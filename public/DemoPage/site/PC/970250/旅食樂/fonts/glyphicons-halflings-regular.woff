@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="zh-TW">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="zh-TW">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="zh-TW">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="zh-TW">
+<!--<![endif]-->
+<head>
+	<!--google-search-console-->
+	<meta name="google-site-verification" content="iajdvSen6nKNRa8Aidhw0-qE1m7L-nzsh4oBBnm6e5Q">
+	<meta charset="UTF-8">
+			
+		<link rel="pingback" href="http://play.nownews.com/xmlrpc.php">
+	<!--le css-->
+	<!--<link href="http://play.nownews.com/wp-content/themes/CT-RWD%20theme%20demo3/style.css" rel="stylesheet">URL-css -->
+	<!--if this @import at styles.css doesn't work,use this-->
+	<link href="../css/jquery-ui.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="../css/topmenu.css" media="screen" rel="stylesheet" type="text/css">
+	
+
+	<!--le javascripts-->
+	<script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <!--<script type="text/javascript" src="http://cache.chinatimes.com/Scripts/common-scripts.min.js?20150622a"></script>-->
+    <script src="../js/common-scripts.min.js" type="text/javascript"></script>
+
+
+		<!--[if lt IE 9]>
+	<script src="http://play.nownews.com/wp-content/themes/CT-RWD%20theme%20demo3/scripts/ext/html5.js" type="text/javascript"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	
+<!-- wp_head start -->
+	<title>404 Not Found | NOWnews | 旅食樂</title>
+<link rel="alternate" type="application/rss+xml" title="訂閱 NOWnews | 旅食樂 &raquo;" href="http://play.nownews.com/feed">
+<link rel="alternate" type="application/rss+xml" title="訂閱 NOWnews | 旅食樂 &raquo; 迴響" href="http://play.nownews.com/comments/feed">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/play.nownews.com\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<meta content="CT-RWD theme demo3 v.1.2.1" name="generator"><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="extra-style-css" href="../css/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="magnific-popup-css" href="../css/magnific_popup.css" type="text/css" media="all">
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-migrate.min.js"></script>
+<link rel="https://api.w.org/" href="http://play.nownews.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://play.nownews.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://play.nownews.com/wp-includes/wlwmanifest.xml"> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style type="text/css" id="extra-dynamic-styles-sidebar_width-width">
+
+		@media only screen and (min-width: 1025px) {
+		.with_sidebar .et_pb_extra_column_sidebar {
+			min-width: 33%;
+			max-width: 33%;
+			width: 33%;
+			flex-basis: 33%;
+		}
+		.with_sidebar .et_pb_extra_column_main {
+			min-width: 67%;
+			max-width: 67%;
+			width: 67%;
+			flex-basis: 67%;
+		}
+		}
+		</style>
+
+<style type="text/css" id="extra-dynamic-styles-accent_color-color">
+.widget_et_recent_tweets .widget_list a,
+.widget_et_recent_tweets .et-extra-icon,
+.widget_et_recent_tweets .widget-footer .et-extra-social-icon,
+.widget_et_recent_tweets .widget-footer .et-extra-social-icon::before,
+.project-details .project-details-title,
+.et_filterable_portfolio .filterable_portfolio_filter a.current,
+.et_extra_layout .et_pb_column .module-head h1,
+.et_pb_extra_column .module-head h1,
+#portfolio_filter a.current,
+.woocommerce div.product div.summary .product_meta a,
+.woocommerce-page div.product div.summary .product_meta a,
+.et_pb_widget.woocommerce .product_list_widget li .amount,
+.et_pb_widget li a:hover, .et_pb_widget.woocommerce .product_list_widget li a:hover,
+.et_pb_widget.widget_et_recent_videos .widget_list .title:hover,
+.et_pb_widget.widget_et_recent_videos .widget_list .title.active,
+.woocommerce .woocommerce-info:before {
+	color: #ffffff;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-accent_color-background-color">
+.single .score-bar,
+.widget_et_recent_reviews .review-breakdowns .score-bar,
+.et_pb_extra_module .posts-list article .post-thumbnail,
+.et_extra_other_module .posts-list article .post-thumbnail,
+.et_pb_widget .widget_list_portrait,
+.et_pb_widget .widget_list_thumbnail,
+.quote-format,
+.link-format,
+.audio-format .audio-wrapper,
+.paginated .pagination li.active,
+.score-bar,
+.review-summary-score-box,
+.post-footer .rating-stars #rating-stars img.star-on,
+.post-footer .rating-stars #rated-stars img.star-on,
+.author-box-module .author-box-avatar,
+.timeline-menu li.active a:before,
+.woocommerce div.product form.cart .button,
+.woocommerce-page div.product form.cart .button,
+.woocommerce div.product form.cart .read-more-button,
+.woocommerce-page div.product form.cart .read-more-button,
+.woocommerce div.product form.cart .post-nav .nav-links .button,
+.woocommerce-page div.product form.cart .post-nav .nav-links .button,
+.woocommerce .woocommerce-message, .woocommerce-page .woocommerce-message {
+	background-color: #ffffff;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-accent_color-border-color">
+#et-menu > li > ul,
+#et-menu li > ul,
+#et-menu > li > ul > li > ul,
+.et-top-search-primary-menu-item .et-top-search,
+.et_pb_module,
+.module,
+.page article,
+.authors-page .page,
+#timeline-sticky-header,
+.et_extra_other_module,
+.woocommerce .woocommerce-info {
+	border-color: #ffffff;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-body_font_size-font-size">
+body {
+	font-size: 20px;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-body_text_color-color">
+body {
+	color: rgba(0,0,0,0.82);
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-background_color-background-color">
+#page-container {
+	background-color: #ffffff;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-primary_nav_font_size-font-size">
+#et-menu li a {
+	font-size: 20px;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-primary_nav_font_style-font-style">
+#et-navigation ul li,
+#et-navigation li a,
+#et-navigation > ul > li > a {
+	font-weight: normal; font-style: normal; text-transform: none; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-primary_nav_text_color-color">
+#et-menu > li a,
+#et-menu > li.menu-item-has-children > a:after,
+#et-menu > li.mega-menu-featured > a:after,
+#et-extra-mobile-menu > li.mega-menu-featured > a:after {
+	color: rgba(0,96,191,0.84);
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-primary_nav_dropdown_background_color-background-color">
+#et-menu > li > ul,
+#et-menu li > ul,
+#et-menu > li > ul > li > ul,
+#et-mobile-navigation nav,
+.et-top-search-primary-menu-item .et-top-search {
+	background-color: #ffffff;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-primary_nav_dropdown_line_color-border-color">
+#et-menu li.mega-menu-featured > ul li.menu-item .recent-list .recent-post,
+#et-extra-mobile-menu li.mega-menu-featured > ul li.menu-item .recent-list .recent-post,
+#et-menu li.mega-menu > ul > li > a,
+#et-menu li.mega-menu > ul li:last-child a,
+#et-menu li > ul li a {
+	border-color: rgba(206,206,206,0.93);
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_background_color-background-color">
+#top-header {
+	background-color: #dd3333;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_active_link_color-color">
+#et-secondary-menu li a:hover,
+#et-secondary-menu > li > a:hover:before,
+#et-secondary-menu li.menu-item-has-children > a:hover:after,
+#et-secondary-menu li.current-menu-item > a {
+	color: #dd3333;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_active_link_color-text-shadow">
+#et-secondary-menu > li > a:hover:before {
+	text-shadow: 10px 0 #dd3333, -10px 0 #dd3333;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_dropdown_background_color-background-color">
+#et-secondary-menu li > ul {
+	background-color: #dd3333;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_trending_font_size-custom">
+#et-trending-label,
+		.et-trending-post a {
+			font-size: 16.000000px;
+		}
+		#et-trending-button {
+			width: 22.857143px;
+			height: 22.857143px;
+		}
+		#et-trending-button span {
+			width: 22.857143px;
+			height: 2.285714px;
+		}
+		#et-trending-button.toggled span:first-child {
+			-webkit-transform: translateY(6.428571px) rotate(45deg);
+			transform: translateY(6.428571px) rotate(45deg);
+		}
+		#et-trending-button.toggled span:last-child {
+			-webkit-transform: translateY(-6.428571px) rotate(-45deg);
+			transform: translateY(-6.428571px) rotate(-45deg);
+		}</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_trending_font_style-font-style">
+#et-trending-label,
+.et-trending-post a {
+	font-weight: bold; font-style: normal; text-transform: uppercase; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_trending_label_text_color-color">
+#et-trending-label,
+#et-trending-button {
+	color: #000000;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_trending_label_text_color-background-color">
+#et-trending-button span {
+	background-color: #000000;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_trending_title_text_color-color">
+header.header .et-trending-post a,
+header.header .et-trending-post a:visited {
+	color: #ffffff;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_icon_search_cart_letter_spacing-letter-spacing">
+#et-info .et-cart,
+#et-info .et-top-search .et-search-field {
+	letter-spacing: 1px;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_icon_search_cart_font_style-font-style">
+#et-info .et-cart span,
+#et-info .et-top-search .et-search-field {
+	font-weight: normal; font-style: normal; text-transform: uppercase; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_icon_search_cart_font_style-font-style-placeholder-webkit">
+#et-info .et-top-search .et-search-field::-webkit-input-placeholder {
+	font-weight: normal; font-style: normal; text-transform: uppercase; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_icon_search_cart_font_style-font-style-placeholder-moz-legacy">
+#et-info .et-top-search .et-search-field:-moz-placeholder {
+	font-weight: normal; font-style: normal; text-transform: uppercase; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_icon_search_cart_font_style-font-style-placeholder-moz">
+#et-info .et-top-search .et-search-field::-moz-placeholder {
+	font-weight: normal; font-style: normal; text-transform: uppercase; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_icon_search_cart_font_style-font-style-placeholder-ms">
+#et-info .et-top-search .et-search-field:-ms-input-placeholder {
+	font-weight: normal; font-style: normal; text-transform: uppercase; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-secondary_nav_icon_search_cart_background_color-background-color">
+#et-info .et-cart,
+#et-info .et-top-search .et-search-field,
+#et-info .et-extra-social-icons .et-extra-icon {
+	background-color: #0a0a0a;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-fixed_primary_nav_background_color-background-color">
+.et-fixed-header #main-header {
+	background-color: #ffffff;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-footer_bottom_credit_font_style-font-style">
+#footer-info a {
+	font-weight: bold; font-style: normal; text-transform: none; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-footer_bottom_menu_font_size-font-size">
+#footer-nav a {
+	font-size: 24px;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-button_text_color-color">
+#page-container .button,
+#page-container button,
+#page-container button[type="submit"],
+#page-container input[type="submit"],
+#page-container input[type="reset"],
+#page-container input[type="button"],
+.read-more-button,
+.comment-body .comment_area .comment-content .reply-container .comment-reply-link,
+.widget_tag_cloud a,
+.widget_tag_cloud a:visited,
+.post-nav .nav-links .button,
+a.read-more-button,
+a.read-more-button:visited,
+#footer .widget_tag_cloud a,
+#footer .widget_tag_cloud a:visited,
+#footer a.read-more-button,
+#footer a.read-more-button:visited,
+#footer .button,
+#footer button,
+#footer button[type="submit"],
+#footer input[type="submit"],
+#footer input[type="reset"],
+#footer input[type="button"] {
+	color: rgba(0,0,0,0.6);
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-button_border_width-border-width">
+#page-container .button,
+#page-container button,
+#page-container button[type="submit"],
+#page-container input[type="submit"],
+#page-container input[type="reset"],
+#page-container input[type="button"],
+.read-more-button,
+.comment-body .comment_area .comment-content .reply-container .comment-reply-link,
+.widget_tag_cloud a,
+.widget_tag_cloud a:visited,
+.post-nav .nav-links .button,
+a.read-more-button,
+a.read-more-button:visited,
+#footer .widget_tag_cloud a,
+#footer .widget_tag_cloud a:visited,
+#footer a.read-more-button,
+#footer a.read-more-button:visited,
+#footer .button,
+#footer button,
+#footer button[type="submit"],
+#footer input[type="submit"],
+#footer input[type="reset"],
+#footer input[type="button"] {
+	border-width: 1px;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-button_letter_spacing-letter-spacing">
+#page-container .button,
+#page-container button,
+#page-container button[type="submit"],
+#page-container input[type="submit"],
+#page-container input[type="reset"],
+#page-container input[type="button"],
+.read-more-button,
+.comment-body .comment_area .comment-content .reply-container .comment-reply-link,
+.widget_tag_cloud a,
+.widget_tag_cloud a:visited,
+.post-nav .nav-links .button,
+a.read-more-button,
+a.read-more-button:visited,
+#footer .widget_tag_cloud a,
+#footer .widget_tag_cloud a:visited,
+#footer a.read-more-button,
+#footer a.read-more-button:visited,
+#footer .button,
+#footer button,
+#footer button[type="submit"],
+#footer input[type="submit"],
+#footer input[type="reset"],
+#footer input[type="button"] {
+	letter-spacing: 4px;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-button_hover_text_color-color">
+#page-container .button:hover,
+#page-container button:hover,
+#page-container button[type="submit"]:hover,
+#page-container input[type="submit"]:hover,
+#page-container input[type="reset"]:hover,
+#page-container input[type="button"]:hover,
+.read-more-button:hover,
+.comment-body .comment_area .comment-content .reply-container .comment-reply-link:hover,
+.widget_tag_cloud a:hover,
+.widget_tag_cloud a:visited:hover,
+.post-nav .nav-links .button:hover,
+a.read-more-button:hover,
+a.read-more-button:visited:hover,
+#footer .widget_tag_cloud a:hover,
+#footer .widget_tag_cloud a:visited:hover,
+#footer a.read-more-button:hover,
+#footer a.read-more-button:visited:hover,
+#footer .button:hover,
+#footer button:hover,
+#footer button[type="submit"]:hover,
+#footer input[type="submit"]:hover,
+#footer input[type="reset"]:hover,
+#footer input[type="button"]:hover {
+	color: rgba(0,0,0,0.6);
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-button_hover_border_width-border-width">
+#page-container .button:hover,
+#page-container button:hover,
+#page-container button[type="submit"]:hover,
+#page-container input[type="submit"]:hover,
+#page-container input[type="reset"]:hover,
+#page-container input[type="button"]:hover,
+.read-more-button:hover,
+.comment-body .comment_area .comment-content .reply-container .comment-reply-link:hover,
+.widget_tag_cloud a:hover,
+.widget_tag_cloud a:visited:hover,
+.post-nav .nav-links .button:hover,
+a.read-more-button:hover,
+a.read-more-button:visited:hover,
+#footer .widget_tag_cloud a:hover,
+#footer .widget_tag_cloud a:visited:hover,
+#footer a.read-more-button:hover,
+#footer a.read-more-button:visited:hover,
+#footer .button:hover,
+#footer button:hover,
+#footer button[type="submit"]:hover,
+#footer input[type="submit"]:hover,
+#footer input[type="reset"]:hover,
+#footer input[type="button"]:hover {
+	border-width: 1px;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-button_hover_letter_spacing-letter-spacing">
+#page-container .button:hover,
+#page-container button:hover,
+#page-container button[type="submit"]:hover,
+#page-container input[type="submit"]:hover,
+#page-container input[type="reset"]:hover,
+#page-container input[type="button"]:hover,
+.read-more-button:hover,
+.comment-body .comment_area .comment-content .reply-container .comment-reply-link:hover,
+.widget_tag_cloud a:hover,
+.widget_tag_cloud a:visited:hover,
+.post-nav .nav-links .button:hover,
+a.read-more-button:hover,
+a.read-more-button:visited:hover,
+#footer .widget_tag_cloud a:hover,
+#footer .widget_tag_cloud a:visited:hover,
+#footer a.read-more-button:hover,
+#footer a.read-more-button:visited:hover,
+#footer .button:hover,
+#footer button:hover,
+#footer button[type="submit"]:hover,
+#footer input[type="submit"]:hover,
+#footer input[type="reset"]:hover,
+#footer input[type="button"]:hover {
+	letter-spacing: 1px;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-et_pb_tabs-title_font_style-font-style">
+.et_pb_tabs_controls li {
+	font-weight: bold; font-style: normal; text-transform: none; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-et_pb_filterable_portfolio-zoom_icon_color-color">
+.et_pb_filterable_portfolio .et_overlay:before {
+	color: #dd3333;
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-et_pb_contact_form-title_font_style-font-style">
+.et_pb_contact_form_container .et_pb_contact_main_title {
+	font-weight: bold; font-style: normal; text-transform: uppercase; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-et_pb_sidebar-header_font_style-font-style">
+.et_pb_widget_area h4 {
+	font-weight: bold; font-style: normal; text-transform: uppercase; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-et_pb_team_member-header_font_style-font-style">
+.et_pb_team_member h4 {
+	font-weight: bold; font-style: normal; text-transform: uppercase; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-et_pb_blog-header_font_style-font-style">
+.et_pb_posts .et_pb_post h2 {
+	font-weight: bold; font-style: normal; text-transform: uppercase; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-et_pb_countdown_timer-header_font_style-font-style">
+.et_pb_countdown_timer .title {
+	font-weight: bold; font-style: normal; text-transform: none; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-et_pb_social_media_follow-_button_font_style-font-style">
+.et_pb_social_media_follow li a.follow_button {
+	font-weight: bold; font-style: normal; text-transform: uppercase; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-et_pb_fullwidth_slider-header_font_style-font-style">
+.et_pb_fullwidth_section .et_pb_slide_description h2 {
+	font-weight: bold; font-style: normal; text-transform: uppercase; text-decoration: none; 
+}
+
+</style>
+
+<style type="text/css" id="extra-dynamic-styles-extra_nav_height_value">
+
+			@media only screen and (min-width: 768px) {
+				#main-header .logo {
+					height: 80px;
+					margin: 0px 0;
+				}
+				.header.left-right #et-navigation > ul > li > a {
+					padding-bottom: 15px;
+				}
+			}
+			@media only screen and (min-width: 768px) {
+				.et-fixed-header #main-header .logo {
+					height: 98.4px;
+					margin: 12.3px 0;
+				}
+				.et-fixed-header .header.left-right #et-navigation > ul > li > a {
+					padding-bottom: 26.75px;
+				}
+			}</style>
+<link rel="shortcut icon" href="../images/icon1.jpg"><script async="async" src="../js/gpt.js"></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script><link rel="icon" href="../images/icon1-150x150.jpg" sizes="32x32">
+<link rel="icon" href="../images/icon1_1.jpg" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="../images/icon1_1.jpg">
+<meta name="msapplication-TileImage" content="http://play.nownews.com/wp-content/uploads/2017/10/icon1.jpg">
+<style type="text/css" id="et-custom-css">
+h1,h2,h3,h4,h5,h6{  font-family: "Microsoft YaHei", "Verdana", "Arial", "PMingLiU", "sans-serif";  }
+
+
+#text-3 > .widgettitle { display:none;}
+#text-2 > .widgettitle { display:none;}
+#text-5 > .widgettitle { display:none;}
+
+article.status-draft > div.post-footer {display:none;}
+
+
+div.et_pb_blog_1 article.et_pb_post {
+    padding-bottom: 2%;
+    border-color: #d9d9d9;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    margin-bottom: 60px;}
+
+
+.header .etad {
+    max-width: 970px;
+    max-height: 250px;
+}
+
+#text-3 .textwidget{
+	padding:0;
+}
+#text-2 .textwidget{
+	padding:0;
+}
+</style><!-- wp_head end -->
+
+
+
+</head>
+<body class="error404 et_extra et_fullwidth_nav et_non_fixed_nav boxed_layout et_pb_gutters3 et_primary_nav_dropdown_animation_slideInX et_secondary_nav_dropdown_animation_Default et_pb_no_sidebar_vertical_divider with_sidebar with_sidebar_right unknown et_includes_sidebar">
+<!--google-analytics.js-->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ /* ga('create', 'UA-81810417-1', 'auto');
+  ga('create', 'UA-83701519-2', 'auto');
+  ga('send', 'pageview');*/
+
+  // Standard code. Replace X's and domain with your own
+ga('create', 'UA-81810417-1', 'auto');
+
+// Replace Y's with your account number. "b" can be anything you want.
+ga('create', 'UA-83701519-2', {'name':'kt'});
+
+// Standard code. No change necessary.
+ga('send', 'pageview');
+
+// "b" can again be anything you want, but it MUST match "b" above.
+ga('kt.send', 'pageview');
+</script>
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.7";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+<!-- Begin comScore Tag -->
+    <script>
+        var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "9457284",
+        options: {
+            url_append: "comscorekw=auto"
+        }
+    });
+   (function () {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+    </script>
+    <noscript>
+        <img src="../p">
+    </noscript>
+<!-- End comScore Tag -->
+<!-- Google Tag Manager -->
+<noscript><iframe src="../ns.html" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TVCGM3');</script>
+<!-- End Google Tag Manager -->
+	<div id="page-container">
+				<!-- Header -->
+		<header class="header container centered" style="padding:0 1%;">
+						<!--top_menu-->
+			<!--<div class="container">-->
+				<!-- Main Header -->
+				<div id="main-header-wrapper">
+					<div id="main-header" data-fixed-height="123">
+						<div class="container">
+						<!-- ET Ad -->
+														<div class="etad">
+								
+
+<!-- 域動廣告 start 2018.06.11 -->
+  <ins class="clickforceads " style="display:inline-block;" data-ad-zone-max="7662" data-ad-zone-min="7663" data-ad-width-max="970" data-ad-height-max="250" data-ad-width-min="300" data-ad-height-min="250" data-ad-changeminwidth="1024"></ins>
+<script type="text/javascript" src="../js/rwd_cap.js"></script>
+<!-- 域動廣告 end -->
+
+							</div>
+							
+							
+							<!-- Logo -->
+							
+							<div class="col-xs-5 col-md-2">
+
+								<a class="" href="http://www.nownews.com/" data-fixed-height="80">
+									<img src="../images/logo01.png" alt="Nownews" style="margin-top: 6%;height:auto;width:100%;" id="logo">
+								</a>
+							</div>
+							<div class="col-xs-5 col-md-3">
+								<a class="logo" href="http://play.nownews.com/" data-fixed-height="80">
+									<img src="../images/%C3%A6%C2%97%C2%85%C3%A9%C2%A3%C2%9F%C3%A6%C2%A8%C2%82Logo-20160509.png" alt="NOWnews | 旅食樂" id="logo">
+								</a>
+							</div>
+							<div class="col-md-6 hidden-menu" style="padding: 0;">
+								<div class="top_menu">
+								<!-- .et-top-search -->
+									<div class="box_search">
+										<div class="fb-like" data-href="https://www.facebook.com/travtlfood/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true">
+										</div>
+										<div class="et-top-search">
+											<form role="search" class="et-search-form" method="get" action="http://play.nownews.com/">
+			<input type="search" class="et-search-field" placeholder="Search" value="" name="s" title="搜尋關於：">
+			<button class="et-search-submit"></button>
+		</form>										</div>
+									</div>
+
+								    <ul class="clear-fix" style="">
+								        <li><a target="_blank" rel="nofollow" href="http://play.tvbs.com.tw/">TVBS旅食樂</a></li>
+								        <!--<li><a target="_blank" rel="nofollow" href="https://lecoin.chinatimes.com/">樂公益</a></li>
+								        <li><a target="_blank" href="http://www.chinatimes.com/broadcast/" rel="nofollow">廣播</a></li>
+								        <li><a target="_blank" href="http://www.chinatimes.com/" rel="nofollow">中時電子報</a></li>
+								        <li><a target="_blank" rel="nofollow" href="http://want-car.chinatimes.com/">旺車</a></li>
+								        <li><a href="http://health.chinatimes.com" rel="nofollow" target="_blank">健康+</a></li>
+								        <li><a href="http://s365.chinatimes.com" rel="nofollow" target="_blank">團購好物</a></li>
+								        <li><a href="http://mamibaby.chinatimes.com/" rel="nofollow" target="_blank">媽媽寶貝</a></li>
+								        <li><a target="_blank" rel="nofollow" href="http://astro.chinatimes.com/">開運</a></li>
+								        <li><a target="_blank" rel="nofollow" href="http://gamer.chinatimes.com/">愛玩Game</a></li>
+								        <li><a target="_blank" rel="nofollow" href="http://weibo.chinatimes.com/">微博</a></li>
+								        <li class="even first"><a href="javascript:void(0)" title="爆料" class="tellme" onclick="window.open('http://i-reporter.chinatimes.com/Complain.aspx','tellme','toolbar=no,width=470,height=320,directories=no,status=no,scrollbars=yes,resize=yes,menubar=no')"> 爆料</a> </li>-->
+								    </ul>
+							    </div>
+							    
+							</div>
+							<div class="col-md-1 hidden-menu" style="margin-bottom: 1%;">
+
+
+
+						    </div>
+						    <!--todaydate script-->
+						    <script type="text/javascript">
+						        var dtNow = new Date();
+						        var chm = new Array("一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二");
+						        $('#navm').text(chm[dtNow.getMonth()] + "月");
+						        $('#navd').text(dtNow.getDate());
+					        </script>
+
+							
+							<!-- ET Navigation -->
+							<div id="et-navigation" class="">
+								<ul id="et-menu" class="nav"><li id="menu-item-11710" class="menu1 menu-item menu-item-type-post_type menu-item-object-page menu-item-11710"><a href="http://play.nownews.com/new">最新</a></li>
+<li id="menu-item-79546" class="menu13 menu-item menu-item-type-custom menu-item-object-custom menu-item-79546"><a href="https://readymag.com/ghinishen/hotspring/">溫泉季</a></li>
+<li id="menu-item-281282" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-281282"><a href="http://play.nownews.com/archives/category/taiwna">台灣</a>
+<ul class="sub-menu">
+	<li id="menu-item-11721" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11721"><a href="http://play.nownews.com/archives/category/taiwna/domestic-travel-north">北部</a></li>
+	<li id="menu-item-11720" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11720"><a href="http://play.nownews.com/archives/category/taiwna/domestic-travel-central">中部</a></li>
+	<li id="menu-item-11722" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11722"><a href="http://play.nownews.com/archives/category/taiwna/domestic-travel-southern">南部</a></li>
+	<li id="menu-item-11723" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11723"><a href="http://play.nownews.com/archives/category/taiwna/domestic-travel-east">東部</a></li>
+	<li id="menu-item-281283" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-281283"><a href="http://play.nownews.com/archives/category/taiwna/domestic-travel-island">離島</a></li>
+</ul>
+</li>
+<li id="menu-item-11715" class="menu3 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-11715"><a href="http://play.nownews.com/archives/category/food">美食</a>
+<ul class="sub-menu">
+	<li id="menu-item-11717" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11717"><a href="http://play.nownews.com/archives/category/food/food-domestic">台灣</a></li>
+	<li id="menu-item-11716" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11716"><a href="http://play.nownews.com/archives/category/food/food-china">中港澳</a></li>
+	<li id="menu-item-11718" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11718"><a href="http://play.nownews.com/archives/category/food/food-foreign">國際</a></li>
+</ul>
+</li>
+<li id="menu-item-11711" class="menu2 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-11711"><a href="http://play.nownews.com/archives/category/stay">旅宿</a>
+<ul class="sub-menu">
+	<li id="menu-item-11713" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11713"><a href="http://play.nownews.com/archives/category/stay/stay-domestic">台灣</a></li>
+	<li id="menu-item-11712" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11712"><a href="http://play.nownews.com/archives/category/stay/china-stay">中港</a></li>
+	<li id="menu-item-11714" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11714"><a href="http://play.nownews.com/archives/category/stay/stay-foreign">國際</a></li>
+</ul>
+</li>
+<li id="menu-item-11728" class="menu6 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-11728"><a href="http://play.nownews.com/archives/category/all-international-tourism">國際</a>
+<ul class="sub-menu">
+	<li id="menu-item-11729" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11729"><a href="http://play.nownews.com/archives/category/all-international-tourism/international-tourism-asia">亞洲</a></li>
+	<li id="menu-item-11730" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11730"><a href="http://play.nownews.com/archives/category/all-international-tourism/international-tourism-oceania">大洋洲</a></li>
+	<li id="menu-item-11731" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11731"><a href="http://play.nownews.com/archives/category/all-international-tourism/international-tourism-europe">歐洲</a></li>
+	<li id="menu-item-11757" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11757"><a href="http://play.nownews.com/archives/category/all-international-tourism/international-tourism-africa">非洲</a></li>
+	<li id="menu-item-11732" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11732"><a href="http://play.nownews.com/archives/category/all-international-tourism/international-tourism-america">美洲</a></li>
+	<li id="menu-item-277821" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-277821"><a href="http://play.nownews.com/peru/">秘魯熱</a></li>
+</ul>
+</li>
+<li id="menu-item-11734" class="menu8 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-11734"><a href="http://play.nownews.com/archives/category/column">專欄</a>
+<ul class="sub-menu">
+	<li id="menu-item-220160" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-220160"><a href="http://play.nownews.com/archives/category/column/%e5%85%ac%e4%b8%bb%e9%81%8a%e8%bc%aa">公主遊輪</a></li>
+	<li id="menu-item-208034" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-208034"><a href="http://play.nownews.com/archives/category/column/clubmed">Club Med</a></li>
+	<li id="menu-item-257801" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-257801"><a href="http://play.nownews.com/archives/category/column/ride">騎動臺灣</a></li>
+</ul>
+</li>
+<li id="menu-item-11750" class="menu12 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-11750"><a href="http://play.nownews.com/archives/category/life">生活</a>
+<ul class="sub-menu">
+	<li id="menu-item-11751" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11751"><a href="http://play.nownews.com/archives/category/life/life-buy">休閒消費</a></li>
+	<li id="menu-item-11753" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11753"><a href="http://play.nownews.com/archives/category/life/life-edu">教育學習</a></li>
+	<li id="menu-item-11754" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11754"><a href="http://play.nownews.com/archives/category/life/life-art">藝術文化</a></li>
+	<li id="menu-item-11755" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11755"><a href="http://play.nownews.com/archives/category/life/life-medical">醫療保健</a></li>
+</ul>
+</li>
+<li id="menu-item-11752" class="menu14 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11752"><a href="http://play.nownews.com/archives/category/life/life-entertainment">娛樂</a></li>
+<li id="menu-item-281284" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-281284"><a href="http://play.nownews.com/archives/category/%e5%85%ac%e7%9b%8a">公益</a></li>
+<li id="menu-item-281286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-281286"><a href="http://play.nownews.com/archives/category/culture">藝文</a></li>
+</ul>								<div id="et-mobile-navigation">
+			<span class="show-menu">
+				<div class="show-menu-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<p>Select Page</p>
+			</span>
+			<nav>
+			</nav>
+		</div> <!-- /#et-mobile-navigation -->							</div><!-- /#et-navigation -->
+						</div><!-- /.container -->
+					</div><!-- /#main-header -->
+				</div><!-- /#main-header-wrapper -->
+			<!--</div>-->
+		</header>
+
+				
+<div id="main-content">
+	<div class="container">
+		<div id="content-area" class="with_sidebar with_sidebar_right clearfix">
+			<div class="et_pb_extra_column_main">
+				
+									<div class="posts-blog-feed-module standard post-module et_pb_extra_module module">
+	<div class="paginated_page">
+			<article class="nopost">
+			<h5>Sorry, No Posts Found</h5>
+		</article>
+			</div><!-- .paginated_page -->
+
+		</div><!-- /.posts-blog-feed-module -->
+							</div>
+			<div class="et_pb_extra_column_sidebar">
+	<div id="text-5" class="et_pb_widget widget_text"><h4 class="widgettitle"> </h4>			<div class="textwidget"><!-- 域動廣告 start 2018.06.11 -->
+  <ins class="clickforceads " style="display:inline-block;" data-ad-zone-max="7666" data-ad-zone-min="7667" data-ad-width-max="300" data-ad-height-max="250" data-ad-width-min="300" data-ad-height-min="250" data-ad-changeminwidth="1024"></ins>
+<script type="text/javascript" src="../js/rwd_cap.js"></script>
+
+  <ins class="clickforceads " style="display:inline-block;" data-ad-zone-max="7664" data-ad-zone-min="7665" data-ad-width-max="300" data-ad-height-max="600" data-ad-width-min="300" data-ad-height-min="250" data-ad-changeminwidth="1024"></ins>
+<script type="text/javascript" src="../js/rwd_cap.js"></script>
+<!-- 域動廣告 end —></div>
+		</div> <!-- end .et_pb_widget -->		<div id="et-recent-posts-3" class="et_pb_widget widget_et_recent_entries">		<h4 class="widgettitle">最新新聞</h4>		<ul class="widget_list">
+					<li>
+									<a href="http://play.nownews.com/archives/282986" title="王子與公主的浪漫戶外婚禮首選 圓山花博Lotus wedding" class="widget_list_thumbnail">
+				<img src="../images/1044-150x150.jpg" alt="王子與公主的浪漫戶外婚禮首選 圓山花博Lotus wedding">
+			</a>								<div class="post_info">
+					<a href="http://play.nownews.com/archives/282986" class="title">王子與公主的浪漫戶外婚禮首選 圓山花博Lotus wedding</a>
+										<div class="post-meta">
+						<span class="updated">十一月 19, 2018 </span>					</div>
+				</div>
+			</li>
+					<li>
+									<a href="http://play.nownews.com/archives/282879" title="米其林餐廳飄酒香　高粱入菜「烈焰片皮鴨」醉迷人" class="widget_list_thumbnail">
+				<img src="../images/%C3%A2%C2%96%C2%B2%C3%A5%C2%85%C2%B6%C3%A6%C2%9E%C2%97%C3%A4%C2%B8%C2%80%C3%A6%C2%98%C2%9F%C3%A9%C2%A4%C2%90%C3%A5%C2%BB%C2%B3%C3%A5%C2%A4%C2%A7%C3%A4%C2%B8%C2%89%C3%A5%C2%85%C2%83%C3%A9%C2%85%C2%92%C3%A6%C2%A8%C2%93%C3%A9%C2%A6%C2%96%C3%A5%C2%BA%C2%A6%C3%A8%C2%88%C2%87%C3%A9%C2%87%C2%91%C3%A9%C2%96%C2%80%C3%A9%C2%85%C2%92%C3%A5%C2%BB%C2%A0%C3%A8%C2%B7%C2%A8%C3%A7%C2%95%C2%8C%C3%A5%C2%90%C2%88%C3%A4%C2%BD%C2%9C%C3%AF%C2%BC%C2%8C%C3%A9%C2%99%C2%90%C3%A9%C2%87%C2%8F%C3%A6%C2%8E%C2%A8%C3%A5%C2%87%C2%BA%C3%A3%C2%80%C2%8C%C3%A9%C2%87%C2%91%C3%A9%C2%96%C2%80%C3%A9%C2%AB%C2%98%C3%A7%C2%B2%C2%B1%C3%A9%C2%85%C2%92%C3%A6%C2%98%C2%9F%C3%A7%C2%B4%C2%9A%C3%A7%C2%9B%C2%9B%C3%A5%C2%AE%C2%B4%C3%A3%C2%80%C2%8D%C3%A3%C2%80%C2%82%C3%AF%C2%BC%C2%88%C3%A5%C2%9C%C2%96%C3%AF%C2%BC%C2%8F%C3%A9%C2%87%C2%91%C3%A9%C2%96%C2%80%C3%A9%C2%85%C2%92%C3%A5%C2%BB%C2%A0%C3%AF%C2%BC%C2%89-150x150.jpg" alt="米其林餐廳飄酒香　高粱入菜「烈焰片皮鴨」醉迷人">
+			</a>								<div class="post_info">
+					<a href="http://play.nownews.com/archives/282879" class="title">米其林餐廳飄酒香　高粱入菜「烈焰片皮鴨」醉迷人</a>
+										<div class="post-meta">
+						<span class="updated">十一月 19, 2018 </span>					</div>
+				</div>
+			</li>
+					<li>
+									<a href="http://play.nownews.com/archives/282880" title="看101跨年煙火不用人擠人　信義區高空餐廳訂位超夯" class="widget_list_thumbnail">
+				<img src="../images/%C3%A2%C2%96%C2%B2%C3%A4%C2%BF%C2%A1%C3%A7%C2%BE%C2%A9%C3%A5%C2%8D%C2%80%C3%A5%C2%91%C2%A8%C3%A9%C2%82%C2%8A%C3%A6%C2%99%C2%AF%C3%A8%C2%A7%C2%80%C3%A9%C2%A4%C2%90%C3%A5%C2%BB%C2%B3%C3%A7%C2%A5%C2%AD%C3%A5%C2%87%C2%BA%C3%A8%C2%B7%C2%A8%C3%A5%C2%B9%C2%B4%C3%A6%C2%96%C2%B9%C3%A6%C2%A1%C2%88%C3%AF%C2%BC%C2%8C%C3%A4%C2%B8%C2%8D%C3%A7%C2%94%C2%A8%C3%A4%C2%BA%C2%BA%C3%A6%C2%93%C2%A0%C3%A4%C2%BA%C2%BA%C3%A3%C2%80%C2%81%C3%A5%C2%90%C2%B9%C3%A5%C2%86%C2%B7%C3%A9%C2%A2%C2%A8%C3%AF%C2%BC%C2%8C%C3%A4%C2%B9%C2%9F%C3%A5%C2%8F%C2%AF%C3%A4%C2%BB%C2%A5%C3%A6%C2%AC%C2%A3%C3%A8%C2%B3%C2%9E%C3%A5%C2%8F%C2%B0%C3%A5%C2%8C%C2%97-101-%C3%A7%C2%85%C2%99%C3%A7%C2%81%C2%AB%C3%A3%C2%80%C2%82%C3%AF%C2%BC%C2%88%C3%A5%C2%9C%C2%96%C3%AF%C2%BC%C2%8F%C3%A5%C2%8F%C2%B0%C3%A5%C2%8C%C2%97-101-%C3%AF%C2%BC%C2%89-150x150.jpg" alt="看101跨年煙火不用人擠人　信義區高空餐廳訂位超夯">
+			</a>								<div class="post_info">
+					<a href="http://play.nownews.com/archives/282880" class="title">看101跨年煙火不用人擠人　信義區高空餐廳訂位超夯</a>
+										<div class="post-meta">
+						<span class="updated">十一月 19, 2018 </span>					</div>
+				</div>
+			</li>
+					<li>
+									<a href="http://play.nownews.com/archives/282895" title="非洲豬瘟疫情還在燒！「雙11」台灣人竟訂1800件大陸肉品" class="widget_list_thumbnail">
+				<img src="../images/%C3%A2%C2%96%C2%B2%C3%A6%C2%A0%C2%B9%C3%A6%C2%93%C2%9A%C3%A8%C2%BE%C2%B2%C3%A5%C2%A7%C2%94%C3%A6%C2%9C%C2%83%C3%A7%C2%B5%C2%B1%C3%A8%C2%A8%C2%88%C3%AF%C2%BC%C2%8C%C3%A6%C2%97%C2%A5%C3%A5%C2%89%C2%8D%C3%A5%C2%A4%C2%A7%C3%A9%C2%99%C2%B8%C3%A3%C2%80%C2%8C%C3%A9%C2%9B%C2%99-11%C3%A3%C2%80%C2%8D%C3%A7%C2%B6%C2%B2%C3%A8%C2%B3%C2%BC%C3%A6%C2%B4%C2%BB%C3%A5%C2%8B%C2%95%C3%A6%C2%9C%C2%9F%C3%A9%C2%96%C2%93%C3%A5%C2%85%C2%A7%C3%AF%C2%BC%C2%8C%C3%A5%C2%90%C2%84%C3%A5%C2%A4%C2%A7%C3%A7%C2%B6%C2%B2%C3%A8%C2%B3%C2%BC%C3%A5%C2%B9%C2%B3%C3%A5%C2%8F%C2%B0%C3%A4%C2%B8%C2%8A%C3%A7%C2%AB%C2%9F%C3%A6%C2%9C%C2%89%C3%A5%C2%A4%C2%9A%C3%A9%C2%81%C2%94-1800-%C3%A5%C2%A4%C2%9A%C3%A4%C2%BB%C2%B6%C3%A3%C2%80%C2%8C%C3%A8%C2%B1%C2%AC%C3%A8%C2%82%C2%89%C3%A7%C2%94%C2%A2%C3%A5%C2%93%C2%81%C3%A3%C2%80%C2%8D%C3%A7%C2%9A%C2%84%C3%A8%C2%A8%C2%82%C3%A5%C2%96%C2%AE%C3%A6%C2%98%C2%AF%C3%A4%C2%BE%C2%86%C3%A8%C2%87%C2%AA%C3%A5%C2%8F%C2%B0%C3%A7%C2%81%C2%A3%C3%A7%C2%B6%C2%B2%C3%A5%C2%8F%C2%8B%C3%A6%C2%89%C2%80%C3%A8%C2%A8%C2%82%C3%A8%C2%B3%C2%BC%C3%A3%C2%80%C2%82%C3%AF%C2%BC%C2%88%C3%A8%C2%B3%C2%87%C3%A6%C2%96%C2%99%C3%A5%C2%9C%C2%96%C3%A7%C2%89%C2%87%C3%AF%C2%BC%C2%8F%C3%A9%C2%87%C2%91%C3%A9%C2%96%C2%80%C3%A7%C2%B8%C2%A3%C3%A5%C2%BA%C2%9C%C3%A6%C2%8F%C2%90%C3%A4%C2%BE%C2%9B%C3%AF%C2%BC%C2%89-150x150.jpg" alt="非洲豬瘟疫情還在燒！「雙11」台灣人竟訂1800件大陸肉品">
+			</a>								<div class="post_info">
+					<a href="http://play.nownews.com/archives/282895" class="title">非洲豬瘟疫情還在燒！「雙11」台灣人竟訂1800件大陸肉品</a>
+										<div class="post-meta">
+						<span class="updated">十一月 19, 2018 </span>					</div>
+				</div>
+			</li>
+					<li>
+									<a href="http://play.nownews.com/archives/282906" title="行家不可錯過的旅展活動！豐富講座帶民眾暢遊世界" class="widget_list_thumbnail">
+				<img src="../images/%C3%A2%C2%96%C2%B2%C3%A9%C2%99%C2%A4%C3%A6%C2%97%C2%85%C3%A9%C2%81%C2%8A%C3%A5%C2%84%C2%AA%C3%A6%C2%83%C2%A0%C3%A8%C2%88%C2%87%C3%A6%C2%8A%C2%BD%C3%A7%C2%8D%C2%8E%C3%A5%C2%A4%C2%96%C3%AF%C2%BC%C2%8CITF-%C3%A5%C2%8F%C2%B0%C3%A5%C2%8C%C2%97%C3%A5%C2%9C%C2%8B%C3%A9%C2%9A%C2%9B%C3%A6%C2%97%C2%85%C3%A5%C2%B1%C2%95%C3%A8%C2%88%C2%89%C3%A8%C2%BE%C2%A6%C3%A5%C2%A4%C2%9A%C3%A5%C2%A0%C2%B4%C3%A6%C2%97%C2%85%C3%A9%C2%81%C2%8A%C3%A6%C2%B7%C2%B1%C3%A5%C2%BA%C2%A6%C3%A8%C2%AB%C2%96%C3%A5%C2%A3%C2%87%C3%A5%C2%8F%C2%8A%C3%A8%C2%AC%C2%9B%C3%A5%C2%BA%C2%A7%C3%AF%C2%BC%C2%8C%C3%A5%C2%85%C2%BC%C3%A5%C2%85%C2%B7%C3%A6%C2%97%C2%85%C3%A9%C2%81%C2%8A%C3%A7%C2%9F%C2%A5%C3%A8%C2%AD%C2%98%C3%A6%C2%80%C2%A7%C3%A3%C2%80%C2%82%C3%AF%C2%BC%C2%88%C3%A5%C2%9C%C2%96%C3%AF%C2%BC%C2%8F%C3%A4%C2%B8%C2%BB%C3%A8%C2%BE%C2%A6%C3%A5%C2%96%C2%AE%C3%A4%C2%BD%C2%8D%C3%A6%C2%8F%C2%90%C3%A4%C2%BE%C2%9B%C3%AF%C2%BC%C2%89-150x150.jpg" alt="行家不可錯過的旅展活動！豐富講座帶民眾暢遊世界">
+			</a>								<div class="post_info">
+					<a href="http://play.nownews.com/archives/282906" class="title">行家不可錯過的旅展活動！豐富講座帶民眾暢遊世界</a>
+										<div class="post-meta">
+						<span class="updated">十一月 19, 2018 </span>					</div>
+				</div>
+			</li>
+						</ul>
+		</div> <!-- end .et_pb_widget --><div id="text-3" class="et_pb_widget widget_text"><h4 class="widgettitle"> </h4>			<div class="textwidget">
+<!-- 域動廣告 start 2018.07.10 -->
+<ins class="clickforceads" style="display:inline-block;width:300px;height:250px;" data-ad-zone="7668"></ins>
+<script async type="text/javascript" src="../js/init.js"></script>
+<!-- 域動廣告 end -->
+</div>
+		</div> <!-- end .et_pb_widget --><div id="simpletags-3" class="et_pb_widget widget-simpletags"><h4 class="widgettitle">標籤雲</h4>
+<!-- Generated by Simple Tags 2.4.5 - http://wordpress.org/extend/plugins/simple-tags -->
+	<div class="st-tag-cloud">
+	<a href="http://play.nownews.com/archives/category/stay/stay-foreign" id="tag-link-92" class="st-tags t0" title="96 topics" rel="tag" style="font-size:20px; color:#cccccc;">國際</a>
+<a href="http://play.nownews.com/archives/category/temple/temple-east" id="tag-link-121" class="st-tags t0" title="1 topics" rel="tag" style="font-size:20px; color:#cccccc;">東部</a>
+<a href="http://play.nownews.com/archives/category/temple" id="tag-link-117" class="st-tags t0" title="47 topics" rel="tag" style="font-size:20px; color:#cccccc;">廟宇</a>
+<a href="http://play.nownews.com/archives/category/%e5%85%ac%e7%9b%8a" id="tag-link-19363" class="st-tags t0" title="3 topics" rel="tag" style="font-size:20px; color:#cccccc;">公益</a>
+<a href="http://play.nownews.com/archives/category/life/life-entertainment" id="tag-link-100" class="st-tags t2" title="2375 topics" rel="tag" style="font-size:22px; color:#a3a3a3;">娛樂時尚</a>
+<a href="http://play.nownews.com/archives/category/food/food-china" id="tag-link-112" class="st-tags t0" title="80 topics" rel="tag" style="font-size:20px; color:#cccccc;">中港澳</a>
+<a href="http://play.nownews.com/archives/category/stay/stay-domestic" id="tag-link-93" class="st-tags t0" title="340 topics" rel="tag" style="font-size:20px; color:#cccccc;">台灣</a>
+<a href="http://play.nownews.com/archives/category/hot-news" id="tag-link-11" class="st-tags t0" title="879 topics" rel="tag" style="font-size:20px; color:#cccccc;">熱門</a>
+<a href="http://play.nownews.com/archives/category/taiwna/domestic-travel-central" id="tag-link-53" class="st-tags t0" title="216 topics" rel="tag" style="font-size:20px; color:#cccccc;">中部</a>
+<a href="http://play.nownews.com/archives/category/all-international-tourism/international-tourism-africa" id="tag-link-64" class="st-tags t0" title="6 topics" rel="tag" style="font-size:20px; color:#cccccc;">非洲</a>
+<a href="http://play.nownews.com/archives/category/life/life-art" id="tag-link-94" class="st-tags t0" title="548 topics" rel="tag" style="font-size:20px; color:#cccccc;">藝術文化</a>
+<a href="http://play.nownews.com/archives/category/taiwna/domestic-travel-island" id="tag-link-189" class="st-tags t0" title="154 topics" rel="tag" style="font-size:20px; color:#cccccc;">離島</a>
+<a href="http://play.nownews.com/archives/category/all-international-tourism/international-tourism-america" id="tag-link-63" class="st-tags t0" title="85 topics" rel="tag" style="font-size:20px; color:#cccccc;">美洲</a>
+<a href="http://play.nownews.com/archives/category/life/life-buy" id="tag-link-96" class="st-tags t1" title="1827 topics" rel="tag" style="font-size:21px; color:#b7b7b7;">休閒消費</a>
+<a href="http://play.nownews.com/archives/category/culture" id="tag-link-17909" class="st-tags t0" title="36 topics" rel="tag" style="font-size:20px; color:#cccccc;">藝文</a>
+<a href="http://play.nownews.com/archives/category/all-international-tourism/international-tourism-oceania" id="tag-link-65" class="st-tags t0" title="5 topics" rel="tag" style="font-size:20px; color:#cccccc;">大洋洲</a>
+<a href="http://play.nownews.com/archives/category/temple/temple-north" id="tag-link-118" class="st-tags t0" title="22 topics" rel="tag" style="font-size:20px; color:#cccccc;">北部</a>
+<a href="http://play.nownews.com/archives/category/food" id="tag-link-68" class="st-tags t1" title="1066 topics" rel="tag" style="font-size:21px; color:#b7b7b7;">美食</a>
+<a href="http://play.nownews.com/archives/category/life" id="tag-link-101" class="st-tags t10" title="9705 topics" rel="tag" style="font-size:30px; color:#000000;">生活</a>
+<a href="http://play.nownews.com/archives/category/all-international-tourism/international-tourism-asia" id="tag-link-56" class="st-tags t0" title="855 topics" rel="tag" style="font-size:20px; color:#cccccc;">亞洲</a></div>
+
+</div> <!-- end .et_pb_widget --><div id="text-2" class="et_pb_widget widget_text"><h4 class="widgettitle"> </h4>			<div class="textwidget"><!-- 域動廣告 start 2018.07.10 -->
+<ins class="clickforceads" style="display:inline-block;width:300px;height:600px;" data-ad-zone="7670"></ins>
+<script async type="text/javascript" src="../js/init.js"></script>
+<!-- 域動廣告 end --></div>
+		</div> <!-- end .et_pb_widget --></div>
+
+		</div> <!-- #content-area -->
+	</div> <!-- .container -->
+</div> <!-- #main-content -->
+
+		<div class="container">
+		<div class="et_pb_extra_row etad footer_above">
+			&nbsp;
+<!-- 域動廣告 start 2018.08.15 手機版懸浮 -->
+<div style="position: fixed;bottom: 0;width: 100%;text-align: center;z-index: 9999999”>
+  <ins class=" clickforceads="" "="" data-ad-zone-max="7676" data-ad-zone-min="7677" data-ad-width-max="320" data-ad-height-max="50" data-ad-width-min="320" data-ad-height-min="50" data-ad-changeminwidth="1024">
+<script type="text/javascript" src="../js/rwd_cap.js"></script>
+</div>
+<!-- 域動廣告 end -->
+
+
+		</div>
+		<footer id="footer" class="footer_columns_1">
+						<div id="footer-bottom">
+				<div class="container">
+				<!--Footer Info_master -->
+					<!--<p id="footer-info">Designed by <a href="http://test.kt.net.tw/" title="Premium Chinatimes Themes">Chinatimes Themes</a> | Powered by <a href="http://www.kt.net.tw/">Ktnetwork</a></p>-->
+				<!--Footer Info_delete↑ -->
+					<!-- Footer Info -->
+					<p id="footer-info" style="float: right;">Designed by <a href="http://play.nownews.com/" title="Premium Chinatimes Themes"> play.nownews.com
+	</a> | Powered by <a href="http://www.kt.net.tw/">Ktnetwork</a></p>
+
+					<!-- Footer Navigation -->
+
+										<div id="footer-nav" style="float: left;">
+						<ul id="footer-menu" class="bottom-nav"><li id="menu-item-12915" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-12915"><a href="http://play.nownews.com/archives/8481">關於我們</a></li>
+<li id="menu-item-12916" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-12916"><a href="http://play.nownews.com/archives/8491">廣告刊登</a></li>
+<li id="menu-item-12917" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-12917"><a href="http://play.nownews.com/archives/8486">合作提案</a></li>
+<li id="menu-item-12918" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-12918"><a href="http://play.nownews.com/archives/8494">歡迎投稿</a></li>
+<li id="menu-item-12919" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-12919"><a href="http://play.nownews.com/archives/8506">徵才實習</a></li>
+<li id="menu-item-251220" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-251220"><a href="https://www.wiseessays.com/buy-research-papers"><div style="color:transparent">Purchase Research Paper</div></a></li>
+</ul>							<ul class="et-extra-social-icons" style="">
+																																														<li class="et-extra-social-icon facebook">
+									<a href="https://facebook.com" class="et-extra-icon et-extra-icon-background-none et-extra-icon-facebook"></a>
+								</li>
+																																															<li class="et-extra-social-icon twitter">
+									<a href="https://twitter.com" class="et-extra-icon et-extra-icon-background-none et-extra-icon-twitter"></a>
+								</li>
+																																																																																																																																																																																																										<li class="et-extra-social-icon instagram">
+									<a href="https://instagram.com" class="et-extra-icon et-extra-icon-background-none et-extra-icon-instagram"></a>
+								</li>
+																																																																																																																																																																																																																																																																																																																																																																																																																																									</ul>
+											</div> <!-- /#et-footer-nav -->
+					
+				</div>
+			</div>
+		</footer>
+	</div>
+		
+	</div> <!-- #page-container -->
+
+			<span title="Back To Top" id="back_to_top"></span>
+	
+	<script type="text/javascript" src="../js/frontend-builder-global-functions.js"></script>
+<script type="text/javascript" src="../js/imagesloaded.min.js"></script>
+<script type="text/javascript" src="../js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="../js/jquery.fitvids.min.js"></script>
+<script type="text/javascript" src="../js/smoothscroll.min.js"></script>
+<script type="text/javascript" src="../js/masonry.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var EXTRA = {"images_uri":"http:\/\/play.nownews.com\/wp-content\/themes\/CT-RWD%20theme%20demo3\/images\/","ajaxurl":"http:\/\/play.nownews.com\/wp-admin\/admin-ajax.php","your_rating":"Your Rating:","rating_nonce":"89d66ccb44","timeline_nonce":"8c7004c7ca","blog_feed_nonce":"5b8e6ba24b","error":"There was a problem, please try again.","contact_error_name_required":"Name field cannot be empty.","contact_error_email_required":"Email field cannot be empty.","contact_error_email_invalid":"\u8acb\u8f38\u5165\u6709\u6548\u7684\u96fb\u5b50\u90f5\u4ef6\u4f4d\u5740"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../js/scripts.min.js"></script>
+<script type="text/javascript" src="../js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="../js/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="../js/jquery.mobile.custom.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var et_pb_custom = {"ajaxurl":"http:\/\/play.nownews.com\/wp-admin\/admin-ajax.php","images_uri":"http:\/\/play.nownews.com\/wp-content\/themes\/CT-RWD%20theme%20demo3\/images","builder_images_uri":"http:\/\/play.nownews.com\/wp-content\/themes\/CT-RWD%20theme%20demo3\/includes\/builder\/images","et_load_nonce":"126661d173","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","is_builder_plugin_used":"","is_divi_theme_used":"","widget_search_selector":".widget_search"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../js/frontend-builder-scripts.js"></script>
+<script type="text/javascript" src="../js/wp-embed.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"travelfoodct"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../js/count.js"></script>
+<!-- 將這個標記放在標頭中，或放在內文結尾標記前面。 
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'zh-TW'}
+</script>-->
+
+<!-- Popin文章推薦系統 -->
+<script type="text/javascript"> 
+
+    (function() {
+
+        var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.charset = "utf-8"; pa.async = true;
+
+        pa.src = window.location.protocol + "//api.popin.cc/searchbox/nownews_play.js";
+
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+
+    })(); 
+
+</script>
+
+</div></div></body>
+</html>

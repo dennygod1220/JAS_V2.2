@@ -1,0 +1,35 @@
+@layout('layout/main')
+@section('content')
+
+
+<div class="container-fluid" id="container">
+    $$get_config$$
+
+    <table class="table table-hover table-bordered table-hover">
+        <thead class="thead-dark">
+            <th scope="col">網址</th>
+            <th scope="col">名稱</th>
+            <th scope="col">版位大小</th>
+            <th scope="col">PC or Phone</th>
+            <th scope="col">Function Name</th>
+            <th scope="col"></th>
+        </thead>
+        <tbody>
+            <tr v-for="(item,index) in config_json">
+                <td>$$item[0]$$</td>
+                <td>$$item[1]$$</td>
+                <td>$$item[2]$$</td>
+                <td>$$item[3]$$</td>
+                <td>$$item[4]$$</td>
+                <td>
+                    <button class="btn btn-outline-danger" v-on:click="remove(item[4],index)">刪除</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script src="{{ assetsUrl('JS/DemoPage_Zone_set/admin/manage_config.js') }}"></script>
+
+@endsection

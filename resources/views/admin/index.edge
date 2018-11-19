@@ -1,0 +1,34 @@
+@layout('layout/main')
+@section('content')
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col" style="text-align:center">
+      <h2>管理區</h2>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      業務
+    </div>
+    <div class="card-body">
+      <a class="btn btn-outline-success" href="{{ route('/business/demopage') }}">
+        業務DemoPage
+      </a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <a class="btn btn-outline-success" href="{{ route('/download_site') }}">
+        網站下載
+      </a>
+    </div>
+  </div>
+
+
+
+</div>
+
+@endsection
