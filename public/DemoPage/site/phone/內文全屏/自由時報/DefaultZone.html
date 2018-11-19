@@ -1,0 +1,1951 @@
+<!DOCTYPE html><html><head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="robots" content="index,follow">
+    <meta name="ltn:device" content="M">
+    <meta property="fb:app_id" content="140490219413038">
+    <meta property="og:type" content="website">
+    <title>&#x81EA;&#x7531;&#x6642;&#x5831;&#x96FB;&#x5B50;&#x5831;</title>
+<meta property="og:title" content="&#x81EA;&#x7531;&#x6642;&#x5831;&#x96FB;&#x5B50;&#x5831;">
+<meta name="keywords" content="&#x81EA;&#x7531;&#x6642;&#x5831;,&#x81EA;&#x7531;&#x96FB;&#x5B50;&#x5831;,&#x81EA;&#x7531;&#x6642;&#x5831;&#x96FB;&#x5B50;&#x5831;,libertytimes,ltn">
+<meta property="og:url" content="http://www.ltn.com.tw/">
+<link rel="canonical" href="http://www.ltn.com.tw/">
+    <meta name="google-site-verification" content="sPp7Kk7Tqa6LK-wWblS9Fby069Wpy4DNTaMyjKHxveU">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script>window.jQuery || document.write(unescape('%3Cscript src="//news.ltn.com.tw/js/jquery/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+    <script>
+                var mobileServer = 'm.ltn.com.tw',
+            newsServer = 'news.ltn.com.tw',
+            webServer = 'www.ltn.com.tw',
+            cachePath = 'http://cache.ltn.com.tw'    </script>
+    <script>
+        var article_status = '0';
+    </script>
+
+            <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function () {
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' === document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+    </script>
+    <script>
+        // 廣告設定檔
+        var dfp = {"B1":{"slot":"B1","id":"\/21202031\/02-mobile-home-B1","size":"getSize()","div":"ad-B1","collapse":1},"B2":{"slot":"B2","id":"\/21202031\/02-mobile-home-B2","size":"getSize()","div":"ad-B2","collapse":1},"B3":{"slot":"B3","id":"\/21202031\/02-mobile-home-B3","size":"getSize()","div":"ad-B3","collapse":1},"B4":{"slot":"B4","id":"\/21202031\/02-mobile-home-B4","size":"getSize()","div":"ad-B4","collapse":1},"I1":{"slot":"I1","id":"\/21202031\/02-mobile-home-I1-bottom","size":"['fluid', [320, 50], [1, 1], [320, 100]]","div":"ad-I1","collapse":1}};
+
+        googletag.cmd.push(function () {
+            if (article_status === '1') {
+                $(function () {
+                    marquee();
+                });
+                return;
+            }
+
+            for (var key in dfp) {
+                if (dfp.hasOwnProperty(key)) {
+                    googletag.defineSlot(dfp[key]['id'], eval(dfp[key]['size']),
+                        dfp[key]['div']).addService(googletag.pubads());
+                }
+            }
+
+            /*RTA Script TOP*/
+            // var crtg_split = (crtg_content || '').split(';');
+            // var pubads = googletag.pubads();
+            // for(var i=1;i<crtg_split.length;i++) {
+            // 	pubads.setTargeting("" + (crtg_split[i-1].split('='))[0] + "", "" + (crtg_split[i-1].split('='))[1] + "");
+            // }
+            /**/
+            /*RTA Script END*/
+
+            googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+                // 版位ID
+                var slotElementId = event.slot.getSlotElementId();
+                // 檢驗是否為想要處理的廣告
+                var match_slot = function (search) {
+                    var type = typeof search;
+                    switch (type) {
+                        case 'string':
+                            var slot_div = 'ad-' + search;
+                            return (slot_div === slotElementId);
+                        case 'object':
+                            return (search.indexOf(slotElementId.replace(/^ad-/, '')) >= 0);
+                        default:
+                            return false;
+                    }
+                };
+
+                // 沒有廣告
+                if (event.isEmpty) {
+                    console.log(slotElementId + " 是空的");
+
+                    // 移除多餘標籤
+                    var check_empty_ad_list = ['IR1'];
+
+                    if (match_slot(check_empty_ad_list)) {
+                        // 移除廣告本身
+                        $('#' + slotElementId).remove();
+                    }
+
+                    if (match_slot("I1")) {
+                        marquee();
+                    }
+
+                    return;
+                }
+
+                // 置底浮水印廣告，調整畫面不要蓋住footer
+                if (match_slot('I1')) {
+                    // I1廣告元素
+                    var adI1Element = $('#ad-I1');
+                    // 廣告的高度
+                    var ad_height = event.size[1];
+
+                    // 調整廣告位置與footer墊底高度
+                    adI1Element.css('height', ad_height + 'px');
+                    $('.door-bottom-space').show().css('height', ad_height + 'px');
+
+                    // 顯示關閉按鈕並綁定關閉事件
+                    if (ad_height > 50) {
+                        adI1Element.find('.close').click(function () {
+                            adI1Element.fadeOut(100);
+                            $('.door-bottom-space').fadeOut(100);
+                        });
+                        // 延遲兩秒後出現按鈕
+                        setTimeout(function () {
+                            adI1Element.find('.close').fadeIn(100);
+                        }, 2000);
+                    }
+                    return;
+                }
+
+                // 內頁文中廣告
+                if (match_slot("IR1")) {
+                    // 顯示「請繼續往下閱讀...」(class="before_ir"在cache中寫的)
+                    $('p.before_ir').fadeIn(200);
+                    // 顯示廣告文章段落
+                    $('p.after_ir').fadeIn(200);
+                }
+            });
+            googletag.enableServices();
+        });
+    </script>
+
+    <script type="text/javascript" src="js/all.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+    <script type="text/javascript" src="js/share.js"></script>
+    <script type="text/javascript" src="js/video_resize.js"></script>
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/layout.css">    <link rel="stylesheet" href="css/search.css">
+    <link rel="apple-touch-icon" href="images/ltn.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ltn.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script>
+        cookies_m = new cookies_admin_mode('m.ltn.com.tw');
+    </script>
+
+    <script type="text/javascript" src="js/c.js"></script>
+
+    <script>
+        var pvServer = "pv.ltn.com.tw";
+
+        function ltncookies_news(key, value, time_sec) {
+            var fn = ltncookies || function () {
+            };
+            fn(key, value, time_sec);
+        }
+
+        $(function () {
+            send_pv();
+        });
+
+        function send_pv() {
+            try {
+                var domain = location.hostname; //ent.ltn.com.tw
+                var type = "";
+                var a_group = "";
+                var a_no = "";
+
+                var uri = location.pathname;
+
+                if (uri == '') {
+
+                } else if (/^\/section\//.test(uri)) {
+                    var s = location.pathname.split("/");
+                    type = s[2];
+                } else if (/^\/news\//.test(uri)) {
+                    var s = location.pathname.split("/");
+                    type = s[2];
+                    a_group = s[3];
+                    a_no = s[4];
+                }
+                getScrNews(domain, type, a_group, a_no);
+            } catch (e) {
+
+            }
+        }
+    </script>
+
+    <!-- Andioid呼叫 CSS 開始 -->
+    <script>
+        if (navigator.userAgent.match(/Android/i)) {
+            loadCSS('assets/css/style_android.css');
+        }
+
+        function loadCSS(url) {
+            $("head").append("<link>");
+            var css = $("head").children(":last");
+            css.attr({
+                rel: "stylesheet",
+                type: "text/css",
+                href: url
+            });
+        }
+    </script>
+    <!-- appier Script TOP-->
+<script src="js/pb.js"></script>
+<!--appier Script END-->    <!-- Andioid呼叫 CSS 結束 -->
+    <!-- Alexa Code -->
+<script>
+    _atrk_opts = { atrk_acct:"LS4hj1a8Dy002+", domain:"ltn.com.tw",dynamic: true};
+    (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<!-- Alexa Code -->
+
+<!-- Comscore Code -->
+<script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "18368781" });
+    (function() {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+</script>
+<!-- Comscore Code -->
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '124629834835104');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="tr"></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Fingerprint -->
+<script src="js/fingerprint2.min.js"></script>
+<!-- Fingerprint -->
+</head>
+
+<body>
+
+<script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-31404335-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('require', 'linkid', 'linkid.js');
+
+    if (typeof(category) != 'undefined') {
+        ga('set', 'dimension2', category);
+    }
+
+    ga('send', 'pageview');
+
+    _atrk_opts = {atrk_acct: "LS4hj1a8Dy002+", domain: "ltn.com.tw", dynamic: true};
+    (function () {
+        var as = document.createElement('script');
+        as.type = 'text/javascript';
+        as.async = true;
+        as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js";
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(as, s);
+    })();
+    var _comscore = _comscore || [];
+    _comscore.push({c1: "2", c2: "18368781"});
+
+    (function () {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+        s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+</script>
+
+<noscript>
+    <img src="images/atrk.gif" style="display:none" height="1" width="1" alt=""><img src="p2">
+</noscript>
+<h1 class="boxTitle" data-desc="&#x7F6E;&#x9802;&#x9078;&#x55AE;">
+    
+    <div class="h1box">
+        <div class="menu"><a id="menu" class="showmenu" data-desc="&#x9078;&#x55AE;"></a></div>
+        <div id="search_btn" class="showsearch boxInput" data-desc="&#x641C;&#x5C0B;"></div>
+        <a href="./" class="logo" data-desc="&#x81EA;&#x7531;&#x6642;&#x5831;"></a>
+    </div>
+
+    <link rel="stylesheet" href="css/marquee3.css">
+<script type="text/javascript" src="js/marquee3.js"></script>
+
+<div class="marquee3">
+
+<div class="marquee-bottom3 marquee-bottom-head2 boxTitle boxText" data-desc="&#x8DD1;&#x99AC;&#x71C8;&#x9078;&#x55AE;">
+    <div class="marqueeTab3">
+        <div class="marqueeBox3 marqueeBox4">
+            <a href="http://m.ltn.com.tw/" class="m mar_1"><span><b>&#x81EA;&#x7531;</b>&#x9996;&#x9801;</span></a>
+            <a href="http://m.ltn.com.tw/list/BreakingNews" class="m mar_2"><span>&#x5373;&#x6642;</span></a>
+            <a href="http://m.ltn.com.tw/newspaper" class="m mar_3"><span>&#x5831;&#x7D19;</span></a>
+            <a href="http://video.ltn.com.tw/" class="m mar_14"><span>&#x5F71;&#x97F3;</span></a>
+			<a href="http://ec.ltn.com.tw/" class="m mar_16"><span>&#x8CA1;&#x7D93;</span></a>
+            <a href="http://sports.ltn.com.tw/" class="m mar_4"><span>&#x9AD4;&#x80B2;</span></a>
+            <a href="http://ent.ltn.com.tw/" class="m mar_5"><span>&#x5A1B;&#x6A02;</span></a>
+            <a href="http://talk.ltn.com.tw/" class="m mar_6"><span>&#x8A55;&#x8AD6;</span></a>
+            <a href="http://m.ltn.com.tw/video/ly/1" class="m mar_12"><span>&#x570B;&#x6703;</span></a>
+            <a href="http://istyle.ltn.com.tw/" class="m mar_7"><span>&#x6642;&#x5C1A;</span></a>
+            <a href="http://3c.ltn.com.tw/" class="m mar_8"><span>3C</span></a>
+            <a href="http://auto.ltn.com.tw/" class="m mar_9"><span>&#x6C7D;&#x8ECA;</span></a>
+            <a href="http://health.ltn.com.tw/" class="m mar_15"><span>&#x5065;&#x5EB7;</span></a>
+            <a href="http://playing.ltn.com.tw/" class="m mar_13"><span>&#x73A9;&#x5496;</span></a>
+            <a href="http://food.ltn.com.tw/" class="m mar_10"><span>&#x98DF;&#x8B5C;</span></a>
+            <a href="http://estate.ltn.com.tw/" class="m mar_11"><span>&#x5730;&#x7522;</span></a>
+            <a href="http://m.ltn.com.tw/project" class="m mar_2"><span>&#x5C08;&#x5340;</span></a>
+        </div>
+        <div class="ani_left"><img src="images/ani_left02.png"></div>
+        <div class="ani_right"><img src="images/ani_right02.png"></div>
+    </div>
+    <div class="marqueeTit3"></div>
+</div>
+<div class="marquee-bottom3 marquee-bottom-space3"></div>
+</div>
+<script>
+	if(!cookies_m.isPC()){
+$(function(){
+	var ltn_url = "m.ltn.com.tw";
+	var c_url = "3c.ltn.com.tw";
+	var auto_url = "auto.ltn.com.tw";
+	var ent_url = "ent.ltn.com.tw";
+	var estate_url = "estate.ltn.com.tw";
+	var style_url = "istyle.ltn.com.tw";
+	var sport_url = "sports.ltn.com.tw";
+	var food_url = "food.ltn.com.tw";
+	var talk_url = "talk.ltn.com.tw";
+	var market_url = "market.ltn.com.tw";
+	var health_url = "health.ltn.com.tw";
+	var features = "features.ltn.com.tw";
+
+	var win = $(window);
+	var chk_close_cookie = localStorage.getItem("ltn_appevent");
+	var ltn_appevent_time_chk = $.now();
+	var ltn_appevent_limit = 1000*60*60*24; //1 day
+	if (chk_close_cookie > 0) {
+		$(".appevent").addClass('close');
+	} else {
+		if (document.domain == ltn_url ||
+			document.domain == health_url ||
+			document.domain == features) {
+			$('h1').prepend($('.appevent'));
+			$('.h1box').css('float', 'left');
+			var top = win.scrollTop();
+			if (top < 200 && chk_close_cookie != 1) {
+				var h1_height = $('h1').height() + 73;
+				$('#rightmain').css('padding-top', h1_height + 'px');
+				$('.appevent').show();
+			}
+		} else {
+			$('h1').prepend($('.appevent'));
+			if (chk_close_cookie != 1) {
+				$('.appevent').show();
+				if (document.domain == auto_url || document.domain == ent_url || document.domain == estate_url)
+					var h1_height = $('h1').height() + $('.appevent').height();
+				else if (document.domain == c_url)
+					var h1_height = 76;
+				else if (document.domain == talk_url)
+					var h1_height = $('h1').height() - 110;
+				else
+					var h1_height = $('h1').height() + $('.appevent').height() + 48;
+				$('#rightmain').css('padding-top', h1_height + 'px');
+			}
+
+			if (document.domain == food_url) {
+				$('.h1box').css('position', 'absolute');
+				$('.marquee3').css('position', 'absolute');
+				var prev_top = 0;
+				prev_top = set_top_hi_div('appevent', prev_top);
+				prev_top = set_top_hi_div('h1box', prev_top);
+				prev_top = set_top_hi_div('marquee3', prev_top);
+				prev_top = set_top_hi_div('tabbar', prev_top);
+				set_real_h1_height();
+				h1_height = $('h1').height() - 52;
+				$('#rightmain').css('padding-top', h1_height + 'px');
+			} else {
+				var prev_top = 0;
+				prev_top = set_top_hi_div('appevent', prev_top);
+				prev_top = set_top_hi_div('h1box', prev_top);
+				prev_top = set_top_hi_div('marquee3', prev_top);
+				prev_top = set_top_hi_div('tabbar', prev_top);
+				set_real_h1_height();
+			}
+			if (document.domain == talk_url) {
+				h1_height = $('h1').height() - 100;
+				console.log(h1_height);
+				$('#rightmain').css('padding-top', h1_height + 'px');
+			}
+			if (document.domain == market_url) {
+				h1_height = $('h1').height();
+				$('#rightmain').css('padding-top', h1_height + 'px');
+			}
+		}
+
+		$('.appevent .close').click(function(){
+			var ltn_appevent_time_chk = $.now();
+			localStorage.setItem("ltn_appevent", ltn_appevent_time_chk);
+			$(".appevent").fadeOut(300);
+			$(".appevent").addClass('close');
+			var h1_height = $('h1').height() - 73;
+			$('h1').css('height', h1_height);
+			if (document.domain == auto_url)
+				h1_height -= 40;
+			else if (document.domain == talk_url)
+				h1_height -= 90;
+			else if (document.domain == c_url)
+				h1_height = 6;
+			else if (document.domain == food_url)
+				h1_height = $('#rightmain').position().top - 73;
+
+			$('#rightmain').css('padding-top', h1_height + 'px');
+			if (document.domain == food_url) {
+				var prev_top = 0;
+				prev_top = set_top_hi_div('h1box', prev_top);
+				prev_top = set_top_hi_div('marquee3', prev_top);
+				prev_top = set_top_hi_div('tabbar', prev_top);
+				set_real_h1_height(prev_top-5);
+			} else if (document.domain != ltn_url &&
+				document.domain != health_url &&
+				document.domain != features) {
+				var prev_top = 0;
+				prev_top = set_top_hi_div('h1box', prev_top);
+				prev_top = set_top_hi_div('marquee3', prev_top);
+				prev_top = set_top_hi_div('tabbar', prev_top);
+				set_real_h1_height(prev_top);
+			}
+			return false;
+		})
+
+		win.bind("scroll", function (event) {
+			var top = win.scrollTop();
+			if(top >= 40){
+				$(".h1box").fadeOut(300).hide();
+			} else {
+				$(".h1box").fadeIn(300).show();
+			}
+			if (!$('.appevent').hasClass('close')) {
+				if(top >= 40){
+					$(".appevent").fadeOut(300).hide();
+				} else {
+					$(".appevent").fadeIn(300).show();
+				}
+			}
+			if (document.domain == food_url) {
+				$('.h1box').css('position', 'absolute');
+				$('.marquee3').css('position', 'absolute');
+				var prev_top = 0;
+				prev_top = set_top_hi_div('appevent', prev_top);
+				prev_top = set_top_hi_div('h1box', prev_top);
+				prev_top = set_top_hi_div('marquee3', prev_top);
+				prev_top = set_top_hi_div('tabbar', prev_top);
+				set_real_h1_height();
+			} else if (document.domain != ltn_url &&
+				document.domain != health_url &&
+				document.domain != features) {
+				var prev_top = 0;
+				prev_top = set_top_hi_div('appevent', prev_top);
+				prev_top = set_top_hi_div('h1box', prev_top);
+				prev_top = set_top_hi_div('marquee3', prev_top);
+				prev_top = set_top_hi_div('tabbar', prev_top);
+			}
+			set_real_h1_height();
+		});
+	}
+	function set_top_hi_div(name, prev_top){
+		var this_h = 0;
+		if ($('.' + name).length > 0 && $('.' + name).is(":visible")) {
+			this_h = $('.' + name).outerHeight() + prev_top
+		}
+		$('.' + name).css('top', prev_top);
+		return this_h;
+	}
+	function set_real_h1_height(set_height = 0)
+	{
+		if (set_height > 0) {
+			$('h1').css('height', set_height);
+			return false;
+		}
+		var h1box_h = 0;
+		var tabbar_h = 0;
+		var marquee3_h = 0;
+		var appevent_h = 0;
+		if ($('.h1box').length > 0 && $('.h1box').is(":visible")) {
+			h1box_h = $('.h1box').height();
+		}
+		if ($('.tabbar').length > 0 && $('.tabbar').is(":visible")) {
+			tabbar_h = $('.tabbar').height();
+		}
+		if ($('.marquee3').length > 0 && $('.marquee3').is(":visible")) {
+			marquee3_h = $('.marquee3').height();
+		}
+		if ($('.appevent').length > 0 && $('.appevent').is(":visible")) {
+			appevent_h = $('.appevent').height();
+		}
+		total_h = h1box_h + tabbar_h + marquee3_h + appevent_h;
+
+		if (document.domain == ltn_url ||
+			document.domain == health_url ||
+			document.domain == features)
+			$('h1').css('height', 'auto');
+		else if (document.domain == food_url) {
+			total_h -= 2;
+			$('h1').css('height', total_h);
+		}
+		else
+			$('h1').css('height', total_h);
+	}
+})
+	}
+</script>
+
+<link rel="stylesheet" href="css/appevent.css">
+<div class="appevent">
+	<a class="close" data-desc="&#x95DC;&#x9589;&#x6D3B;&#x52D5;banner">&#x2573;</a>
+	<img src="images/app_icon.png">
+	<p>&#x81EA;&#x7531;&#x6642;&#x5831;APP<br><span>&#x770B;&#x65B0;&#x805E;&#x53C8;&#x62BD;&#x734E;</span></p>
+	<a href="http://iservice.ltn.com.tw/app/app.html" class="load" data-desc="app&#x4E0B;&#x8F09;">&#x7ACB;&#x5373;&#x4E0B;&#x8F09;</a>
+</div>
+
+    <script>
+        $(function () {
+            $('.marqueeBox3').removeClass('marqueeBox4');
+                        marquee3(1);
+                    });
+    </script>
+</h1>
+
+<div id="main">
+    
+    <span class="top-hide"><div id="topr" class="topr boxTitle" data-desc="TOP"></div></span>
+
+    <div id="NullHeader"></div>
+
+        <script type="text/javascript" src="js/leftmenu.js"></script>
+    <link rel="stylesheet" href="css/leftmenu.css">
+
+<div id="leftmenu" class="leftmenu_c" style="display:none;">
+    <div class="flex_home boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x81EA;&#x7531;&#x96FB;&#x5B50;&#x5831;">
+        <a href="http://m.ltn.com.tw/" class="full"><div class="m15"></div>&#x81EA;&#x7531;&#x96FB;&#x5B50;&#x5831;</a>
+    </div>
+    <div class="sort flex_ch" id="sortindex">&#x983B;&#x9053;</div>
+    <!-- 新聞總覽 -->
+    <div class="flex_news boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x65B0;&#x805E;&#x7E3D;&#x89BD;">
+        <div class="full newsmain boxInput" data-desc="&#x65B0;&#x805E;&#x7E3D;&#x89BD;_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c0"></div>&#x65B0;&#x805E;&#x7E3D;&#x89BD;<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://m.ltn.com.tw/list/BreakingNews">&#x5373;&#x6642;</a>
+            <a href="http://m.ltn.com.tw/newspaper">&#x5831;&#x7D19;</a>
+            <div class="sort">&#x65B0;&#x805E;&#x5206;&#x985E;</div>
+            <a href="http://m.ltn.com.tw/section/focus">&#x7126;&#x9EDE;</a>
+            <a href="http://video.ltn.com.tw/">&#x5F71;&#x97F3;</a>
+            <a href="http://m.ltn.com.tw/section/politics">&#x653F;&#x6CBB;</a>
+            <a href="http://m.ltn.com.tw/section/society">&#x793E;&#x6703;</a>
+            <a href="http://talk.ltn.com.tw/">&#x8A00;&#x8AD6;</a>
+            <a href="http://m.ltn.com.tw/section/local">&#x5730;&#x65B9;</a>
+            <a href="http://ec.ltn.com.tw">&#x8CA1;&#x7D93;</a>
+            <a href="http://m.ltn.com.tw/section/world">&#x570B;&#x969B;</a>
+            <a href="http://ent.ltn.com.tw/">&#x5A1B;&#x6A02;</a>
+            <a href="http://sports.ltn.com.tw/">&#x9AD4;&#x80B2;</a>
+            <a href="http://m.ltn.com.tw/section/consumer">&#x6D88;&#x8CBB;</a>
+            <a href="http://m.ltn.com.tw/section/life">&#x751F;&#x6D3B;</a>
+            <a href="http://m.ltn.com.tw/project">&#x5C08;&#x5340;</a>
+            <a href="http://m.ltn.com.tw/section/supplement">&#x526F;&#x520A;</a>
+            <div class="sortline"></div>
+            <a href="https://www.facebook.com/m.ltn.tw" target="_blank" class="right_all"><div class="m21"></div><span>&#x81EA;&#x7531;&#x6642;&#x5831;</span>&#x7C89;&#x7D72;&#x5718;</a>
+            <a href="http://iservice.ltn.com.tw/app/app.html" target="_blank" class="right_all"><div class="m24"></div><span>&#x81EA;&#x7531;&#x96FB;&#x5B50;&#x5831;</span>APP</a>
+        </div>
+    </div>
+    <!-- 影音 -->
+    <div class="flex_video boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x81EA;&#x7531;&#x5F71;&#x97F3;">
+        <div class="full newsmain boxInput" data-desc="&#x81EA;&#x7531;&#x5F71;&#x97F3;_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c12"></div>&#x81EA;&#x7531;&#x5F71;&#x97F3;<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://video.ltn.com.tw/">&#x5F71;&#x97F3;&#x9996;&#x9801;</a>
+            <a href="http://video.ltn.com.tw/m/list/PLI7xntdRxhw0WHZ8M3l5kcZoqbBsrI_jg">&#x653F;&#x6CBB;&#x98A8;&#x5411;&#x7403;</a>
+            <a href="http://video.ltn.com.tw/m/list/PLI7xntdRxhw15955hZeJehkLxnS0GmfKp">&#x9A5A;&#x7206;&#x65B0;&#x805E;&#x7DDA;</a>
+            <a href="http://video.ltn.com.tw/m/list/PLCvAZ9B-QRHMlV-Ek_VO3Sz1xCz8NGiid">&#x5C0F;&#x7DE8;&#x7CBE;&#x9078;</a>
+            <a href="http://video.ltn.com.tw/m/list/PLI7xntdRxhw3GL_NUdypnk72_x_RuIXDg">&#x751F;&#x6D3B;&#x6307;&#x5357;&#x91DD;</a>
+            <a href="http://video.ltn.com.tw/m/list/PLI7xntdRxhw3wvo3_BFusfhOiuuiMxkhG">&#x8CA1;&#x7D93;e&#x9EDE;&#x901A;</a>
+            <a href="http://video.ltn.com.tw/m/list/PLI7xntdRxhw3_Xs3l4gLfxd5AXci51Hng">&#x6C7D;&#x8ECA;&#x8A66;&#x99D5;</a>
+            <a href="http://video.ltn.com.tw/m/list/PLI7xntdRxhw3U812aJivjuBgMaTKVDevI">&#x5F71;&#x97F3;&#x7CBE;&#x9078;</a>
+            <a href="http://video.ltn.com.tw/m/list/b5a366a1394e4784227788de38820d90">&#x5982;&#x8679;&#x97F3;&#x6A02;&#x6703;</a>
+        </div>
+    </div>
+	<!-- 財經 -->
+    <div class="flex_ec boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x81EA;&#x7531;&#x8CA1;&#x7D93;">
+        <div class="full newsmain boxInput" data-desc="&#x81EA;&#x7531;&#x8CA1;&#x7D93;_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c15"></div>&#x81EA;&#x7531;&#x8CA1;&#x7D93;<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://ec.ltn.com.tw/">&#x8CA1;&#x7D93;&#x9996;&#x9801;</a>
+            <a href="http://ec.ltn.com.tw/m/list/strategy">&#x8CA1;&#x7D93;&#x653F;&#x7B56;</a>
+            <a href="http://ec.ltn.com.tw/m/list/international">&#x570B;&#x969B;&#x8CA1;&#x7D93;</a>
+            <a href="http://ec.ltn.com.tw/m/list/securities">&#x8B49;&#x5238;&#x7522;&#x696D;</a>
+            <a href="http://ec.ltn.com.tw/m/list/estate">&#x623F;&#x7522;&#x8CC7;&#x8A0A;</a>
+            <a href="http://ec.ltn.com.tw/m/list/paper">&#x5831;&#x7D19;</a>
+            <a href="http://m.ltn.com.tw/newspaper/weeklybiz">&#x8CA1;&#x7D93;&#x9031;&#x5831;</a>
+            <a href="http://ec.ltn.com.tw/m/fund">&#x57FA;&#x91D1;&#x67E5;&#x8A62;</a>
+            <a href="https://www.facebook.com/ec.ltn.tw" target="_blank" class="right_all"><div class="m21"></div><span>&#x81EA;&#x7531;&#x8CA1;&#x7D93;</span>&#x7C89;&#x7D72;&#x5718;</a>
+        </div>
+    </div>
+    <!-- 體育 -->
+    <div class="flex_sport boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x81EA;&#x7531;&#x9AD4;&#x80B2;">
+        <div class="full newsmain boxInput" data-desc="&#x81EA;&#x7531;&#x9AD4;&#x80B2;_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c7"></div>&#x81EA;&#x7531;&#x9AD4;&#x80B2;<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://sports.ltn.com.tw/">&#x9AD4;&#x80B2;&#x9996;&#x9801;</a>
+            <a href="http://sports.ltn.com.tw/newspaper">&#x5831;&#x7D19;</a>
+            <a href="http://sports.ltn.com.tw/baseball">&#x68D2;&#x7403;</a>
+            <a href="http://sports.ltn.com.tw/basketball">&#x7C43;&#x7403;</a>
+            <a href="http://sports.ltn.com.tw/athletics">&#x7AF6;&#x6280;</a>
+            <a href="http://sports.ltn.com.tw/tennis">&#x7DB2;&#x7403;</a>
+            <a href="http://sports.ltn.com.tw/football">&#x8DB3;&#x7403;</a>
+            <a href="http://sports.ltn.com.tw/leisure">&#x4F11;&#x9592;</a>
+            <a href="http://sports.ltn.com.tw/gaming">&#x96FB;&#x7AF6;</a>
+            <a href="http://sports.ltn.com.tw/live">&#x5BE6;&#x6CC1;</a>
+            <a href="http://sports.ltn.com.tw/video">&#x5F71;&#x97F3;</a>
+            <a href="http://sports.ltn.com.tw/interview">&#x5C08;&#x6B04;</a>
+            <a href="https://www.facebook.com/sport.ltn.tw" target="_blank" class="right_all"><div class="m21"></div><span>&#x81EA;&#x7531;&#x9AD4;&#x80B2;</span>&#x7C89;&#x7D72;&#x5718;</a>
+        </div>
+    </div>
+    <!-- 自由娛樂 -->
+    <div class="flex_ent boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x81EA;&#x7531;&#x5A1B;&#x6A02;">
+        <div class="full newsmain boxInput" data-desc="&#x81EA;&#x7531;&#x5A1B;&#x6A02;_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c4"></div>&#x81EA;&#x7531;&#x5A1B;&#x6A02;<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://ent.ltn.com.tw/">&#x5A1B;&#x6A02;&#x9996;&#x9801;</a>
+            <a href="http://ent.ltn.com.tw/m/breakingnews">&#x5373;&#x6642;&#x65B0;&#x805E;</a>
+            <a href="http://ent.ltn.com.tw/m/hotnews">&#x5A49;&#x541B;&#x63A8;</a>
+            <a href="http://ent.ltn.com.tw/m/fashion">&#x6642;&#x5C1A;&#x6D88;&#x8CBB;</a>
+            <a href="http://ent.ltn.com.tw/m/arts">&#x85DD;&#x8853;&#x6587;&#x5316;</a>
+            <a href="http://ent.ltn.com.tw/m/family">&#x5BB6;&#x5EAD;</a>
+            <a href="http://ent.ltn.com.tw/m/literature">&#x6587;&#x5B78;</a>
+            <a href="http://ent.ltn.com.tw/m/travel">&#x65C5;&#x904A;</a>
+            <a href="http://ent.ltn.com.tw/m/sexuality">&#x5169;&#x6027;</a>
+            <a href="http://ent.ltn.com.tw/m/artist">&#x85DD;&#x4EBA;X&#x6A94;&#x6848;</a>
+            <a href="https://www.facebook.com/ent.ltn.tw" target="_blank" class="right_all"><div class="m21"></div><span>&#x81EA;&#x7531;&#x5A1B;&#x6A02;</span>&#x7C89;&#x7D72;&#x5718;</a>
+        </div>
+    </div>
+    <!-- 自由評論 -->
+    <div class="flex_talk boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x81EA;&#x7531;&#x8A55;&#x8AD6;&#x7DB2;">
+        <div class="full newsmain boxInput" data-desc="&#x81EA;&#x7531;&#x8A55;&#x8AD6;&#x7DB2;_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c5"></div>&#x81EA;&#x7531;&#x8A55;&#x8AD6;&#x7DB2;<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://talk.ltn.com.tw/" class="left_all">&#x8A55;&#x8AD6;&#x9996;&#x9801;</a>
+            <div class="sort">&#x5167;&#x5BB9;&#x5206;&#x985E;</div>
+            <a href="http://talk.ltn.com.tw/pe">&#x653F;&#x7D93;</a>
+            <a href="http://talk.ltn.com.tw/society">&#x793E;&#x6703;</a>
+            <a href="http://talk.ltn.com.tw/life">&#x751F;&#x6D3B;</a>
+            <a href="http://talk.ltn.com.tw/international">&#x570B;&#x969B;</a>
+            <a href="http://talk.ltn.com.tw/people">&#x540D;&#x4EBA;</a>
+            <div class="sort">&#x5C08;&#x984C;&#x8A55;&#x8AD6;</div>
+            <a href="http://talk.ltn.com.tw/opinion"><li><div></div>&#x8A00;&#x8AD6;</li></a>
+            <a href="http://talk.ltn.com.tw/column"><li><div></div>&#x5C08;&#x6B04;</li></a>
+            <a href="http://talk.ltn.com.tw/media"><li><div></div>&#x5A92;&#x9AD4;</li></a>
+            <a href="http://talk.ltn.com.tw/forum"><li><div></div>&#x6295;&#x66F8;</li></a>
+            <div class="sortline"></div>
+            <a href="https://www.facebook.com/talk.ltn" target="_blank" class="right_all"><div class="m21"></div><span>&#x81EA;&#x7531;&#x8A55;&#x8AD6;&#x7DB2;</span>&#x7C89;&#x7D72;&#x5718;</a>
+        </div>
+    </div>
+    <!-- 新國會 -->
+    <div class="flex_live boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x570B;&#x6703;&#x76F4;&#x64A5;">
+        <div class="full newsmain boxInput" data-desc="&#x570B;&#x6703;&#x76F4;&#x64A5;_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c10"></div>&#x570B;&#x6703;LIVE<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://m.ltn.com.tw/video/ly/1">&#x9662;&#x6703;</a>
+            <a href="http://m.ltn.com.tw/video/ly/2">&#x5167;&#x653F;</a>
+            <a href="http://m.ltn.com.tw/video/ly/2">&#x5167;&#x653F;</a>
+            <a href="http://m.ltn.com.tw/video/ly/4">&#x7D93;&#x6FDF;</a>
+            <a href="http://m.ltn.com.tw/video/ly/5">&#x8CA1;&#x653F;</a>
+            <a href="http://m.ltn.com.tw/video/ly/7">&#x4EA4;&#x901A;</a>
+            <a href="http://m.ltn.com.tw/video/ly/6">&#x6559;&#x80B2;/&#x6587;&#x5316;</a>
+            <a href="http://m.ltn.com.tw/video/ly/3">&#x5916;&#x4EA4;/&#x570B;&#x9632;</a>
+            <a href="http://m.ltn.com.tw/video/ly/8">&#x53F8;&#x6CD5;/&#x6CD5;&#x5236;</a>
+            <a href="http://m.ltn.com.tw/video/ly/9">&#x793E;&#x798F;/&#x885B;&#x74B0;</a>
+        </div>
+    </div>
+    <!-- 時尚 -->
+    <div class="flex_style boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:iStyle&#x6642;&#x5C1A;&#x983B;&#x9053;">
+        <div class="full newsmain boxInput" data-desc="iStyle&#x6642;&#x5C1A;&#x983B;&#x9053;_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c6"></div>iStyle&#x6642;&#x5C1A;&#x983B;&#x9053;<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://istyle.ltn.com.tw/">&#x6642;&#x5C1A;&#x9996;&#x9801;</a>
+            <a href="http://istyle.ltn.com.tw/m/fashion">&#x6D41;&#x884C;&#x6642;&#x5C1A;</a>
+            <a href="http://istyle.ltn.com.tw/m/beauty">&#x7F8E;&#x599D;&#x8A71;&#x984C;</a>
+            <a href="http://istyle.ltn.com.tw/m/lifestyle">&#x54C1;&#x5473;&#x751F;&#x6D3B;</a>
+            <a href="http://istyle.ltn.com.tw/m/love-sex">&#x5169;&#x6027;&#x60C5;&#x611B;</a>
+            <a href="http://istyle.ltn.com.tw/m/blog">&#x540D;&#x5BB6;&#x5C08;&#x6B04;</a>
+            <a href="https://instagram.com/istyle_ltn" target="_blank" class="listsmall">Instagram</a>
+                        <a href="https://www.facebook.com/istyle.ltn.tw" target="_blank" class="right_all"><div class="m21"></div><span>iStyle</span>&#x7C89;&#x7D72;&#x5718;</a>
+        </div>
+    </div>
+    <!-- 科技 -->
+    <div class="flex_3c boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:3C&#x79D1;&#x6280;">
+        <div class="full newsmain boxInput" data-desc="3C&#x79D1;&#x6280;_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c1"></div>3C&#x79D1;&#x6280;<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://3c.ltn.com.tw/">3C&#x9996;&#x9801;</a>
+            <a href="http://3c.ltn.com.tw/m/cubelist/mobile">&#x667A;&#x6167;&#x624B;&#x6A5F;</a>
+            <a href="http://3c.ltn.com.tw/m/cubelist/howto">&#x5BE6;&#x7528;&#x79D8;&#x6280;</a>
+            <a href="http://3c.ltn.com.tw/m/cubelist/lifetechnology">&#x79D1;&#x6280;&#x8DA3;&#x805E;</a>
+            <a href="http://3c.ltn.com.tw/m/cubelist/internet">&#x7DB2;&#x8DEF;&#x793E;&#x7FA4;</a>
+            <a href="http://3c.ltn.com.tw/m/cubelist/camera">&#x597D;&#x651D;&#x76F8;&#x6A5F;</a>
+            <a href="http://3c.ltn.com.tw/m/cubelist/computer">&#x96FB;&#x8166;&#x61C9;&#x7528;</a>
+            <a href="http://3c.ltn.com.tw/m/cubelist/elife">&#x5BB6;&#x96FB;&#x5A1B;&#x6A02;</a>
+            <a href="https://www.facebook.com/m.3c.ltn.tw" target="_blank" class="right_all"><div class="m21"></div><span>3C&#x79D1;&#x6280;</span>&#x7C89;&#x7D72;&#x5718;</a>
+        </div>
+    </div>
+    <!-- 汽車 -->
+    <div class="flex_auto boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x6C7D;&#x8ECA;&#x983B;&#x9053;">
+        <div class="full newsmain boxInput" data-desc="&#x6C7D;&#x8ECA;&#x983B;&#x9053;_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c2"></div>&#x6C7D;&#x8ECA;&#x983B;&#x9053;<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://auto.ltn.com.tw/">&#x6C7D;&#x8ECA;&#x9996;&#x9801;</a>
+            <a href="http://auto.ltn.com.tw/list/2">&#x570B;&#x5167;</a>
+            <a href="http://auto.ltn.com.tw/list/3">&#x570B;&#x969B;</a>
+            <a href="http://auto.ltn.com.tw/list/4">&#x8A66;&#x99D5;</a>
+            <a href="http://auto.ltn.com.tw/list/43">&#x6CD5;&#x898F;</a>
+            <a href="http://auto.ltn.com.tw/list/44">&#x54C1;&#x724C;</a>
+            <a href="http://auto.ltn.com.tw/list/7">&#x611B;&#x8ECA;</a>
+            <a href="http://auto.ltn.com.tw/Car">&#x898F;&#x683C;</a>
+                        <a href="https://www.facebook.com/auto.ltn" target="_blank" class="right_all event"><div class="m21"></div><span>&#x6C7D;&#x8ECA;&#x983B;&#x9053;</span>&#x6C7D;&#x8ECA;&#x983B;&#x9053;&#x7C89;&#x7D72;&#x5718;</a>
+        </div>
+    </div>
+    <!-- 健康醫療 -->
+    <div class="flex_health boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x5065;&#x5EB7;&#x91AB;&#x7642;">
+        <a href="http://health.ltn.com.tw" class="full"><div class="c_icon c13"></div>&#x5065;&#x5EB7;&#x91AB;&#x7642;</a>
+    </div>
+    <!-- 玩咖playing -->
+    <div class="flex_playing boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x73A9;&#x5496;Playing">
+        <div class="full newsmain boxInput" data-desc="&#x73A9;&#x5496;playing_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c11"></div>&#x73A9;&#x5496;Playing<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://playing.ltn.com.tw">&#x73A9;&#x5496;&#x9996;&#x9801;</a>
+            <a href="http://playing.ltn.com.tw/list/travel">&#x611B;&#x65C5;&#x884C;</a>
+            <a href="http://playing.ltn.com.tw/list/stay">&#x627E;&#x4F4F;&#x5BBF;</a>
+            <a href="http://playing.ltn.com.tw/list/food">&#x597D;&#x98DF;&#x5149;</a>
+            <a href="http://playing.ltn.com.tw/list/life">&#x6A02;&#x751F;&#x6D3B;</a>
+            <a href="https://www.facebook.com/playing.ltn" target="_blank" class="right_all"><div class="m21"></div><span>&#x73A9;&#x5496;Playing</span>&#x7C89;&#x7D72;&#x5718;</a>
+        </div>
+    </div>
+    <!-- 食譜 -->
+    <div class="flex_food boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x98DF;&#x8B5C;">
+        <div class="full newsmain boxInput" data-desc="&#x98DF;&#x8B5C;_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c3"></div>&#x98DF;&#x8B5C;&#x81EA;&#x7531;&#x914D;<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://food.ltn.com.tw/m">&#x98DF;&#x8B5C;&#x9996;&#x9801;</a>
+            <a href="http://food.ltn.com.tw/m/category">&#x627E;&#x98DF;&#x8B5C;</a>
+            <a href="http://food.ltn.com.tw/m/latest">&#x6700;&#x65B0;&#x98DF;&#x8B5C;</a>
+            <a href="http://food.ltn.com.tw/m/theme">&#x4E3B;&#x984C;&#x98DF;&#x8B5C;</a>
+            <a href="http://food.ltn.com.tw/m/tips">&#x6599;&#x7406;&#x6487;&#x6B65;</a>
+            <a href="http://food.ltn.com.tw/m/knowhow" style="line-height:1.65rem;border-right:none;font-size:1.1rem;">&#x5EDA;&#x623F;&#x751F;&#x6D3B;<br>&#x5C0F;&#x77E5;&#x8B58;</a>
+            <a href="http://food.ltn.com.tw/m/type/283">&#x5F71;&#x97F3;&#x98DF;&#x8B5C;</a>
+            <a href="https://www.facebook.com/food.ltn.tw" target="_blank" class="right_all"><div class="m21"></div><span>&#x98DF;&#x8B5C;&#x81EA;&#x7531;&#x914D;</span>&#x7C89;&#x7D72;&#x5718;</a>
+        </div>
+    </div>
+    <!-- 地產天下 -->
+    <div class="flex_est boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x5730;&#x7522;&#x5929;&#x4E0B;">
+        <div class="full newsmain boxInput" data-desc="&#x5730;&#x7522;&#x5929;&#x4E0B;_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c9"></div>&#x5730;&#x7522;&#x5929;&#x4E0B;<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://estate.ltn.com.tw/">&#x5730;&#x7522;&#x9996;&#x9801;</a>
+            <a href="http://estate.ltn.com.tw/news">&#x6700;&#x65B0;&#x65B0;&#x805E;</a>
+            <a href="http://estate.ltn.com.tw/sniper">&#x6848;&#x5834;&#x76F4;&#x64CA;</a>
+            <a href="http://estate.ltn.com.tw/hit">&#x623F;&#x5E02;&#x71B1;&#x5340;</a>
+            <a href="http://estate.ltn.com.tw/thinking">&#x5730;&#x7522;&#x601D;&#x7DAD;</a>
+            <a href="http://estate.ltn.com.tw/design">&#x54C1;&#x5473;&#x5BB6;&#x5C45;</a>
+            <a href="http://estate.ltn.com.tw/video">&#x5730;&#x7522;&#x5F71;&#x97F3;</a>
+        </div>
+    </div>
+    <!-- 熱門新訊 -->
+    <div class="flex_market boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x71B1;&#x9580;&#x65B0;&#x8A0A;">
+        <a href="http://market.ltn.com.tw/" class="full"><div class="c_icon c8"></div>&#x71B1;&#x9580;&#x65B0;&#x8A0A;</a>
+    </div>
+    <!-- 服務 -->
+    <div class="flex_service boxTitle boxText" data-desc="&#x5DE6;&#x5074;&#x9078;&#x55AE;:&#x670D;&#x52D9;">
+        <div class="full newsmain boxInput" data-desc="&#x670D;&#x52D9;_&#x9078;&#x55AE;&#x958B;&#x555F;"><div class="c_icon c14"></div>&#x670D;&#x52D9;<div class="m20 hidenewslist"></div></div>
+        <div class="newslist">
+            <a href="http://m.ltn.com.tw/service/9">&#x95DC;&#x65BC;&#x6211;&#x5011;</a>
+            <a href="http://m.ltn.com.tw/service/10">&#x8457;&#x4F5C;&#x6B0A;&#x8072;&#x660E;</a>
+            <a href="http://m.ltn.com.tw/service/5">&#x5EE3;&#x544A;</a>
+            <a href="http://m.ltn.com.tw/service/2">&#x96B1;&#x79C1;&#x6B0A;&#x653F;&#x7B56;</a>
+            <a href="http://m.ltn.com.tw/service/4">&#x5FB5;&#x624D;</a>
+            <a href="http://m.ltn.com.tw/service/3">&#x6295;&#x7A3F;</a>
+            <a href="http://m.ltn.com.tw/service/6">&#x8A02;&#x5831;</a>
+        </div>
+    </div>
+
+    <div class="close flex_space"></div>
+</div>
+        <script>
+            // 左側選單新聞總覽置頂
+            $('.flex_news').addClass('flex_focus').removeClass('flex_news');
+        </script>
+    
+    
+    <link rel="stylesheet" type="text/css" href="css/cover_menu.css">
+
+    <div id="rightmain" class="rightmain_c">
+        <!--搜尋 -->
+        <div class="search_hid">
+            <div class="search_box02 boxTitle" id="search_bar" data-desc="&#x641C;&#x5C0B;">
+                <form class="form-search" id="searchb" action="search" name="form1" method="get" onsubmit="search_click();return false;">
+                    <div class="sbox01">
+                        <div class="sbox01L">
+                            <input type="text" id="qs" class="text_s" placeholder="&#x8F38;&#x5165;&#x95DC;&#x9375;&#x5B57;" value="">
+                        </div>
+
+                        <div class="sbox01R">
+                            <span id="advanced" class="showslide boxInput" data-desc="&#x9032;&#x968E;&#x67E5;&#x8A62;">&#x9032;&#x968E;</span>
+                        </div>
+                    </div>
+
+                    <div class="sbox02">
+                        <div class="sbox02_box">
+                            <div class="sbox02L">
+                                <input class="datepicker" name="start_time" value="" placeholder="2018-08-21" onfocus="blur();">
+                                <input type="hidden" class="send_search_input" id="start_time" value="">
+                            </div>
+                            <div class="sbox02C"> ~</div>
+                            <div class="sbox02R">
+                                <input class="datepicker" name="end_time" value="" placeholder="2018-11-19" onfocus="blur();">
+                                <input type="hidden" class="send_search_input" id="end_time" value="">
+                            </div>
+                        </div>
+                        <div class="sbox02S">* &#x6BCF;&#x6B21;&#x67E5;&#x8A62;&#x5340;&#x9593;<span>&#x6700;&#x9577;&#x70BA;&#x4E09;&#x500B;&#x6708;</span></div>
+                    </div>
+
+                    <div class="sbox03">
+                        <button type="submit" class="btn_s boxInput" id="search_submit_btn" data-desc="Search">
+                            Search
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="search_keyword boxTitle" data-desc="&#x641C;&#x5C0B;:&#x95DC;&#x9375;&#x5B57;">
+                <div class="keywordtit">&#x71B1;&#x9580;&#x95DC;&#x9375;&#x5B57;</div>
+                <div class="searchtag">
+                                                <a href="topic/%E7%AC%AC55%E5%B1%86%E9%87%91%E9%A6%AC%E7%8D%8E">&#x7B2C;55&#x5C46;&#x91D1;&#x99AC;&#x734E;</a>
+                                                        <a href="topic/%E9%99%B3%E5%85%B6%E9%82%81">&#x9673;&#x5176;&#x9081;</a>
+                                                        <a href="topic/%E4%B8%AD%E5%9C%8B">&#x4E2D;&#x570B;</a>
+                                                        <a href="topic/%E7%BE%BD%E7%90%83">&#x7FBD;&#x7403;</a>
+                                                        <a href="topic/%E9%A6%99%E6%B8%AF%E7%BE%BD%E7%90%83%E5%85%AC%E9%96%8B%E8%B3%BD">&#x9999;&#x6E2F;&#x7FBD;&#x7403;&#x516C;&#x958B;&#x8CFD;</a>
+                                                        <a href="topic/%E5%B8%82%E9%95%B7%E9%81%B8%E8%88%89">&#x5E02;&#x9577;&#x9078;&#x8209;</a>
+                                                                </div>
+            </div>
+        </div>
+
+        <div class="search_mask"></div>
+
+        
+<div class="lbox sc1 boxTitle" data-desc="&#x5927;&#x5716;">
+                        <div class="photo picbox 0 photoOn">
+                <a href="news/politics/breakingnews/2617083" data-desc="&#x5716;:&#x97D3;&#x3001;&#x5F35;&#x83DC;&#x87F2;&#x8B8A;&#x6551;&#x661F; &#x6797;&#x6DD1;&#x82AC;&#xFF1A;&#x5929;&#x5730;&#x985B;&#x5012;"><img src="images/1826416.jpg" title="&#x97D3;&#x3001;&#x5F35;&#x83DC;&#x87F2;&#x8B8A;&#x6551;&#x661F; &#x6797;&#x6DD1;&#x82AC;&#xFF1A;&#x5929;&#x5730;&#x985B;&#x5012;" alt="&#x97D3;&#x3001;&#x5F35;&#x83DC;&#x87F2;&#x8B8A;&#x6551;&#x661F; &#x6797;&#x6DD1;&#x82AC;&#xFF1A;&#x5929;&#x5730;&#x985B;&#x5012;"></a>
+                <div class="explain"><a href="news/politics/breakingnews/2617083" data-desc="&#x6A19;:&#x97D3;&#x3001;&#x5F35;&#x83DC;&#x87F2;&#x8B8A;&#x6551;&#x661F; &#x6797;&#x6DD1;&#x82AC;&#xFF1A;&#x5929;&#x5730;&#x985B;&#x5012;">&#x97D3;&#x3001;&#x5F35;<span style="color:#FFCC00">&#x83DC;&#x87F2;&#x8B8A;&#x6551;&#x661F;</span> &#x6797;&#x6DD1;&#x82AC;&#xFF1A;&#x5929;&#x5730;&#x985B;&#x5012;</a>
+                </div>
+            </div>
+                            <div class="photo picbox box1">
+            <a href="http://cache.ltn.com.tw/app/program/click.php?ano=2018111527601300" data-no="2018111527601300" data-desc="&#x5716;">
+                <img src="images/1542263973.jpg" title="&#x5167;&#x5EE3;" alt="">
+            </a>
+            <div class="explain">&#xA0;
+                <a href="http://cache.ltn.com.tw/app/program/click.php?ano=2018111527601300" data-desc="&#x6A19;">&#x79D1;&#x6280;&#x5C16;&#x7259;&#x80A1;&#x5F48;&#x529B;&#x5F37; &#x8DCC;&#x6DF1;&#x63D0;&#x4F9B;&#x8CB7;&#x9032;&#x826F;&#x6A5F;</a>
+            </div>
+        </div>
+        <script>document.write('<img style="display:none" src="http://cache.ltn.com.tw/app/program/impression.php?ano=2018111527601300&' + new Date().getTime() + '">');</script>
+                                <div class="photo picbox 2 ">
+                <a href="news/politics/breakingnews/2617315" data-desc="&#x5716;:&#x59DA;&#x6587;&#x667A;&#x7206;&#x67EF;&#x66FE;&#x8AAA;&#x300C;&#x4E2D;&#x570B;&#x8981;&#x81EA;&#x5DF1;&#x9078;&#x7E3D;&#x7D71;&#x300D;"><img src="images/1826671.jpg" title="&#x59DA;&#x6587;&#x667A;&#x7206;&#x67EF;&#x66FE;&#x8AAA;&#x300C;&#x4E2D;&#x570B;&#x8981;&#x81EA;&#x5DF1;&#x9078;&#x7E3D;&#x7D71;&#x300D;" alt="&#x59DA;&#x6587;&#x667A;&#x7206;&#x67EF;&#x66FE;&#x8AAA;&#x300C;&#x4E2D;&#x570B;&#x8981;&#x81EA;&#x5DF1;&#x9078;&#x7E3D;&#x7D71;&#x300D;"></a>
+                <div class="explain"><a href="news/politics/breakingnews/2617315" data-desc="&#x6A19;:&#x59DA;&#x6587;&#x667A;&#x7206;&#x67EF;&#x66FE;&#x8AAA;&#x300C;&#x4E2D;&#x570B;&#x8981;&#x81EA;&#x5DF1;&#x9078;&#x7E3D;&#x7D71;&#x300D;">&#x59DA;&#x6587;&#x667A;&#x7206;&#x67EF;&#x66FE;&#x8AAA;&#x300C;&#x4E2D;&#x570B;&#x8981;&#x81EA;&#x5DF1;&#x9078;&#x7E3D;&#x7D71;&#x300D;</a>
+                </div>
+            </div>
+                                <div class="photo picbox 3 ">
+                <a href="news/life/breakingnews/2617317" data-desc="&#x5716;:&#x9177;&#xFF01;&#x5916;&#x570B;&#x80CC;&#x5305;&#x5BA2;&#x642D;&#x4FBF;&#x8ECA; &#x96A8;&#x624B;&#x6514;&#x5230;&#x738B;&#x5EFA;&#x6C11;"><img src="images/1826633.jpg" title="&#x9177;&#xFF01;&#x5916;&#x570B;&#x80CC;&#x5305;&#x5BA2;&#x642D;&#x4FBF;&#x8ECA; &#x96A8;&#x624B;&#x6514;&#x5230;&#x738B;&#x5EFA;&#x6C11;" alt="&#x9177;&#xFF01;&#x5916;&#x570B;&#x80CC;&#x5305;&#x5BA2;&#x642D;&#x4FBF;&#x8ECA; &#x96A8;&#x624B;&#x6514;&#x5230;&#x738B;&#x5EFA;&#x6C11;"></a>
+                <div class="explain"><a href="news/life/breakingnews/2617317" data-desc="&#x6A19;:&#x9177;&#xFF01;&#x5916;&#x570B;&#x80CC;&#x5305;&#x5BA2;&#x642D;&#x4FBF;&#x8ECA; &#x96A8;&#x624B;&#x6514;&#x5230;&#x738B;&#x5EFA;&#x6C11;">&#x9177;&#xFF01;&#x5916;&#x570B;&#x80CC;&#x5305;&#x5BA2;&#x642D;&#x4FBF;&#x8ECA; &#x96A8;&#x624B;&#x6514;&#x5230;&#x738B;&#x5EFA;&#x6C11;</a>
+                </div>
+            </div>
+                            <div class="photo picbox box1">
+            <a href="http://cache.ltn.com.tw/app/program/click.php?ano=2018111585789804" data-no="2018111585789804" data-desc="&#x5716;">
+                <img src="images/1542273880.jpg" title="&#x5167;&#x5EE3;" alt="">
+            </a>
+            <div class="explain">&#xA0;
+                <a href="http://cache.ltn.com.tw/app/program/click.php?ano=2018111585789804" data-desc="&#x6A19;">CX-5&#x5169;&#x529F;&#x80FD;&#x5347;&#x7D1A;&#x3000;&#x8D85;&#x5408;&#x53F0;&#x7063;&#x4EBA;&#x80C3;&#x53E3;</a>
+            </div>
+        </div>
+        <script>document.write('<img style="display:none" src="http://cache.ltn.com.tw/app/program/impression.php?ano=2018111585789804&' + new Date().getTime() + '">');</script>
+                                <div class="photo picbox 5 ">
+                <a href="news/world/breakingnews/2617100" data-desc="&#x5716;:56&#x5E74;&#x61F8;&#x6848; &#x60E1;&#x9B54;&#x5CF6;3&#x56DA;&#x5047;&#x4EBA;&#x982D;&#x6210;&#x529F;&#x8D8A;&#x7344;"><img src="images/1826554.jpg" title="56&#x5E74;&#x61F8;&#x6848; &#x60E1;&#x9B54;&#x5CF6;3&#x56DA;&#x5047;&#x4EBA;&#x982D;&#x6210;&#x529F;&#x8D8A;&#x7344;" alt="56&#x5E74;&#x61F8;&#x6848; &#x60E1;&#x9B54;&#x5CF6;3&#x56DA;&#x5047;&#x4EBA;&#x982D;&#x6210;&#x529F;&#x8D8A;&#x7344;"></a>
+                <div class="explain"><a href="news/world/breakingnews/2617100" data-desc="&#x6A19;:56&#x5E74;&#x61F8;&#x6848; &#x60E1;&#x9B54;&#x5CF6;3&#x56DA;&#x5047;&#x4EBA;&#x982D;&#x6210;&#x529F;&#x8D8A;&#x7344;">56&#x5E74;&#x61F8;&#x6848; &#x60E1;&#x9B54;&#x5CF6;3&#x56DA;&#x5047;&#x4EBA;&#x982D;&#x6210;&#x529F;&#x8D8A;&#x7344;</a>
+                </div>
+            </div>
+                                <div class="photo picbox 6 ">
+                <a href="news/politics/breakingnews/2617013" data-desc="&#x5716;:&#x5C0E;&#x6F14;&#x55C6;&#x4E2D;&#x570B;&#x5F71;&#x661F; &#x300C;&#x53F0;&#x7063;&#x4E00;&#x9EDE;&#x90FD;&#x4E0D;&#x60F3;&#x591A;&#x300D;"><img src="images/1826320.jpg" title="&#x5C0E;&#x6F14;&#x55C6;&#x4E2D;&#x570B;&#x5F71;&#x661F; &#x300C;&#x53F0;&#x7063;&#x4E00;&#x9EDE;&#x90FD;&#x4E0D;&#x60F3;&#x591A;&#x300D;" alt="&#x5C0E;&#x6F14;&#x55C6;&#x4E2D;&#x570B;&#x5F71;&#x661F; &#x300C;&#x53F0;&#x7063;&#x4E00;&#x9EDE;&#x90FD;&#x4E0D;&#x60F3;&#x591A;&#x300D;"></a>
+                <div class="explain"><a href="news/politics/breakingnews/2617013" data-desc="&#x6A19;:&#x5C0E;&#x6F14;&#x55C6;&#x4E2D;&#x570B;&#x5F71;&#x661F; &#x300C;&#x53F0;&#x7063;&#x4E00;&#x9EDE;&#x90FD;&#x4E0D;&#x60F3;&#x591A;&#x300D;">&#x5C0E;&#x6F14;&#x55C6;&#x4E2D;&#x570B;&#x5F71;&#x661F; &#x300C;&#x53F0;&#x7063;&#x4E00;&#x9EDE;&#x90FD;&#x4E0D;&#x60F3;&#x591A;&#x300D;</a>
+                </div>
+            </div>
+                            <div class="photo picbox box1">
+            <a href="http://cache.ltn.com.tw/app/program/click.php?ano=2018111948182166" data-no="2018111948182166" data-desc="&#x5716;">
+                <img src="images/1542594590.jpg" title="&#x5167;&#x5EE3;" alt="">
+            </a>
+            <div class="explain">&#xA0;
+                <a href="http://cache.ltn.com.tw/app/program/click.php?ano=2018111948182166" data-desc="&#x6A19;">&#x5275;&#x6AC3;&#x677F;&#x516C;&#x53F8;&#x5F15;&#x9818;&#x6F6E;&#x6D41; &#x65B0;&#x5275;hen&#x53EF;&#x4EE5;</a>
+            </div>
+        </div>
+        <script>document.write('<img style="display:none" src="http://cache.ltn.com.tw/app/program/impression.php?ano=2018111948182166&' + new Date().getTime() + '">');</script>
+                                <div class="photo picbox 8 ">
+                <a href="http://ec.ltn.com.tw/article/breakingnews/2617069" data-desc="&#x5716;:&#x4E2D;&#x570B;&#x860B;&#x679C;&#x4F9B;&#x61C9;&#x5546; &#x50B3;&#x88C1;8&#x5343;&#x4EBA;&#x7206;&#x570D;&#x5EE0;"><img src="images/1826456.jpg" title="&#x4E2D;&#x570B;&#x860B;&#x679C;&#x4F9B;&#x61C9;&#x5546; &#x50B3;&#x88C1;8&#x5343;&#x4EBA;&#x7206;&#x570D;&#x5EE0;" alt="&#x4E2D;&#x570B;&#x860B;&#x679C;&#x4F9B;&#x61C9;&#x5546; &#x50B3;&#x88C1;8&#x5343;&#x4EBA;&#x7206;&#x570D;&#x5EE0;"></a>
+                <div class="explain"><a href="http://ec.ltn.com.tw/article/breakingnews/2617069" data-desc="&#x6A19;:&#x4E2D;&#x570B;&#x860B;&#x679C;&#x4F9B;&#x61C9;&#x5546; &#x50B3;&#x88C1;8&#x5343;&#x4EBA;&#x7206;&#x570D;&#x5EE0;">&#x4E2D;&#x570B;&#x860B;&#x679C;&#x4F9B;&#x61C9;&#x5546; &#x50B3;&#x88C1;8&#x5343;&#x4EBA;&#x7206;&#x570D;&#x5EE0;</a>
+                </div>
+            </div>
+                                <div class="photo picbox 9 ">
+                <a href="news/life/breakingnews/2617319" data-desc="&#x5716;:&#x9BCA;&#x9B5A;&#x53C8;&#x54AC;&#x96FB;&#x7E9C;&#xFF1F;&#x4E2D;&#x83EF;&#x96FB;&#x7DB2;&#x8DEF;&#x4ECA;&#x65E9;&#x66FE;&#x7570;&#x5E38;"><img src="images/1826527.jpg" title="&#x9BCA;&#x9B5A;&#x53C8;&#x54AC;&#x96FB;&#x7E9C;&#xFF1F;&#x4E2D;&#x83EF;&#x96FB;&#x7DB2;&#x8DEF;&#x4ECA;&#x65E9;&#x66FE;&#x7570;&#x5E38;" alt="&#x9BCA;&#x9B5A;&#x53C8;&#x54AC;&#x96FB;&#x7E9C;&#xFF1F;&#x4E2D;&#x83EF;&#x96FB;&#x7DB2;&#x8DEF;&#x4ECA;&#x65E9;&#x66FE;&#x7570;&#x5E38;"></a>
+                <div class="explain"><a href="news/life/breakingnews/2617319" data-desc="&#x6A19;:&#x9BCA;&#x9B5A;&#x53C8;&#x54AC;&#x96FB;&#x7E9C;&#xFF1F;&#x4E2D;&#x83EF;&#x96FB;&#x7DB2;&#x8DEF;&#x4ECA;&#x65E9;&#x66FE;&#x7570;&#x5E38;">&#x9BCA;&#x9B5A;&#x53C8;&#x54AC;&#x96FB;&#x7E9C;&#xFF1F;&#x4E2D;&#x83EF;&#x96FB;&#x7DB2;&#x8DEF;&#x4ECA;&#x65E9;&#x66FE;&#x7570;&#x5E38;</a>
+                </div>
+            </div>
+                                <div class="photo picbox 10 ">
+                <a href="news/life/breakingnews/2617080" data-desc="&#x5716;:&#x842C;&#x5B9C;&#x98B1;&#x98A8;&#x5C07;&#x751F;&#x6210; &#x8C50;&#x6C9B;&#x6C34;&#x6C23;&#x9078;&#x5F8C;&#x6050;&#x8B8A;&#x5929;"><img src="images/1826424.jpg" title="&#x842C;&#x5B9C;&#x98B1;&#x98A8;&#x5C07;&#x751F;&#x6210; &#x8C50;&#x6C9B;&#x6C34;&#x6C23;&#x9078;&#x5F8C;&#x6050;&#x8B8A;&#x5929;" alt="&#x842C;&#x5B9C;&#x98B1;&#x98A8;&#x5C07;&#x751F;&#x6210; &#x8C50;&#x6C9B;&#x6C34;&#x6C23;&#x9078;&#x5F8C;&#x6050;&#x8B8A;&#x5929;"></a>
+                <div class="explain"><a href="news/life/breakingnews/2617080" data-desc="&#x6A19;:&#x842C;&#x5B9C;&#x98B1;&#x98A8;&#x5C07;&#x751F;&#x6210; &#x8C50;&#x6C9B;&#x6C34;&#x6C23;&#x9078;&#x5F8C;&#x6050;&#x8B8A;&#x5929;">&#x842C;&#x5B9C;&#x98B1;&#x98A8;&#x5C07;&#x751F;&#x6210; &#x8C50;&#x6C9B;&#x6C34;&#x6C23;&#x9078;&#x5F8C;&#x6050;&#x8B8A;&#x5929;</a>
+                </div>
+            </div>
+            </div>
+<div class="bt boxTitle" data-desc="&#x5927;&#x5716;">
+    <div class="btl boxInput" data-desc="&#x5411;&#x5DE6;&#x9375;">
+        <img src="images/bt-left.png" id="btl" title="&#x4E0A;&#x4E00;&#x5247;" alt="&#x4E0A;&#x4E00;&#x5247;">
+    </div>
+    <div class="btr boxInput" data-desc="&#x5411;&#x53F3;&#x9375;">
+        <img src="images/bt-right.png" id="btr" title="&#x4E0B;&#x4E00;&#x5247;" alt="&#x4E0B;&#x4E00;&#x5247;">
+    </div>
+</div>
+<ul id="marquee" class="news boxTitle extra" style="display: none" data-desc="&#x5FEB;&#x8A0A;">
+    <p class="newstit highlight">&#x5FEB;&#x8A0A;</p>
+</ul>
+
+<script type="text/javascript">
+$(function(){
+    // 新聞快訊部分使用jsonp向cache->get_extra.php取得資料後載入
+    $.ajax({
+        type: "get",
+        async: false,
+        url: "http://cache.ltn.com.tw/app/program/get_extra.php",
+        dataType: "jsonp",//指定以jsonp方式執行
+        // jsonp: "callback",//"callback"會以GET的變數名稱傳送，沒指定時，jQuery使用"callback"當變數名稱
+        // jsonpCallback:'get_extra',//"mycallback"變數的值，沒指定時，jQuery隨機產生
+        success: function(data){
+            insertMarqueeData(data); // 插入新聞快訊
+            runMarquee(); // 顯示快訊(包含廣告)
+        },
+        error: function(e){
+            console.log('get extra failed!');
+            console.log(e);
+        }
+    });
+
+    function insertMarqueeData(data) {
+        var html = '';
+        var order = 0;
+        var time_now = new Date().getTime();
+        for (type in data) { // extra, ad_153, ad_311 三種快訊
+            var list = data[type];
+            for (i in list) {
+                var item = list[i];
+                switch(type){
+                    case 'extra':
+                        html += '<li><a href="'+item['src']+'"><p>'+item['title']+'</p></a></li>';
+                        break;
+                    case 'ad_153':
+                        html += '<li class="exad" >';
+                        html += '<a href="http://cache.ltn.com.tw/app/program/click.php?ano='+item['no']+'" class="ltn_ad" data-no="'+item['no']+'"><p>'+item['title']+'</p></a><sub>PR</sub>';
+                        html += '<img style="display:none" src="http://cache.ltn.com.tw/app/program/impression.php?ano='+item['no']+'&'+time_now+'">';
+                        html += '</li>';
+                        break;
+                    case 'ad_311':
+                        html += '<li>';
+                        html += '<a href="http://cache.ltn.com.tw/app/program/click.php?ano='+item['no']+'" class="ltn_ad" data-no="'+item['no']+'"><p>'+item['title']+'</p></a>';
+                        html += '<img style="display:none" src="http://cache.ltn.com.tw/app/program/impression.php?ano='+item['no']+'&'+time_now+'">';
+                        html += '</li>';
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        if (html == '') { return; }
+        $('#marquee').prepend(html);
+    }
+
+    function runMarquee() {
+        var $marquee = $('#marquee');
+        var extras = $marquee.find('li');
+
+        // 無快訊時不處理
+        if (extras.length < 1) { return; }
+
+        // 顯示快訊
+        textSlider($marquee);
+        $marquee.slideDown(500);
+    }
+
+    function textSlider(marquee) {
+        var selectedIndex = 1;
+        var timer;
+
+        marquee.find('li').eq(0).addClass('animate');
+
+        if (timer) clearInterval(timer);
+        timer = setInterval(function () {
+            switchTab(
+                selectedIndex++ % $('.extra li').length + 1,
+                marquee
+            );
+        }, 4000);
+
+        function switchTab(index, marquee) {
+            marquee.find('li').removeClass('animate');
+            marquee.find('li').eq(index-1).addClass('animate');
+            selectedIndex = index;
+        }
+
+        function padLeft(str, lenght){
+            if(str.length >= lenght)
+                return str;
+            else
+                return padLeft("0" + str, lenght);
+        }
+    }
+});
+</script>
+
+
+
+
+<!--box排程 - youtube直播-->
+<div id="liveEvent">
+    <script>
+    $(function(){
+        $.ajax({
+            type: "get",
+            async: false,
+            url: "http://cache.ltn.com.tw/app/program/get_liveEvent.php",
+            dataType: "jsonp",//指定以jsonp方式執行
+            success: function(data){
+                $('#liveEvent').html(makeEventHtml(data));
+                loadEventIframeMaker();
+            },
+            error: function(e){
+                console.log('get live failed!');
+                console.log(e);
+            }
+        });
+    });
+
+    function makeEventHtml(data)
+    {
+        var html = '';
+        for (item in data) {
+            html += '<section class="boxTitle" data-desc="事件:'+data[item]['title']+'">';
+            html += '<p class="newstit highlight">\n'+
+                    '\t\t<a>\n'+
+                    '\t\t<span class="tWord">'+data[item]['title']+'</span>\n'+
+                    '\t\t<span class="tSpace">| 直播</span>\n'+
+                    '\t\t</a>\n'+
+                    '\t</p>\n'+
+                    '\t<p>';
+            html += '<div id="YTplayer'+data[item]['youtube_ID']+'" class="YTplayer" data-ytid="'+data[item]['youtube_ID']+'"></div></p></section>'
+        }
+
+        return html;
+    }
+
+    function loadEventIframeMaker()
+    {
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+
+    /*
+        電腦版: 自動播放, 靜音。
+        iPhone: 不會自動播放, 也不需要靜音。
+        Android: 會自動播放。
+        */
+    function onYouTubeIframeAPIReady() {
+        YTPlayers = [];
+        var list = $('.YTplayer').map(function () {
+            var tag_id = $(this).attr('id');
+            var YT_id = $(this).data('ytid');
+            return {'tag_id': tag_id, 'YT_id':YT_id};
+        });
+        jQuery.each(list, function(i, val) {
+            YTPlayers.push(newYTPlayer(val['tag_id'], val['YT_id']));
+        });
+    }
+    function newYTPlayer(tag_id, YT_id) {
+        return new YT.Player(tag_id, {
+            height: '315',
+            width: '100%',
+            videoId: YT_id,
+            events: {
+                'onReady': function (event) {
+                    event.target.playVideo();
+                    if((navigator.userAgent).indexOf('iPhone OS')>-1){
+                        //iphone
+                    }else if((navigator.userAgent).indexOf('Android')>-1){
+                        //Android
+                        event.target.mute();
+                    }else{
+                        //other
+                        event.target.mute();
+                    }
+                },
+                'onStateChange': function (event) {
+
+                }
+            }
+        })
+    }
+</script>
+</div>
+
+<section class="boxTitle" data-desc="&#x5C08;&#x984C;">
+    <style>
+li.housead{text-align:center}
+li.housead img{width: 100%;height:auto;float:none;margin:0 auto}
+</style>
+<ul class="news boxpadding">
+<p class="newstit">
+<span class="tWord">2018&#x4E5D;&#x5408;&#x4E00;&#x9078;&#x8209;</span>
+	<span class="tSpace"></span>
+</p>
+<a href="http://election.ltn.com.tw/2018/" target="_blank"><li class="housead"><img src="images/1648558.jpg" alt="&#x5716;"></li></a>
+</ul>
+</section>
+
+
+<style>
+    .containerS {width:100%;height:100%;overflow:hidden;}
+	.containerS .swiper-wrapper{width:100%;}
+    .containerS .swiper-wrapper .swiper-slide {width:100%;background:#fff;border:none;}
+	.containerS .swiper-slide a img{width:100%;height:auto;display:block;}
+	.caption{height:50px;text-align:left;font-size:1.3rem;padding:8px 0px;z-index:888;}
+
+	.swiper-wrapper .swiper-slide{position:relative;}
+	.swiper-slide a:before{content:"";display:inline-block;width:50%;height:50%;position:absolute;z-index:100;top:39%;left:35%;
+	background:url(fonts/playbt.svg) no-repeat;background-size:60%;opacity:0.3;}
+
+	.pagination{position:static;margin:10px auto;text-align:center;}
+	.swiper-pagination-bullet{margin:5px;}
+</style>
+
+<section class="event boxTitle" data-desc="&#x4E8B;&#x4EF6;:&#x81EA;&#x7531;&#x5F71;&#x97F3;&#x7CBE;&#x9078;">
+<p class="newstit highlight">
+	<a href="https://www.youtube.com/watch?v=gsIsFdSfh5E&amp;list=PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7&amp;index=1" data-link="1826467" data-desc="&#x6A19;&#x982D;">
+		<span class="tWord">&#x81EA;&#x7531;&#x5F71;&#x97F3;&#x7CBE;&#x9078;</span>
+		<span class="tSpace"><span class="tS_more"></span></span>
+	</a>
+</p>
+
+<div class="containerS">
+	<div class="swiper-wrapper">
+			<div class="swiper-slide">
+			<div class="caption">
+				<a href="http://video.ltn.com.tw/m/article/fyNjxtgTIDY/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7">&#x59DA;&#x6587;&#x667A;&#x8FAD;&#x7ACB;&#x59D4; &#x67EF;&#x6587;&#x54F2;&#x7A31;&#x5C0A;&#x91CD;</a>
+			</div>
+			<a href="http://video.ltn.com.tw/m/article/fyNjxtgTIDY/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7"><img src="images/1826479.jpg"></a>
+		</div>
+			<div class="swiper-slide">
+			<div class="caption">
+				<a href="http://video.ltn.com.tw/m/article/gsIsFdSfh5E/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7">&#x9673;&#x666F;&#x5CFB;&#x70BA;&#x67EF;&#x6587;&#x54F2;&#x7AD9;&#x53F0; &#x59DA;&#x6587;&#x667A;&#x8981;&#x6C42;&#x6C11;&#x9032;&#x9EE8;&#x8655;&#x7406;</a>
+			</div>
+			<a href="http://video.ltn.com.tw/m/article/gsIsFdSfh5E/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7"><img src="images/1826477.jpg"></a>
+		</div>
+			<div class="swiper-slide">
+			<div class="caption">
+				<a href="http://video.ltn.com.tw/m/article/6KFeiKgUHv0/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7">&#x5433;&#x6566;&#x7FA9;&#x300C;&#x8C6C;&#x6BCD;&#x8AAA;&#x300D;&#x5931;&#x8A00; &#x4FAF;&#x53CB;&#x5B9C;&#xFF1A;&#x6253;&#x58DE;&#x6211;&#x9078;&#x8209;&#x6B65;&#x9A5F;</a>
+			</div>
+			<a href="http://video.ltn.com.tw/m/article/6KFeiKgUHv0/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7"><img src="images/1826470.jpg"></a>
+		</div>
+			<div class="swiper-slide">
+			<div class="caption">
+				<a href="http://video.ltn.com.tw/m/article/zkK2Bm1scao/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7">&#x906D;&#x5433;&#x6566;&#x7FA9;&#x5F71;&#x5C04;&#x300C;&#x5927;&#x6BCD;&#x8C6C;&#x300D; &#x9673;&#x83CA;:&#x6211;&#x662F;&#x53F0;&#x7063;&#x4EBA;&#x7684;&#x5973;&#x5152; &#x4E0D;&#x662F;&#x5927;&#x6BCD;&#x8C6C;
+</a>
+			</div>
+			<a href="http://video.ltn.com.tw/m/article/zkK2Bm1scao/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7"><img src="images/1825344.jpg"></a>
+		</div>
+			<div class="swiper-slide">
+			<div class="caption">
+				<a href="http://video.ltn.com.tw/m/article/xouuBtPD6uU/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7">&#x5C55;&#x73FE;&#x53C3;&#x9078;&#x6C7A;&#x5FC3; &#x59DA;&#x6587;&#x667A;&#x9078;&#x524D;&#x5012;&#x6578;&#x9EC3;&#x91D1;&#x9031;&#x5BA3;&#x5E03;&#x8FAD;&#x7ACB;&#x59D4;
+</a>
+			</div>
+			<a href="http://video.ltn.com.tw/m/article/xouuBtPD6uU/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7"><img src="images/1825628.jpg"></a>
+		</div>
+			<div class="swiper-slide">
+			<div class="caption">
+				<a href="http://video.ltn.com.tw/m/article/ExWKg7Utnkw/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7">&#x67EF;&#xFF30;&#x5712;&#x904A;&#x6703;&#x62DA;&#x9023;&#x4EFB; &#x76F4;&#x8A00;&#x7D71;&#x7368;&#x662F;&#x5047;&#x8B70;&#x984C;&#x4F46;&#x5169;&#x9EE8;&#x5047;&#x6232;&#x771F;&#x505A;</a>
+			</div>
+			<a href="http://video.ltn.com.tw/m/article/ExWKg7Utnkw/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7"><img src="images/1826302.jpg"></a>
+		</div>
+			<div class="swiper-slide">
+			<div class="caption">
+				<a href="http://video.ltn.com.tw/m/article/RVqy-StC3Ro/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7">&#x8521;&#x82F1;&#x6587;&#xFF1A;&#x5F9E;&#x672A;&#x63A5;&#x53D7;&#x300C;&#x4E2D;&#x570B;&#x53F0;&#x7063;&#x300D; &#x53F0;&#x7063;&#x5C31;&#x662F;&#x53F0;&#x7063;
+</a>
+			</div>
+			<a href="http://video.ltn.com.tw/m/article/RVqy-StC3Ro/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7"><img src="images/1825349.jpg"></a>
+		</div>
+			<div class="swiper-slide">
+			<div class="caption">
+				<a href="http://video.ltn.com.tw/m/article/TQIpJnfXTDA/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7">&#x6BCD;&#x8C6C;&#x8AAA;&#x88AB;&#x5207;&#x5272;&#xFF1F;&#x5433;&#x6566;&#x7FA9;&#x7F3A;&#x5E2D;&#x5317;&#x5E02;&#x4E01;&#x5B88;&#x4E2D;&#x9020;&#x52E2;&#x5927;&#x6703;</a>
+			</div>
+			<a href="http://video.ltn.com.tw/m/article/TQIpJnfXTDA/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7"><img src="images/1824898.jpg"></a>
+		</div>
+			<div class="swiper-slide">
+			<div class="caption">
+				<a href="http://video.ltn.com.tw/m/article/CGWTUh5Bgxc/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7">&#x5433;&#x6566;&#x7FA9;&#x9AD8;&#x96C4;&#x8F14;&#x9078;&#x51FA;&#x60E1;&#x8A00; &#x6697;&#x7F75;&#x9673;&#x83CA;&#x300C;&#x80A5;&#x6ECB;&#x6ECB;&#x7684;&#x5927;&#x6BCD;&#x8C6C;&#x300D;</a>
+			</div>
+			<a href="http://video.ltn.com.tw/m/article/CGWTUh5Bgxc/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7"><img src="images/1823463.jpg"></a>
+		</div>
+			<div class="swiper-slide">
+			<div class="caption">
+				<a href="http://video.ltn.com.tw/m/article/COGFF2alpFM/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7">&#x5317;&#x5E02;&#x653F;&#x898B;&#x767C;&#x8868;&#x6703; &#x5433;&#x855A;&#x6D0B;&#xFF1A;&#x6211;&#x4F86;&#x8A13;&#x7DF4;&#x67EF;&#x6587;&#x54F2;&#x7576;&#x7E3D;&#x7D71;&#xFF01;
+</a>
+			</div>
+			<a href="http://video.ltn.com.tw/m/article/COGFF2alpFM/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7"><img src="images/1825354.jpg"></a>
+		</div>
+			<div class="swiper-slide">
+			<div class="caption">
+				<a href="http://video.ltn.com.tw/m/article/ZnsshTwkHQw/PLCvAZ9B-QRHMlV-Ek_VO3Sz1xCz8NGiid">&#x7D55;&#x7F8E;&#x666F;&#x8272;&#x76E1;&#x6536;&#x773C;&#x5E95; &#x7A7A;&#x62CD;&#x9054;&#x4EBA;&#x7528;&#x5F71;&#x7247;&#x544A;&#x8A34;&#x5927;&#x5BB6;&#xFF1A;&#x9AD8;&#x96C4;&#x8D85;&#x7F8E;&#xFF01;</a>
+			</div>
+			<a href="http://video.ltn.com.tw/m/article/ZnsshTwkHQw/PLCvAZ9B-QRHMlV-Ek_VO3Sz1xCz8NGiid"><img src="images/1824563.jpg"></a>
+		</div>
+			<div class="swiper-slide">
+			<div class="caption">
+				<a href="http://video.ltn.com.tw/m/article/Jp6YQH4fuVk/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7">&#x8036;&#x8A95;&#x5FC5;&#x8FFD;&#xFF01; &#x9019;&#x5169;&#x5730;&#x8036;&#x8A95;&#x9020;&#x666F;&#x7F8E;&#x7FFB;&#x5929;</a>
+			</div>
+			<a href="http://video.ltn.com.tw/m/article/Jp6YQH4fuVk/PLI7xntdRxhw2yudg1fUeZfo0970mXpfL7"><img src="images/1822614.jpg"></a>
+		</div>
+	</div>
+	<!-- Add Pagination -->
+	<div class="pagination"></div>
+</div>
+
+<script>
+$(function(){
+	var swiper = new Swiper('.containerS', {
+		pagination: '.pagination',
+		paginationClickable: false,
+		autoplay: 4000,
+		loop: true,
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		spaceBetween: 10,
+		autoplayDisableOnInteraction: false,
+		paginationClickable: true
+	});
+
+	$(window).resize(function(){
+		var mainW = $('#main').width();
+		$('.containerS .swiper-slide').css('width',(mainW));
+	});
+})
+</script>
+</section>
+
+<section class="boxTitle" data-desc="&#x4E8B;&#x4EF6;&#x4E0A;">
+    <section class="event boxTitle" data-desc="&#x4E8B;&#x4EF6;:&#x7B2C;55&#x5C46;&#x91D1;&#x99AC;&#x734E;">
+<p class="newstit highlight">
+	<a href="topic/%E7%AC%AC55%E5%B1%86%E9%87%91%E9%A6%AC%E7%8D%8E" data-link="1824008" data-desc="&#x6A19;&#x982D;">
+		<span class="tWord">&#x7B2C;55&#x5C46;&#x91D1;&#x99AC;&#x734E;</span>
+		<span class="tSpace">| &#x4E8B;&#x4EF6; <span class="tS_more"></span></span>
+	</a>
+</p>
+<ul class="chcon L22">
+<li>
+	<a href="http://ent.ltn.com.tw/news/breakingnews/2615669">
+        <div class="listS_h"><img alt="" src="images/1818337.jpg"></div>
+        <p>&#x91D1;&#x99AC;&#x300B;&#x7B2C;55&#x5C46;&#x91D1;&#x99AC;&#x734E;&#x5B8C;&#x6574;&#x5F97;&#x734E;&#x540D;&#x55AE;</p>
+	</a>
+</li>
+	<li><a href="news/entertainment/breakingnews/2617439"><p>&#x91D1;&#x99AC;&#x6536;&#x8996;&#x51FA;&#x7210;&#x8DCC;&#x7834;&#x773C;&#x93E1;&#xFF01;&#x5168;&#x5834;&#x77AC;&#x9593;&#x6700;&#x9AD8;&#x7ADF;&#x662F;&#x300C;&#x4ED6;&#x300D;</p></a></li>
+	<li><a href="news/politics/breakingnews/2617217"><p>&#x518D;&#x8072;&#x63F4;&#x5085;&#x6986;&#x53F0;&#x7368;&#x8AAA;   &#x6797;&#x98DB;&#x5E06;&#xFF1A;&#x62C6;&#x6BC0;&#x91D1;&#x99AC;&#x821E;&#x53F0;&#x7684;&#x662F;&#x4E2D;&#x5171;&#xFF01;</p></a></li>
+</ul>
+<a href="topic/%E7%AC%AC55%E5%B1%86%E9%87%91%E9%A6%AC%E7%8D%8E" data-link="1824008" class="tS_moreD">... more</a>
+</section></section>
+
+    <section class="boxTitle" data-desc="&#x9996;8">
+    <div class="tit">
+        <p class="newstit page-name" data-desc="&#x9996;&#x9801;">
+            <span class="tWord">&#x7DE8;&#x8F2F;&#x63A8;&#x85A6;</span>
+            <span class="tSpace"></span>
+        </p>
+    </div>
+    <ul class="news boxpadding noP">
+                        <li>
+                    <span>2018-11-19</span>
+                    <a href="news/politics/breakingnews/2617025" data-desc="&#x5927;&#x5716;:0:&#x8EAB;&#x5206;&#x66DD;&#x5149;&#xFF01;&#x6BB5;&#x5B9C;&#x5EB7;&#x7206;&#x4FAF;&#x53CB;&#x5B9C;&#x7528;&#x5973;&#x5152;&#x540D;&#x7FA9;&#x501F;&#x9322;&#x7D66;&#x6797;&#x5764;&#x6B63;">
+                        <p>&#x8EAB;&#x5206;&#x66DD;&#x5149;&#xFF01;&#x6BB5;&#x5B9C;&#x5EB7;&#x7206;&#x4FAF;&#x53CB;&#x5B9C;&#x7528;&#x5973;&#x5152;&#x540D;&#x7FA9;&#x501F;&#x9322;&#x7D66;&#x6797;&#x5764;&#x6B63;</p>
+                        <div class="listA_03" style="max-height: 763px;">
+                            <img class="large" src="images/600_phpFeDqNB.jpg" title="&#x8EAB;&#x5206;&#x66DD;&#x5149;&#xFF01;&#x6BB5;&#x5B9C;&#x5EB7;&#x7206;&#x4FAF;&#x53CB;&#x5B9C;&#x7528;&#x5973;&#x5152;&#x540D;&#x7FA9;&#x501F;&#x9322;&#x7D66;&#x6797;&#x5764;&#x6B63;">
+                        </div>
+                    </a>
+                </li>
+                                            <li>
+                    <span>2018-11-19</span>
+                    <a href="news/politics/breakingnews/2617217" data-desc="&#x5927;&#x5716;:1:&#x518D;&#x8072;&#x63F4;&#x5085;&#x6986;&#x53F0;&#x7368;&#x8AAA;   &#x6797;&#x98DB;&#x5E06;&#xFF1A;&#x62C6;&#x6BC0;&#x91D1;&#x99AC;&#x821E;&#x53F0;&#x7684;&#x662F;&#x4E2D;&#x5171;&#xFF01;">
+                        <p>&#x518D;&#x8072;&#x63F4;&#x5085;&#x6986;&#x53F0;&#x7368;&#x8AAA;   &#x6797;&#x98DB;&#x5E06;&#xFF1A;&#x62C6;&#x6BC0;&#x91D1;&#x99AC;&#x821E;&#x53F0;&#x7684;&#x662F;&#x4E2D;&#x5171;&#xFF01;</p>
+                        <div class="listA_03" style="max-height: 763px;">
+                            <img class="large" src="images/600_php0BXlD4.jpg" title="&#x518D;&#x8072;&#x63F4;&#x5085;&#x6986;&#x53F0;&#x7368;&#x8AAA;   &#x6797;&#x98DB;&#x5E06;&#xFF1A;&#x62C6;&#x6BC0;&#x91D1;&#x99AC;&#x821E;&#x53F0;&#x7684;&#x662F;&#x4E2D;&#x5171;&#xFF01;">
+                        </div>
+                    </a>
+                </li>
+                                            <li>
+                    <span>2018-11-19</span>
+                    <a href="news/life/breakingnews/2617317" data-desc="&#x5927;&#x5716;:2:&#x8D85;&#x5E78;&#x904B;&#xFF01;&#x5916;&#x570B;&#x80CC;&#x5305;&#x5BA2;&#x62DB;&#x624B;&#x6C42;&#x4E0A;&#x8ECA; &#x53F8;&#x6A5F;&#x7ADF;&#x662F;&#x738B;&#x5EFA;&#x6C11;&#x672C;&#x4EBA;...">
+                        <p>&#x8D85;&#x5E78;&#x904B;&#xFF01;&#x5916;&#x570B;&#x80CC;&#x5305;&#x5BA2;&#x62DB;&#x624B;&#x6C42;&#x4E0A;&#x8ECA; &#x53F8;&#x6A5F;&#x7ADF;&#x662F;&#x738B;&#x5EFA;&#x6C11;&#x672C;&#x4EBA;...</p>
+                        <div class="listA_03" style="max-height: 763px;">
+                            <img class="large" src="images/600_phpN4r3w0.jpg" title="&#x8D85;&#x5E78;&#x904B;&#xFF01;&#x5916;&#x570B;&#x80CC;&#x5305;&#x5BA2;&#x62DB;&#x624B;&#x6C42;&#x4E0A;&#x8ECA; &#x53F8;&#x6A5F;&#x7ADF;&#x662F;&#x738B;&#x5EFA;&#x6C11;&#x672C;&#x4EBA;...">
+                        </div>
+                    </a>
+                </li>
+                                            <li>
+                    <span>2018-11-19</span>
+                    <a href="news/politics/breakingnews/2617315" data-desc="&#x5927;&#x5716;:3:&#x59DA;&#x6587;&#x667A;&#x7206;&#x67EF;&#x6587;&#x54F2; &#x53D7;&#x8A2A;&#x66FE;&#x8AAA;&#x300C;&#x4E2D;&#x570B;&#x8981;&#x81EA;&#x5DF1;&#x9078;&#x7E3D;&#x7D71;&#x300D;">
+                        <p>&#x59DA;&#x6587;&#x667A;&#x7206;&#x67EF;&#x6587;&#x54F2; &#x53D7;&#x8A2A;&#x66FE;&#x8AAA;&#x300C;&#x4E2D;&#x570B;&#x8981;&#x81EA;&#x5DF1;&#x9078;&#x7E3D;&#x7D71;&#x300D;<img src="images/video_icon03m.png" class="is_video"></p>
+                        <div class="listA_03" style="max-height: 763px;">
+                            <img class="large" src="images/600_2617315_2.jpg" title="&#x59DA;&#x6587;&#x667A;&#x7206;&#x67EF;&#x6587;&#x54F2; &#x53D7;&#x8A2A;&#x66FE;&#x8AAA;&#x300C;&#x4E2D;&#x570B;&#x8981;&#x81EA;&#x5DF1;&#x9078;&#x7E3D;&#x7D71;&#x300D;">
+                        </div>
+                    </a>
+                </li>
+                                            <li>
+                    <span>2018-11-19</span>
+                    <a href="news/politics/breakingnews/2617209" data-desc="&#x5927;&#x5716;:4:TVBS&#x4E0B;&#x67B6;AIT&#x83AB;&#x5065;&#x5C08;&#x8A2A; &#x9678;&#x59D4;&#x6703;&#xFF1A;&#x81EA;&#x6211;&#x9650;&#x7E2E;&#x5C07;&#x65B7;&#x9001;&#x6C11;&#x4E3B;">
+                        <p>TVBS&#x4E0B;&#x67B6;AIT&#x83AB;&#x5065;&#x5C08;&#x8A2A; &#x9678;&#x59D4;&#x6703;&#xFF1A;&#x81EA;&#x6211;&#x9650;&#x7E2E;&#x5C07;&#x65B7;&#x9001;&#x6C11;&#x4E3B;</p>
+                        <div class="listA_03" style="max-height: 763px;">
+                            <img class="large" src="images/600_php8SP4RR.jpg" title="TVBS&#x4E0B;&#x67B6;AIT&#x83AB;&#x5065;&#x5C08;&#x8A2A; &#x9678;&#x59D4;&#x6703;&#xFF1A;&#x81EA;&#x6211;&#x9650;&#x7E2E;&#x5C07;&#x65B7;&#x9001;&#x6C11;&#x4E3B;">
+                        </div>
+                    </a>
+                </li>
+                    <div id="ad-B1" class="B1 ad" data-desc="&#x5EE3;&#x544A;">
+<script type="text/javascript">
+googletag.cmd.push(function() { 
+    googletag.display('ad-B1');
+});
+</script>
+</div>
+                        <li>
+                    <span>2018-11-19</span>
+                    <a href="news/politics/breakingnews/2617083" data-desc="&#x5927;&#x5716;:5:&#x97D3;&#x570B;&#x745C;&#x3001;&#x5F35;&#x69AE;&#x5473;&#x300C;&#x83DC;&#x87F2;&#x7ADF;&#x8B8A;&#x6551;&#x661F;&#x300D; &#x6797;&#x6DD1;&#x82AC;&#x5606;&#xFF1A;&#x5929;&#x5730;&#x985B;&#x5012;&#x4E86;">
+                        <p>&#x97D3;&#x570B;&#x745C;&#x3001;&#x5F35;&#x69AE;&#x5473;&#x300C;&#x83DC;&#x87F2;&#x7ADF;&#x8B8A;&#x6551;&#x661F;&#x300D; &#x6797;&#x6DD1;&#x82AC;&#x5606;&#xFF1A;&#x5929;&#x5730;&#x985B;&#x5012;&#x4E86;</p>
+                        <div class="listA_03" style="max-height: 763px;">
+                            <img class="large" src="images/600_phpOoN7af.jpg" title="&#x97D3;&#x570B;&#x745C;&#x3001;&#x5F35;&#x69AE;&#x5473;&#x300C;&#x83DC;&#x87F2;&#x7ADF;&#x8B8A;&#x6551;&#x661F;&#x300D; &#x6797;&#x6DD1;&#x82AC;&#x5606;&#xFF1A;&#x5929;&#x5730;&#x985B;&#x5012;&#x4E86;">
+                        </div>
+                    </a>
+                </li>
+                                            <li>
+                    <span>2018-11-19</span>
+                    <a href="news/politics/breakingnews/2617033" data-desc="&#x5927;&#x5716;:6:&#x9019;&#x624D;&#x662F;&#x9AD8;&#x96C4;&#x7684;&#x8072;&#x97F3;&#xFF01;&#x9AD8;&#x6377;&#x8ECA;&#x5EC2;&#x6628;&#x665A;&#x6C92;&#x55A7;&#x56C2;&#x3001;&#x53EA;&#x6709;&#x5653;&#x5BD2;&#x554F;&#x6696;...">
+                        <p>&#x9019;&#x624D;&#x662F;&#x9AD8;&#x96C4;&#x7684;&#x8072;&#x97F3;&#xFF01;&#x9AD8;&#x6377;&#x8ECA;&#x5EC2;&#x6628;&#x665A;&#x6C92;&#x55A7;&#x56C2;&#x3001;&#x53EA;&#x6709;&#x5653;&#x5BD2;&#x554F;&#x6696;...</p>
+                        <div class="listA_03" style="max-height: 763px;">
+                            <img class="large" src="images/600_2617033_1.jpg" title="&#x9019;&#x624D;&#x662F;&#x9AD8;&#x96C4;&#x7684;&#x8072;&#x97F3;&#xFF01;&#x9AD8;&#x6377;&#x8ECA;&#x5EC2;&#x6628;&#x665A;&#x6C92;&#x55A7;&#x56C2;&#x3001;&#x53EA;&#x6709;&#x5653;&#x5BD2;&#x554F;&#x6696;...">
+                        </div>
+                    </a>
+                </li>
+                                <section class="boxTitle" data-desc="&#x5EE3;&#x544A;">
+        <a href="http://cache.ltn.com.tw/app/program/click.php?ano=2018111605070807" target="_blank">
+            <li class="lit5">
+                <div class="adbox">&#x5EE3;&#x544A;</div>
+                <p>&#x52D5;&#x4FDD;&#x5929;&#x4F7F;&#x9673;&#x4FE1;&#x745C;&#x611B;&#x8B77;&#x52D5;&#x7269; &#x95DC;&#x61F7;&#x5F31;&#x52E2;</p>
+                    <img src="images/34154479.jpg" title="&#x52D5;&#x4FDD;&#x5929;&#x4F7F;&#x9673;&#x4FE1;&#x745C;&#x611B;&#x8B77;&#x52D5;&#x7269; &#x95DC;&#x61F7;&#x5F31;&#x52E2;" alt="">
+            </li>
+        </a>
+    </section>
+    <script>document.write('<img style="display:none" src="http://cache.ltn.com.tw/app/program/impression.php?ano=2018111605070807&' + new Date().getTime() + '">');</script>
+                        <li><div style="width:100%;text-align:center;"><ins class="clickforceads" style="display:inline-block;width:4px;height:4px;" data-ad-zone="8730"></ins><script async type="text/javascript" src="//cdn.doublemax.net/js/init.js"></script></div></li></ul>
+</section>
+    <div class="height20"></div>
+
+    <section class="boxTitle" data-desc="&#x4E8B;&#x4EF6;&#x4E0B;&#x4E00;">
+        <section class="event boxTitle" data-desc="&#x4E8B;&#x4EF6;:&#x5929;&#x5929;&#x5403;&#x597D;&#x6599;">
+    <p class="newstit highlight">
+        <a href="topic/%E5%A4%A9%E5%A4%A9%E5%90%83%E5%A5%BD%E6%96%99" data-link="1824544" data-desc="&#x6A19;&#x982D;">
+            <span class="tWord">&#x5929;&#x5929;&#x5403;&#x597D;&#x6599;</span>
+            <span class="tSpace">| &#x4E8B;&#x4EF6; <span class="tS_more"></span></span>
+        </a>
+    </p>
+    <ul class="chcon L22">
+        <li>
+            <a href="news/life/breakingnews/2612816">
+                <div class="listS_h"><img alt="" src="images/1824545.jpg"></div>
+                <p>&#x53F0;&#x5357;&#x6B23;&#x6B23;&#x9910;&#x5EF3; &#x5728;&#x5730;&#x7D93;&#x5178;&#x8001;&#x53F0;&#x83DC;</p>
+            </a>
+        </li>
+                    <li><a href="http://news.ltn.com.tw/news/life/breakingnews/2609628"><p>&#x5929;&#x5929;&#x5403;&#x597D;&#x6599;&#x300B;&#x6C38;&#x548C;&#x4E00;&#x8DEF;&#x767C;&#x4E0A;&#x6D77;&#x9BAE;&#x8089;&#x5305; &#x7F8E;&#x5473;&#x4EE4;&#x4EBA;&#x5782;&#x6D8E;</p></a></li>
+                    <li><a href="http://news.ltn.com.tw/news/life/breakingnews/2603705"><p>&#x5929;&#x5929;&#x5403;&#x597D;&#x6599;&#x300B;&#x901A;&#x9704;&#x7D00;&#x5BB6;&#x8089;&#x7CBD; 43&#x5E74;&#x597D;&#x6ECB;&#x5473;</p></a></li>
+                    <li><a href="http://news.ltn.com.tw/news/life/breakingnews/2602277"><p>&#x5929;&#x5929;&#x5403;&#x597D;&#x6599;&#x300B;&#x53F0;&#x4E2D;&#x60A0;&#x71B9;&#x71D2;&#x8089; &#x8B1B;&#x6C42;&#x98DF;&#x6750;&#x539F;&#x5473;</p></a></li>
+                    <li><a href="http://news.ltn.com.tw/news/life/breakingnews/2588778"><p>&#x5929;&#x5929;&#x5403;&#x597D;&#x6599;&#x300B;&#x53F0;&#x4E2D;&#x68D7;&#x9EDE;&#x5B50;&#x98DF;&#x5C1A;&#x5BA2;&#x9928; &#x5C08;&#x7CBE;&#x7D05;&#x68D7;&#x6599;&#x7406;</p></a></li>
+                    <li><a href="http://news.ltn.com.tw/news/life/breakingnews/2563319"><p>&#x5929;&#x5929;&#x5403;&#x597D;&#x6599;&#x300B;&#x4E94;&#x80A1;&#x65B0;&#x4E5D;&#x4E5D;&#x725B;&#x8089;&#x9EB5; &#x6FC3;&#x90C1;&#x5929;&#x7136;&#x6E6F;&#x982D;</p></a></li>
+            </ul>
+    <a href="topic/%E5%A4%A9%E5%A4%A9%E5%90%83%E5%A5%BD%E6%96%99" data-link="1824544" class="tS_moreD">... more</a>
+</section>    </section>
+
+
+<!--Swiper 頻道開始-->
+<div class="ch boxTitle boxpadding" data-desc="&#x983B;&#x9053;">
+    <p class="newstit">
+    <span class="tWord">&#x983B;&#x9053;</span>
+    <span class="tSpace"></span>
+    </p>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="http://ec.ltn.com.tw">
+                    <div class="box">
+                        <img src="images/600_php3qvMMT.jpg" title="&#x81EA;&#x7531;&#x8CA1;&#x7D93;" alt="&#x81EA;&#x7531;&#x8CA1;&#x7D93;">
+                    </div>
+                    <div class="boxW logo12">
+                        <span>&#x81EA;&#x7531;&#x8CA1;&#x7D93;</span>
+                    </div>
+                </a>
+            </div>
+                    	<div class="swiper-slide">
+                <a href="http://sports.ltn.com.tw">
+                    <div class="box">
+                        <img src="images/phpOX3F6r.jpg">
+                    </div>
+                    <div class="boxW logo7">
+                        <span>&#x9AD4;&#x80B2;</span>
+                    </div>
+                </a>
+            </div>
+                                    <div class="swiper-slide">
+                <a href="http://ent.ltn.com.tw">
+                    <div class="box">
+                        <img src="images/2617442_1.jpg">
+                    </div>
+                    <div class="boxW logo1">
+                        <span>&#x81EA;&#x7531;&#x5A1B;&#x6A02;</span>
+                    </div>
+                </a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="http://istyle.ltn.com.tw">
+                    <div class="box">
+                        <img src="images/1823822.jpg">
+                    </div>
+                    <div class="boxW logo3">
+                        <span>istyle</span>
+                    </div>
+                </a>
+            </div>
+                                                <div class="swiper-slide">
+                <a href="http://talk.ltn.com.tw">
+                    <div class="box">
+                        <img src="images/1825123.jpg">
+                    </div>
+                    <div class="boxW logo2">
+                        <span>&#x81EA;&#x7531;&#x8A55;&#x8AD6;&#x7DB2;</span>
+                    </div>
+                </a>
+            </div>
+                                    <div class="swiper-slide">
+                <a href="http://m.ltn.com.tw/video/ly/1">
+                    <div class="box">
+                        <img src="images/live_pic.png" title="" alt="">
+                    </div>
+                    <div class="boxW logo10">
+                        <span>&#x570B;&#x6703;&#x76F4;&#x64AD;</span>
+                    </div>
+                </a>
+            </div>
+                                    <div class="swiper-slide">
+                <a href="http://3c.ltn.com.tw">
+                    <div class="box">
+                        <img src="images/1826695.jpg">
+                    </div>
+                    <div class="boxW logo4">
+                        <span>3C&#x79D1;&#x6280;</span>
+                    </div>
+                </a>
+            </div>
+                                    <div class="swiper-slide">
+                <a href="http://auto.ltn.com.tw">
+                    <div class="box">
+                        <img src="images/1825311.jpg">
+                    </div>
+                    <div class="boxW logo5">
+                        <span>&#x6C7D;&#x8ECA;&#x983B;&#x9053;</span>
+                    </div>
+                </a>
+            </div>
+                                        <div class="swiper-slide">
+                    <a href="http://playing.ltn.com.tw">
+                        <div class="box">
+                            <img src="images/1821204.jpg">
+                        </div>
+                        <div class="boxW logo11">
+                            <span>&#x73A9;&#x5496;</span>
+                        </div>
+                    </a>
+                </div>
+                                    <div class="swiper-slide">
+                <a href="http://food.ltn.com.tw">
+                    <div class="box">
+                        <img src="images/1826276.jpg">
+                    </div>
+                    <div class="boxW logo6">
+                        <span>&#x98DF;&#x8B5C;&#x81EA;&#x7531;&#x914D;</span>
+                    </div>
+                </a>
+            </div>
+            			<div class="swiper-slide">
+                <a href="http://estate.ltn.com.tw">
+                    <div class="box">
+                        <img src="images/estate300.jpg">
+                    </div>
+                    <div class="boxW logo9">
+                        <span>&#x5730;&#x7522;&#x5929;&#x4E0B;</span>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="http://health.ltn.com.tw">
+                    <div class="box">
+                        <img src="images/health_pic.png" title="" alt="">
+                    </div>
+                    <div class="boxW logo8">
+                        <span>&#x5065;&#x5EB7;&#x91AB;&#x7642;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<!--Swiper 頻道結束-->
+<script>
+$(function(){
+	var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+			slidesPerView: 3,
+			slidesPerGroup: 3,
+			paginationClickable: true,
+			spaceBetween: 10,
+			autoplay: 2500,
+			autoplayDisableOnInteraction: false,
+			paginationClickable: true
+	});
+
+	$(window).resize(function(){
+		var mainW = $('#main').width();
+		$('.swiper-container .swiper-slide').css('width',(mainW-56)/3);
+	})
+})
+</script>
+
+<div id="ad-B2" class="B2 ad" data-desc="&#x5EE3;&#x544A;">
+<script type="text/javascript">
+googletag.cmd.push(function() { 
+    googletag.display('ad-B2');
+});
+</script>
+</div>
+
+
+<section class="boxTitle" data-desc="&#x5C08;&#x984C;">
+    </section>
+
+    <ul class="news boxTitle boxpadding noP" data-desc="&#x6E05;&#x55AE;">
+        <p class="newstit">
+            <span class="tWord">&#x5373;&#x6642;&#x65B0;&#x805E;</span>
+            <span class="tSpace"></span>
+        </p>
+                    <li>
+                                    <a href="news/politics/breakingnews/2617441" data-desc="&#x6A19;">
+                        <span>2018-11-19 14:49</span>
+                        <p>&#x55AE;&#x5175;&#x6CE8;&#x610F;&#xFF01;&#x57FA;&#x672C;&#x6230;&#x9B25;&#x6559;&#x7DF4;&#x6CBF;&#x7528;&#x8FD1;20&#x5E74; &#x660E;&#x5E74;&#x5C07;&#x6539;</p>
+                        <div class="listA_03">
+                            <img class="large" src="images/600_php8yKD8s.jpg" title="&#x55AE;&#x5175;&#x6CE8;&#x610F;&#xFF01;&#x57FA;&#x672C;&#x6230;&#x9B25;&#x6559;&#x7DF4;&#x6CBF;&#x7528;&#x8FD1;20&#x5E74; &#x660E;&#x5E74;&#x5C07;&#x6539;" alt="&#x5716;">
+                        </div>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/life/breakingnews/2617445" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/600_2617445_1.jpg" title="&#x4FC3;&#x9032;&#x53F0;&#x7F8E;&#x7522;&#x5B78;&#x5408;&#x4F5C; &#x4E73;&#x916A;&#x5C08;&#x5BB6;&#x8A8D;&#x8B49;&#x8AB2;&#x7A0B;&#x660E;&#x5E74;&#x767B;&#x53F0;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:47</span>
+                        <p>&#x4FC3;&#x9032;&#x53F0;&#x7F8E;&#x7522;&#x5B78;&#x5408;&#x4F5C; &#x4E73;&#x916A;&#x5C08;&#x5BB6;&#x8A8D;&#x8B49;&#x8AB2;&#x7A0B;&#x660E;&#x5E74;&#x767B;&#x53F0;</p>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/world/breakingnews/2617421" data-desc="&#x6A19;">
+                        <span>2018-11-19 14:47</span>
+                        <p>&#x7F8A;&#x54A9;&#x54A9;&#x4E5F;&#x8D85;&#x6015;&#x6253;&#x91DD;&#xFF1F;&#x56DB;&#x8173;&#x671D;&#x5929;&#x3001;&#x773C;&#x795E;&#x6B7B;&#x8B93;&#x7DB2;&#x53CB;&#x7B11;&#x7FFB;<img src="images/video_icon01m.png" class="is_video"></p>
+                        <div class="listA_03">
+                            <img class="large" src="images/600_php4wuIgb.jpg" title="&#x7F8A;&#x54A9;&#x54A9;&#x4E5F;&#x8D85;&#x6015;&#x6253;&#x91DD;&#xFF1F;&#x56DB;&#x8173;&#x671D;&#x5929;&#x3001;&#x773C;&#x795E;&#x6B7B;&#x8B93;&#x7DB2;&#x53CB;&#x7B11;&#x7FFB;" alt="&#x5716;">
+                        </div>
+                    </a>
+                            </li>
+            
+                    <li class="chicon_01">
+                                    <a href="http://ent.ltn.com.tw/news/breakingnews/2617442" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/2617442_1.jpg" title="&#x5F90;&#x4E43;&#x9E9F;&#x6182;&#x7BC0;&#x76EE;&#x6536;&#x6524;&#x7B11;&#x558A;&#x53BB;&#x8CE3;&#x8EAB; &#x5085;&#x6986;&#x5BA3;&#x8A00;&#x66FE;&#x570B;&#x57CE;&#x6C92;&#x770B;&#x5230;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:47</span>
+                        <p>&#x5F90;&#x4E43;&#x9E9F;&#x6182;&#x7BC0;&#x76EE;&#x6536;&#x6524;&#x7B11;&#x558A;&#x53BB;&#x8CE3;&#x8EAB; &#x5085;&#x6986;&#x5BA3;&#x8A00;&#x66FE;&#x570B;&#x57CE;&#x6C92;&#x770B;&#x5230;</p>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/business/breakingnews/2617411" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/600_php3qvMMT.jpg" title="&#x83F2;&#x5F8B;&#x8CD3;&#x300C;&#x89AA;&#x4E2D;&#x68C4;&#x7F8E;&#x300D;&#xFF1F; &#x4E2D;&#x4F01;&#x5C07;&#x5728;&#x83F2;&#x6295;&#x8CC7;&#x5DE5;&#x696D;&#x5712;&#x5340;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:46</span>
+                        <p>&#x83F2;&#x5F8B;&#x8CD3;&#x300C;&#x89AA;&#x4E2D;&#x68C4;&#x7F8E;&#x300D;&#xFF1F; &#x4E2D;&#x4F01;&#x5C07;&#x5728;&#x83F2;&#x6295;&#x8CC7;&#x5DE5;&#x696D;&#x5712;&#x5340;</p>
+                    </a>
+                            </li>
+            <div id="ad-B3" class="B3 ad" data-desc="&#x5EE3;&#x544A;">
+<script type="text/javascript">
+googletag.cmd.push(function() { 
+    googletag.display('ad-B3');
+});
+</script>
+</div>
+
+                    <li>
+                                    <a href="news/life/breakingnews/2617440" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/600_phplDntK7.png" title="&#x56DB;&#x6280;&#x4E8C;&#x5C08;&#x7279;&#x6B8A;&#x9078;&#x624D;&#x63A8;&#x9752;&#x5E74;&#x5132;&#x84C4;&#x7D44; 108&#x5E74;&#x62DB;&#x751F;&#x589E;&#x70BA;3&#x500D;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:44</span>
+                        <p>&#x56DB;&#x6280;&#x4E8C;&#x5C08;&#x7279;&#x6B8A;&#x9078;&#x624D;&#x63A8;&#x9752;&#x5E74;&#x5132;&#x84C4;&#x7D44; 108&#x5E74;&#x62DB;&#x751F;&#x589E;&#x70BA;3&#x500D;</p>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/business/breakingnews/2617365" data-desc="&#x6A19;">
+                        <span>2018-11-19 14:44</span>
+                        <p>&#x5411;&#x7F8E;&#x8CBF;&#x6613;&#x6230;&#x8868;&#x614B;&#xFF1F;&#x50B3;&#x4E2D;&#x570B;&#x64EC;&#x5728;12&#x6708;&#x5BA3;&#x4F48;&#x64F4;&#x5927;&#x958B;&#x653E;</p>
+                        <div class="listA_03">
+                            <img class="large" src="images/600_phpeXiY7r.jpg" title="&#x5411;&#x7F8E;&#x8CBF;&#x6613;&#x6230;&#x8868;&#x614B;&#xFF1F;&#x50B3;&#x4E2D;&#x570B;&#x64EC;&#x5728;12&#x6708;&#x5BA3;&#x4F48;&#x64F4;&#x5927;&#x958B;&#x653E;" alt="&#x5716;">
+                        </div>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/world/breakingnews/2617402" data-desc="&#x6A19;">
+                        <span>2018-11-19 14:40</span>
+                        <p>&#x6050;&#x6016;&#xFF01;&#x65E5;&#x672C;&#x9AD8;&#x4E2D;&#x68D2;&#x7403;&#x7DF4;&#x7FD2;&#x8CFD;   &#x6253;&#x8005;&#x88AB;&#x982D;&#x90E8;&#x89F8;&#x8EAB;&#x7403;&#x7838;&#x6B7B;</p>
+                        <div class="listA_03">
+                            <img class="large" src="images/600_phpUUG7nA.jpg" title="&#x6050;&#x6016;&#xFF01;&#x65E5;&#x672C;&#x9AD8;&#x4E2D;&#x68D2;&#x7403;&#x7DF4;&#x7FD2;&#x8CFD;   &#x6253;&#x8005;&#x88AB;&#x982D;&#x90E8;&#x89F8;&#x8EAB;&#x7403;&#x7838;&#x6B7B;" alt="&#x5716;">
+                        </div>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/politics/breakingnews/2617428" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/600_2617428_1.jpg" title="&#x9109;&#x4E0B;&#x7DB2;&#x8DEF;&#x93C8;&#x7D50;&#x6709;&#x9650; &#x6C11;&#x9032;&#x9EE8;&#x738B;&#x958B;&#x73B9;&#x300C;&#x50B3;&#x7D71;&#x9678;&#x6230;&#x300D;&#x6700;&#x5F8C;&#x885D;&#x523A;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:40</span>
+                        <p>&#x9109;&#x4E0B;&#x7DB2;&#x8DEF;&#x93C8;&#x7D50;&#x6709;&#x9650; &#x6C11;&#x9032;&#x9EE8;&#x738B;&#x958B;&#x73B9;&#x300C;&#x50B3;&#x7D71;&#x9678;&#x6230;&#x300D;&#x6700;&#x5F8C;&#x885D;&#x523A;</p>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/life/breakingnews/2617425" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/600_phprhMnaV.png" title="&#x5730;&#x725B;&#x6296;&#x52D5;&#xFF01;&#x82B1;&#x84EE;&#x5916;&#x6D77;&#x898F;&#x6A21;4.9&#x5730;&#x9707;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:39</span>
+                        <p>&#x5730;&#x725B;&#x6296;&#x52D5;&#xFF01;&#x82B1;&#x84EE;&#x5916;&#x6D77;&#x898F;&#x6A21;4.9&#x5730;&#x9707;</p>
+                    </a>
+                            </li>
+            <div id="ad-B4" class="B4 ad" data-desc="&#x5EE3;&#x544A;">
+<script type="text/javascript">
+googletag.cmd.push(function() { 
+    googletag.display('ad-B4');
+});
+</script>
+</div>
+
+                    <li class="chicon_01">
+                                    <a href="http://ent.ltn.com.tw/news/breakingnews/2617439" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/phpvDNDxO.jpeg" title="&#x91D1;&#x99AC;&#x6536;&#x8996;&#x51FA;&#x7210;&#x8DCC;&#x7834;&#x773C;&#x93E1;&#xFF01;&#x5168;&#x5834;&#x77AC;&#x9593;&#x6700;&#x9AD8;&#x7ADF;&#x662F;&#x300C;&#x4ED6;&#x300D;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:38</span>
+                        <p>&#x91D1;&#x99AC;&#x6536;&#x8996;&#x51FA;&#x7210;&#x8DCC;&#x7834;&#x773C;&#x93E1;&#xFF01;&#x5168;&#x5834;&#x77AC;&#x9593;&#x6700;&#x9AD8;&#x7ADF;&#x662F;&#x300C;&#x4ED6;&#x300D;</p>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/politics/breakingnews/2617423" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/600_2617423_1.jpg" title="&#x9ED8;&#x5951;&#x5341;&#x8DB3; &#x9023;&#x52DD;&#x6587;&#x3001;&#x4E01;&#x5B88;&#x4E2D;&#x5408;&#x9AD4;&#x716E;&#x7FA9;&#x5927;&#x5229;&#x9EB5; " alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:37</span>
+                        <p>&#x9ED8;&#x5951;&#x5341;&#x8DB3; &#x9023;&#x52DD;&#x6587;&#x3001;&#x4E01;&#x5B88;&#x4E2D;&#x5408;&#x9AD4;&#x716E;&#x7FA9;&#x5927;&#x5229;&#x9EB5; </p>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/life/breakingnews/2617407" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/600_2617407_1.jpg" title="1&#x5E74;&#x591A;&#x9077;&#x846C;15&#x516C;&#x5893; &#x5C4F;&#x5E02;&#x6E05;&#x6F54;&#x968A;&#x90E8;&#x5927;&#x6A13;&#x65A5;&#x8CC7;&#x5104;&#x5143;&#x4ECA;&#x52D5;&#x571F;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:37</span>
+                        <p>1&#x5E74;&#x591A;&#x9077;&#x846C;15&#x516C;&#x5893; &#x5C4F;&#x5E02;&#x6E05;&#x6F54;&#x968A;&#x90E8;&#x5927;&#x6A13;&#x65A5;&#x8CC7;&#x5104;&#x5143;&#x4ECA;&#x52D5;&#x571F;</p>
+                    </a>
+                            </li>
+            
+                    <li class="chicon_01">
+                                    <a href="http://ent.ltn.com.tw/news/breakingnews/2617378" data-desc="&#x6A19;">
+                        <span>2018-11-19 14:34</span>
+                        <p>&#x66FE;&#x541E;&#x85E5;&#x9B27;&#x81EA;&#x6BBA;&#x70CF;&#x9F8D; &#x661F;&#x5349;&#x6D88;&#x5931;&#x4E00;&#x5E74;&#x8FD1;&#x6CC1;&#x66DD;&#x5149;</p>
+                        <div class="listA_03">
+                            <img class="large" src="images/phpmbjzwp.jpg" title="&#x66FE;&#x541E;&#x85E5;&#x9B27;&#x81EA;&#x6BBA;&#x70CF;&#x9F8D; &#x661F;&#x5349;&#x6D88;&#x5931;&#x4E00;&#x5E74;&#x8FD1;&#x6CC1;&#x66DD;&#x5149;" alt="&#x5716;">
+                        </div>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/politics/breakingnews/2617409" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/600_phpMxZuc3.jpg" title="&#x516C;&#x958B;&#x529B;&#x633A;&#x8B1D;&#x6587;&#x9032;  &#x570B;&#x6C11;&#x9EE8;&#x7AF9;&#x5E02;&#x8ECD;&#x7CFB;&#x5E02;&#x8B70;&#x54E1;&#x6BB5;&#x5B5D;&#x82B3;&#x88AB;&#x505C;&#x6B0A;1&#x5E74;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:32</span>
+                        <p>&#x516C;&#x958B;&#x529B;&#x633A;&#x8B1D;&#x6587;&#x9032;  &#x570B;&#x6C11;&#x9EE8;&#x7AF9;&#x5E02;&#x8ECD;&#x7CFB;&#x5E02;&#x8B70;&#x54E1;&#x6BB5;&#x5B5D;&#x82B3;&#x88AB;&#x505C;&#x6B0A;1&#x5E74;</p>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/life/breakingnews/2617430" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/600_phpAQ22rL.jpg" title="&#x92D2;&#x9762;&#x901A;&#x904E;&#xFF01;&#x57FA;&#x9686;&#x5317;&#x6D77;&#x5CB8;&#x3001;&#x65B0;&#x5317;&#x5C71;&#x5340;&#x53CA;&#x53F0;&#x6771;&#x7B49;3&#x7E23;&#x5E02;&#x5927;&#x96E8;&#x7279;&#x5831;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:30</span>
+                        <p>&#x92D2;&#x9762;&#x901A;&#x904E;&#xFF01;&#x57FA;&#x9686;&#x5317;&#x6D77;&#x5CB8;&#x3001;&#x65B0;&#x5317;&#x5C71;&#x5340;&#x53CA;&#x53F0;&#x6771;&#x7B49;3&#x7E23;&#x5E02;&#x5927;&#x96E8;&#x7279;&#x5831;</p>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/politics/breakingnews/2617406" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/600_phpxFRiNW.jpg" title="&#x5927;&#x91CF;&#x6D0B;&#x5783;&#x573E;&#x9032;&#x53E3;&#x6211;&#x570B; &#x74B0;&#x7F72;&#x6328;&#x6279;&#x300C;&#x592A;&#x9072;&#x920D;&#x300D;&#x9810;&#x7B97;&#x51CD;&#x7D50;500&#x842C;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:28</span>
+                        <p>&#x5927;&#x91CF;&#x6D0B;&#x5783;&#x573E;&#x9032;&#x53E3;&#x6211;&#x570B; &#x74B0;&#x7F72;&#x6328;&#x6279;&#x300C;&#x592A;&#x9072;&#x920D;&#x300D;&#x9810;&#x7B97;&#x51CD;&#x7D50;500&#x842C;</p>
+                    </a>
+                            </li>
+            
+                    <li class="chicon_07">
+                                    <a href="http://sports.ltn.com.tw/news/breakingnews/2617321" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/phpOX3F6r.jpg" title="NFL&#x300B;&#x570B;&#x5317;&#x5167;&#x6230;&#x5931;&#x8AA4;&#x6EFF;&#x5929;&#x98DB; &#x718A;&#x968A;&#x64CA;&#x9000;&#x7DAD;&#x4EAC;&#x4EBA;&#xFF08;&#x5F71;&#x97F3;&#xFF09;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:24</span>
+                        <p>NFL&#x300B;&#x570B;&#x5317;&#x5167;&#x6230;&#x5931;&#x8AA4;&#x6EFF;&#x5929;&#x98DB; &#x718A;&#x968A;&#x64CA;&#x9000;&#x7DAD;&#x4EAC;&#x4EBA;&#xFF08;&#x5F71;&#x97F3;&#xFF09;</p>
+                    </a>
+                            </li>
+            
+                    <li class="chicon_02">
+                                    <a href="http://talk.ltn.com.tw/article/breakingnews/2617410" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/phpMfRfZa.jpg" title="&#x81EA;&#x7531;&#x958B;&#x8B1B;&#x300B;&#x4EBA;&#x8EAB;&#x653B;&#x64CA;&#x53C8;&#x6B67;&#x8996;&#x5973;&#x6027; &#x4FAF;&#x53CB;&#x5B9C;&#x6191;&#x4EC0;&#x9EBC;&#x8B74;&#x8CAC;&#x300C;&#x6BCD;&#x8C6C;&#x8AAA;&#x300D;&#xFF1F;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:22</span>
+                        <p>&#x81EA;&#x7531;&#x958B;&#x8B1B;&#x300B;&#x4EBA;&#x8EAB;&#x653B;&#x64CA;&#x53C8;&#x6B67;&#x8996;&#x5973;&#x6027; &#x4FAF;&#x53CB;&#x5B9C;&#x6191;&#x4EC0;&#x9EBC;&#x8B74;&#x8CAC;&#x300C;&#x6BCD;&#x8C6C;&#x8AAA;&#x300D;&#xFF1F;</p>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/politics/breakingnews/2617401" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/600_2617401_1.jpg" title="&#x5357;&#x6295;&#x904B;&#x300C;&#x7968;&#x300D;&#x9806;&#x5229; &#x516C;&#x8077;&#x3001;&#x516C;&#x6295;&#x4E92;&#x76F8;&#x932F;&#x6295;&#x7B97;&#x300C;&#x7121;&#x6548;&#x7968;&#x300D;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:22</span>
+                        <p>&#x5357;&#x6295;&#x904B;&#x300C;&#x7968;&#x300D;&#x9806;&#x5229; &#x516C;&#x8077;&#x3001;&#x516C;&#x6295;&#x4E92;&#x76F8;&#x932F;&#x6295;&#x7B97;&#x300C;&#x7121;&#x6548;&#x7968;&#x300D;</p>
+                    </a>
+                            </li>
+            
+                    <li class="chicon_01">
+                                    <a href="http://ent.ltn.com.tw/news/breakingnews/2617420" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/2617420_1.jpg" title="&#x5DE5;&#x4F5C;&#x5BA4;&#x522A;&#x6587;&#x6EC5;&#x706B;&#x60F9;&#x60F1;&#x4E2D;&#x570B;&#x7C89;&#x7D72; &#x694A;&#x4E1E;&#x7433;&#x88E1;&#x5916;&#x4E0D;&#x662F;&#x4EBA;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:22</span>
+                        <p>&#x5DE5;&#x4F5C;&#x5BA4;&#x522A;&#x6587;&#x6EC5;&#x706B;&#x60F9;&#x60F1;&#x4E2D;&#x570B;&#x7C89;&#x7D72; &#x694A;&#x4E1E;&#x7433;&#x88E1;&#x5916;&#x4E0D;&#x662F;&#x4EBA;</p>
+                    </a>
+                            </li>
+            
+                    <li class="chicon_07">
+                                    <a href="http://sports.ltn.com.tw/news/breakingnews/2617400" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/phpsXNGcj.jpg" title="NBA&#x300B;&#x81EA;&#x5099;&#x6230;&#x8853;&#x677F;&#x6436;&#x6559;&#x7DF4;&#x5DE5;&#x4F5C;  &#x6E56;&#x4EBA;&#x8001;&#x5C07;&#x8CFD;&#x5F8C;&#x6328;&#x7F75;&#xFF08;&#x5F71;&#x97F3;&#xFF09;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:21</span>
+                        <p>NBA&#x300B;&#x81EA;&#x5099;&#x6230;&#x8853;&#x677F;&#x6436;&#x6559;&#x7DF4;&#x5DE5;&#x4F5C;  &#x6E56;&#x4EBA;&#x8001;&#x5C07;&#x8CFD;&#x5F8C;&#x6328;&#x7F75;&#xFF08;&#x5F71;&#x97F3;&#xFF09;<img src="images/video_icon01m.png" class="is_video"></p>
+                    </a>
+                            </li>
+            
+                    <li>
+                                    <a href="news/politics/breakingnews/2617392" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/600_2617392_1.jpg" title="&#x666E;&#x60A0;&#x746A;&#x4E8B;&#x6545;&#x8ABF;&#x67E5; &#x5289;&#x6AC2;&#x8C6A;&#x6307;&#x6B63;&#x5728;&#x300C;&#x6536;&#x6582;&#x968E;&#x6BB5;&#x300D;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:19</span>
+                        <p>&#x666E;&#x60A0;&#x746A;&#x4E8B;&#x6545;&#x8ABF;&#x67E5; &#x5289;&#x6AC2;&#x8C6A;&#x6307;&#x6B63;&#x5728;&#x300C;&#x6536;&#x6582;&#x968E;&#x6BB5;&#x300D;</p>
+                    </a>
+                            </li>
+            
+                    <li class="chicon_01">
+                                    <a href="http://ent.ltn.com.tw/news/breakingnews/2617412" data-desc="&#x6A19;">
+                        <span>2018-11-19 14:19</span>
+                        <p>&#x767D;&#x5BB6;&#x7DBA;&#x633A;&#x809A;&#x6F01;&#x7DB2;&#x88F9;&#x8EAB;&#x4E0B;&#x6F5B;13&#x7C73; &#x8239;&#x4E0A;&#x5B55;&#x5410;&#x9A5A;&#x558A;&#x300C;&#x4E0D;&#x77E5;&#x6709;&#x4E86;&#xFF01;&#x300D;</p>
+                        <div class="listA_03">
+                            <img class="large" src="images/2617412_1.jpg" title="&#x767D;&#x5BB6;&#x7DBA;&#x633A;&#x809A;&#x6F01;&#x7DB2;&#x88F9;&#x8EAB;&#x4E0B;&#x6F5B;13&#x7C73; &#x8239;&#x4E0A;&#x5B55;&#x5410;&#x9A5A;&#x558A;&#x300C;&#x4E0D;&#x77E5;&#x6709;&#x4E86;&#xFF01;&#x300D;" alt="&#x5716;">
+                        </div>
+                    </a>
+                            </li>
+            
+                    <li class="chicon_04">
+                                    <a href="http://3c.ltn.com.tw/news/35130" data-desc="&#x5C0F;&#x5716;">
+                        <div class="listS_h">
+                            <img src="images/181119-35130-1.jpg" title="YouTube &#x6084;&#x63A8;&#x514D;&#x8CBB;&#x96FB;&#x5F71;&#xFF01;&#x770B;&#x5EE3;&#x544A;&#x5C31;&#x53EF;&#x5B8C;&#x6574;&#x6B23;&#x8CDE;&#x4E0A;&#x767E;&#x90E8;" alt="&#x5716;">
+                        </div>
+                        <span>2018-11-19 14:15</span>
+                        <p>YouTube &#x6084;&#x63A8;&#x514D;&#x8CBB;&#x96FB;&#x5F71;&#xFF01;&#x770B;&#x5EE3;&#x544A;&#x5C31;&#x53EF;&#x5B8C;&#x6574;&#x6B23;&#x8CDE;&#x4E0A;&#x767E;&#x90E8;</p>
+                    </a>
+                            </li>
+            
+            <li><div style="width:100%;text-align:center;"><ins class="clickforceads" style="display:inline-block;width:4px;height:4px;" data-ad-zone="8730"></ins><script async type="text/javascript" src="//cdn.doublemax.net/js/init.js"></script></div></li></ul>
+
+<div id="page" class="boxTitle" data-desc="&#x5206;&#x9801;">
+    <div data-desc="&#x5206;&#x9801;" class="boxTitle" id="page">
+    <span class="p_first">&#xAB;</span>
+    <span class="p_prev">&#x2039;</span>
+	<strong class="p_num number" rel="1">1</strong>
+	<a class="p_next" data-desc="&#x4E0B;&#x4E00;&#x9801;" href="http://m.ltn.com.tw/page/2">&#x203A;</a>
+	<a class="p_last" data-desc="&#x6700;&#x5F8C;&#x9801;" href="http://m.ltn.com.tw/page/173">&#xBB;</a>
+</div></div>
+
+<section class="boxTitle" data-desc="&#x4E8B;&#x4EF6;&#x4E0B;">
+    <section class="event boxTitle" data-desc="&#x4E8B;&#x4EF6;:&#x8B20;&#x8A00;&#x7D42;&#x7D50;&#x7AD9;">
+<p class="newstit highlight">
+    <a href="topic/%E8%AC%A0%E8%A8%80%E7%B5%82%E7%B5%90%E7%AB%99" data-link="1711964" data-desc="&#x6A19;&#x982D;">
+        <span class="tWord">&#x8B20;&#x8A00;&#x7D42;&#x7D50;&#x7AD9;</span>
+        <span class="tSpace">| &#x4E8B;&#x4EF6; <span class="tS_more"></span></span>
+    </a>
+</p>
+<ul class="chcon L22">
+<li>
+    <a href="news/politics/paper/1247840">
+        <div class="listS_h"><img alt="" src="images/1326931.jpg"></div>
+        <p>&#x8B20;&#x8A00;&#x7D42;&#x7D50;&#x7AD9;&#x300B; &#x570B;&#x6C11;&#x9EE8;&#x8981;&#x7528;&#x9322;&#x5168;&#x5F97;&#x5411;&#x9EE8;&#x7522;&#x6703;&#x7533;&#x8ACB;&#xFF1F; &#x9EE8;&#x7522;&#x6703;&#x99C1;&#x65A5;&#xFF1A;&#x6096;&#x96E2;&#x4E8B;&#x5BE6;</p>
+    </a>
+</li>
+    <li><a href="news/opinion/breakingnews/2616302"><p>&#x6CD5;&#x64CD;&#x300B;&#x5A5A;&#x59FB;&#x5E73;&#x6B0A;&#x8AA4;&#x89E3;&#x5927;&#x7834;&#x89E3;03&#x2013;&#x540C;&#x5A5A;&#x5408;&#x6CD5;&#x5F8C;&#x6703;&#x6709;&#x5F88;&#x591A;&#x611B;&#x6ECB;&#x75C5;&#x60A3;&#x4F86;&#x53F0;&#x7063;&#x7528;&#x5065;&#x4FDD;&#x55CE;&#xFF1F;</p></a></li>
+    <li><a href="news/lifeweekly/paper/1247595"><p>&#x3010;&#x7DB2;&#x8DEF;&#x8B20;&#x8A00;&#x7834;&#x89E3;&#x3011;&#x91DD;&#x773C;&#x56F0;&#x64FE;&#x4E0D;&#x60F1;&#x4EBA;</p></a></li>
+</ul>
+<a href="topic/%E8%AC%A0%E8%A8%80%E7%B5%82%E7%B5%90%E7%AB%99" data-link="1711964" class="tS_moreD">... more</a>
+</section></section>
+
+<section class="boxTitle hottag boxpadding" data-desc="&#x71B1;&#x9580;&#x95DC;&#x9375;&#x5B57;">
+	<p class="newstit">
+		<span class="tWord">&#x71B1;&#x9580;&#x95DC;&#x9375;&#x5B57;</span>
+		<span class="tSpace"></span>
+	</p>
+	<div class="tagbox">
+<a id="hotkeyword_0" href="topic/%E7%AC%AC55%E5%B1%86%E9%87%91%E9%A6%AC%E7%8D%8E" class="tb_01">&#x7B2C;55&#x5C46;&#x91D1;&#x99AC;&#x734E;</a><a id="hotkeyword_1" href="topic/%E9%99%B3%E5%85%B6%E9%82%81" class="tb_02">&#x9673;&#x5176;&#x9081;</a><a id="hotkeyword_2" href="topic/%E4%B8%AD%E5%9C%8B" class="tb_03">&#x4E2D;&#x570B;</a><a id="hotkeyword_3" href="topic/%E7%BE%BD%E7%90%83" class="tb_04">&#x7FBD;&#x7403;</a><a id="hotkeyword_4" href="topic/%E9%A6%99%E6%B8%AF%E7%BE%BD%E7%90%83%E5%85%AC%E9%96%8B%E8%B3%BD" class="tb_05">&#x9999;&#x6E2F;&#x7FBD;&#x7403;&#x516C;&#x958B;&#x8CFD;</a><a id="hotkeyword_5" href="topic/%E5%B8%82%E9%95%B7%E9%81%B8%E8%88%89" class="tb_06">&#x5E02;&#x9577;&#x9078;&#x8209;</a>	</div>
+</section>
+
+<script src="js/jquery-ui.js"></script>
+<script src="js/colorbrick.js"></script>
+<script type="text/javascript">
+ColorBrick.init({
+	member : ['第55屆金馬獎','陳其邁','中國','羽球','香港羽球公開賽','市長選舉','韓國瑜','2018九合一選舉','APEC','吳敦義']
+});
+</script>
+
+<script>
+    $(document).ready(function () {
+        $(".listS_h img").one("load", function () {
+            if ($(this).width() > $(this).height())
+                listS_w($(this));
+        }).each(function () {
+            if (this.complete) $(this).load();
+        });
+    });
+</script>
+
+        <div class="footer boxTitle" data-desc="&#x5E95;&#x90E8;&#x9078;&#x55AE;">
+            <p>&#x624B;&#x6A5F;&#x7248; | <a id="gotopcf" class="boxInput" data-desc="&#x96FB;&#x8166;&#x7248;">&#x96FB;&#x8166;&#x7248;</a></p>
+            <a href="http://m.ltn.com.tw" data-desc="&#x81EA;&#x7531;&#x6642;&#x5831;"><img src="images/logo_foot.png" width="84"></a><br>
+            <span>&#x7248;&#x6B0A;&#x6240;&#x6709; &#x4E0D;&#x5F97;&#x8F49;&#x8F09; <br>&#xA9; 2018                The Liberty Times. All Rights Reserved.</span>
+        </div>
+    </div>
+
+    <div id="ad-I1" class="door-bottom door-bottom-head" style="display:none;">
+    <i class="close"></i>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.display('ad-I1');
+        });
+    </script>
+</div>
+<div class="door-bottom door-bottom-space" style="display:none;"></div>
+    <section class="boxTitle" data-desc="&#x5E95;&#x90E8;&#x8DD1;&#x99AC;">
+        <link rel="stylesheet" href="css/marquee.css">
+<script type="text/javascript" src="js/marquee.js"></script>
+<div class="marquee-bottom marquee-bottom-head" data-desc="&#x8DD1;&#x99AC;&#x71C8;&#x65B0;&#x805E;" style="display: none;">
+    <div class="marqueeTab">
+        <div class="marqueeBox"></div>
+    </div>
+    <div class="marqueeTit">&#x71B1;&#x9580;</div>
+</div>
+<div class="marquee-bottom marquee-bottom-space" style="display: none;"></div>
+    </section>
+</div>
+
+<link rel="stylesheet" href="css/swiper_ch.css">
+<script type="text/javascript" src="js/swiper_ch.js"></script>
+
+
+<script type="text/javascript" src="js/month.min.js"></script>
+<link rel="stylesheet" href="css/month.css">
+
+
+</body></html>

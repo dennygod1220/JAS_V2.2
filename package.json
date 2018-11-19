@@ -28,6 +28,7 @@
     "@adonisjs/shield": "^1.0.8",
     "@adonisjs/validator": "^5.0.6",
     "adm-zip": "^0.4.11",
+    "aws-sdk": "^2.358.0",
     "cheerio": "^1.0.0-rc.2",
     "find": "^0.2.9",
     "fs": "0.0.1-security",
