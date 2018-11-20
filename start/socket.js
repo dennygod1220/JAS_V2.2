@@ -299,7 +299,6 @@ io.on('connection', function (socket) {
       process.then(function (video) {
         video
         .setVideoFrameRate(10)
-        .setVideoBitRate(512)
         .save('public/uploadtest/2.mp4',function(error,file){
           if(!error){
             console.log('video file:' + file); 
