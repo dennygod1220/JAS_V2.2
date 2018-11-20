@@ -299,7 +299,7 @@ io.on('connection', function (socket) {
       process.then(function (video) {
         video
         .setVideoFrameRate(25)
-        .setVideoSize('50%',true,true)
+        .setVideoSize('75%',true,true)
         .save('public/videoconvert/'+fileInfo.name ,function(error,file){
           if(!error){
             console.log('video file:' + file); 
