@@ -298,7 +298,6 @@ io.on('connection', function (socket) {
       var process = new ffmpeg('public/uploadtest/'+fileInfo.name);
       process.then(function (video) {
         video
-        .setVideoSize('640x?', true, true, '#fff')
         .setVideoFrameRate(10)
         .setVideoBitRate(512)
         .save('public/uploadtest/2.mp4',function(error,file){
