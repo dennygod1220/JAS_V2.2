@@ -3,6 +3,7 @@
 var AWS = use('aws-sdk');
 var FC = require('../../../cusmodules/FileControl');
 var key = FC.readjsonSync('S3config.json');
+var fs = use('fs');
 
 class ProjectController {
   async test() {
@@ -11,14 +12,30 @@ class ProjectController {
       accessKeyId: key.accessKeyId,
       secretAccessKey: key.secretAccessKey,
     });
+    
+    var fi = fs.readFileSync('public/uploadtest/1.mp4');
+    console.log(fi);
+    
     var params = {
       Bucket: key.Bucket,
-      Prefix: 'dev/Jason/test'
-    }
-    s3.listObjectsV2(params, function (err, data) {
-      if (err) console.log(err, err.stack); // an error occurred
-      else console.log(data); // successful response
+      Key: 'dev/Jason/test/test.mp4',
+      ACL: 'public-read',
+      Body:fi
+    };
+    s3.upload(params).on('httpUploadProgress', function (evt) {
+
+      //上傳進度
+      console.log(evt);
+    }).
+    send(function (err, data) {
+
+      //上傳完畢或是碰到錯誤
+
     });
+  }
+
+  async test2(){
+
   }
 }
 

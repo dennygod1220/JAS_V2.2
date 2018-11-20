@@ -210,60 +210,123 @@ io.on('connection', function (socket) {
   //======================管理DemoPage 設定檔==============
   //======================================================
 
-  socket.on('CtoS business cron config',function(){
+  socket.on('CtoS business cron config', function () {
     var config_json = FC.readjsonSync('public/JS/Scrape/config.json');
-    io.sockets.connected[socket.id].emit('StoC business cron config',{
-      config_json:config_json.set
+    io.sockets.connected[socket.id].emit('StoC business cron config', {
+      config_json: config_json.set
     })
   })
 
   //接收Client 傳來的 要刪除的資訊
-  socket.on('CtoS remove business cron config',function(data){
-    try{
+  socket.on('CtoS remove business cron config', function (data) {
+    try {
       var config_json = FC.readjsonSync('public/JS/Scrape/config.json');
       var config_info = config_json.set[data.config_index];
-      config_json.set.splice(data.config_index,1);
+      config_json.set.splice(data.config_index, 1);
       var string_obj = JSON.stringify(config_json);
-      fs.writeFileSync('public/JS/Scrape/config.json',string_obj);
-      
+      fs.writeFileSync('public/JS/Scrape/config.json', string_obj);
+
       var basic = FC.Exists("cusmodules/ZoneChange/basic/" + config_info[4] + ".js");
       var custom = FC.Exists("cusmodules/ZoneChange/custom/" + config_info[4] + ".js");
 
-      if(basic == true){
-        try{
+      if (basic == true) {
+        try {
           FC.Remove("cusmodules/ZoneChange/basic/" + config_info[4] + ".js");
-        }catch(e){
+        } catch (e) {
 
         }
       }
-      if(custom == true){
-        try{
+      if (custom == true) {
+        try {
           FC.Remove("cusmodules/ZoneChange/custom/" + config_info[4] + ".js");
-        }catch(e){
+        } catch (e) {
 
         }
       }
       //手機板
-      if(config_info[3] == true){
-        var site_path = "public/DemoPage/site/phone/" + config_info[2] +"/" + config_info[1];
-      }else{
-        var site_path = "public/DemoPage/site/PC/" + config_info[2] +"/" + config_info[1];
+      if (config_info[3] == true) {
+        var site_path = "public/DemoPage/site/phone/" + config_info[2] + "/" + config_info[1];
+      } else {
+        var site_path = "public/DemoPage/site/PC/" + config_info[2] + "/" + config_info[1];
       }
       var site_exist = FC.Exists(site_path);
-      if(site_exist == true){
-        try{
+      if (site_exist == true) {
+        try {
           FC.Remove(site_path);
-        }catch(e){
-          
+        } catch (e) {
+
         }
       }
-      
-    }catch(e){
+
+    } catch (e) {
       console.log("socket.js CtoS remove business cron config Has an Error!!!!");
       console.log(e);
     }
 
   })
+
+  //======================================================
+  //           File upload test
+  //======================================================
+  var AWS = use('aws-sdk');
+  var SocketIOFile = use('socket.io-file');
+  var ffmpeg = use('ffmpeg');
+
+  var uploader = new SocketIOFile(socket, {
+    // uploadDir: {			// multiple directories
+    // 	music: 'data/music',
+    // 	document: 'data/document'
+    // },
+    uploadDir: 'public/uploadtest', // simple directory
+    accepts: ['image/jpeg', 'image/png', 'video/mp4', 'image/gif'], // chrome and some of browsers checking mp3 as 'audio/mp3', not 'audio/mpeg'
+    maxFileSize: 20971520, // 4 MB. default is undefined(no limit)
+    chunkSize: 10240, // default is 10240(1KB)
+    transmissionDelay: 0, // delay of each transmission, higher value saves more cpu resources, lower upload speed. default is 0(no delay)
+    overwrite: true // overwrite file if exists, default is true.
+  });
+  uploader.on('start', (fileInfo) => {
+    console.log('Start uploading');
+    console.log(fileInfo);
+  });
+  uploader.on('stream', (fileInfo) => {
+    // console.log(`${fileInfo.wrote} / ${fileInfo.size} byte(s)`);
+  });
+  uploader.on('complete', (fileInfo) => {
+    console.log('Upload Complete.');
+    // console.log(fileInfo);
+    try {
+      var process = new ffmpeg('public/uploadtest/'+fileInfo.name);
+      process.then(function (video) {
+        video.setVideoFrameRate(10)
+        .setVideoBitRate(512)
+        .save('public/uploadtest/'+fileInfo.name,function(error,file){
+          if(!error){
+            console.log('video file:' + file); 
+          }else{
+            console.log(error);
+            
+          }
+        })
+        // Video metadata
+        console.log(video.metadata);
+        console.log("=====================");
+        
+        // FFmpeg configuration
+        console.log(video.info_configuration);
+      }, function (err) {
+        console.log('Error: ' + err);
+      });
+    } catch (e) {
+      console.log(e.code);
+      console.log(e.msg);
+    }
+  });
+  uploader.on('error', (err) => {
+    // console.log('Error!', err);
+  });
+  uploader.on('abort', (fileInfo) => {
+    // console.log('Aborted: ', fileInfo);
+  });
   //======================================================
   //======================================================
   //======================================================
