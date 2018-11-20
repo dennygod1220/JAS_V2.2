@@ -297,16 +297,18 @@ io.on('connection', function (socket) {
     try {
       var process = new ffmpeg('public/uploadtest/'+fileInfo.name);
       process.then(function (video) {
-        video.setVideoFrameRate(10)
+        video
+        .setVideoSize('640x?', true, true, '#fff')
+        .setVideoFrameRate(10)
         .setVideoBitRate(512)
-        .save('public/uploadtest/'+fileInfo.name,function(error,file){
+        .save('public/uploadtest/2.mp4',function(error,file){
           if(!error){
             console.log('video file:' + file); 
           }else{
             console.log(error);
             
           }
-        })
+        });
         // Video metadata
         console.log(video.metadata);
         console.log("=====================");
