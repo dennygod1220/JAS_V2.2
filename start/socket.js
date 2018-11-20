@@ -303,6 +303,7 @@ io.on('connection', function (socket) {
         .save('public/videoconvert/'+fileInfo.name ,function(error,file){
           if(!error){
             console.log('video file:' + file); 
+            io.sockets.connected[socket.id].emit('StoC video convert ok');
           }else{
             console.log(error);
             
