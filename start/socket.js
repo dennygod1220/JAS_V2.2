@@ -298,8 +298,9 @@ io.on('connection', function (socket) {
       var process = new ffmpeg('public/uploadtest/'+fileInfo.name);
       process.then(function (video) {
         video
-        .setVideoFrameRate(10)
-        .save('public/uploadtest/2.mp4',function(error,file){
+        .setVideoFrameRate(15)
+        .setVideoBitRate("512k")
+        .save('public/uploadtest/1.mp4',function(error,file){
           if(!error){
             console.log('video file:' + file); 
           }else{
