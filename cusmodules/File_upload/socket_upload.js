@@ -1,6 +1,7 @@
 var AWS = use('aws-sdk');
 var SocketIOFile = use('socket.io-file');
 var ffmpeg = use('ffmpeg');
+var fs = user('fs');
 
 function uploadVideo(io,socket){
 
@@ -30,6 +31,9 @@ function uploadVideo(io,socket){
         try {
           var process = new ffmpeg('public/uploadtest/' +fileInfo.name);
           process.then(function (video) {
+            if(fs.existsSync('public/videoconvert/'+fileInfo.data.user)==false){
+                fs.mkdirSync('public/videoconvert/'+fileInfo.data.user)
+            }
             video
             .setVideoFrameRate(25)
             .setVideoSize('75%',true,true)
@@ -38,7 +42,7 @@ function uploadVideo(io,socket){
                 console.log('video file:' + file); 
                 io.sockets.connected[socket.id].emit('StoC video convert ok');
               }else{
-                  console.log(error);
+                  
                   
                 io.sockets.connected[socket.id].emit('StoC video convert has error');
                 
