@@ -2,6 +2,7 @@ var AWS = use('aws-sdk');
 var SocketIOFile = use('socket.io-file');
 var ffmpeg = use('ffmpeg');
 var fs = use('fs');
+var upS3 = require('./upload_s3');
 
 function uploadVideo(io,socket){
 
@@ -40,12 +41,10 @@ function uploadVideo(io,socket){
             .save('public/videoconvert/'+fileInfo.data.user+'/'+fileInfo.name ,function(error,file){
               if(!error){
                 console.log('video file:' + file); 
-                io.sockets.connected[socket.id].emit('StoC video convert ok');
-              }else{
-                  
-                  
-                io.sockets.connected[socket.id].emit('StoC video convert has error');
+                upS3.up('public/videoconvert/'+fileInfo.data.user+'/'+fileInfo.name,fileInfo.name,io,socket);
                 
+              }else{
+                io.sockets.connected[socket.id].emit('StoC video convert has error');
               }
             });
             // Video metadata
@@ -70,6 +69,8 @@ function uploadVideo(io,socket){
         // console.log('Aborted: ', fileInfo);
       });
 }
+
+
 
 module.exports = {
     uploadVideo:uploadVideo

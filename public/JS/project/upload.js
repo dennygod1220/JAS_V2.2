@@ -34,7 +34,7 @@ form.onsubmit = function (ev) {
 
   var fileEl = document.getElementById('file');
 //   uploader.upload(fileEl);
-    var uploadIds = uploader.upload(fileEl, {
+    uploader.upload(fileEl, {
       data: {
           user:$("#username").text().trim()
       }
