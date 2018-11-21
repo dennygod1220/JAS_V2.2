@@ -1,0 +1,308 @@
+.cssload-wraper {
+  width: 0px;
+  display: block;
+  margin: 25px auto;
+}
+
+.cssload-dots {
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+.cssload-dots:not(:required) {
+  overflow: hidden;
+  position: relative;
+  text-indent: -4999px;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  border-radius: 100%;
+  box-shadow: rgb(255, 136, 102) -7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  -o-box-shadow: rgb(255, 136, 102) -7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  -ms-box-shadow: rgb(255, 136, 102) -7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  -webkit-box-shadow: rgb(255, 136, 102) -7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  -moz-box-shadow: rgb(255, 136, 102) -7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  animation: cssload-dots 8.75s infinite ease-in-out;
+  -o-animation: cssload-dots 8.75s infinite ease-in-out;
+  -ms-animation: cssload-dots 8.75s infinite ease-in-out;
+  -webkit-animation: cssload-dots 8.75s infinite ease-in-out;
+  -moz-animation: cssload-dots 8.75s infinite ease-in-out;
+  transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+}
+
+
+
+@keyframes cssload-dots {
+  0% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) -7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  8.33% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) 7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  16.67% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) 7px 7px 0 3px, rgb(255, 204, 102) 7px 7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  25% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+
+  33.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee -7px -7px 0 3px;
+  }
+
+  41.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px -7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  50% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  58.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  66.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 -7px -7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  75% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px -7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  83.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px 7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee 7px 7px 0 3px;
+  }
+
+  91.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+
+  100% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+}
+
+@-o-keyframes cssload-dots {
+  0% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) -7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  8.33% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) 7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  16.67% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) 7px 7px 0 3px, rgb(255, 204, 102) 7px 7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  25% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+
+  33.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee -7px -7px 0 3px;
+  }
+
+  41.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px -7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  50% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  58.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  66.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 -7px -7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  75% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px -7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  83.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px 7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee 7px 7px 0 3px;
+  }
+
+  91.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+
+  100% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+}
+
+@-ms-keyframes cssload-dots {
+  0% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) -7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  8.33% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) 7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  16.67% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) 7px 7px 0 3px, rgb(255, 204, 102) 7px 7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  25% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+
+  33.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee -7px -7px 0 3px;
+  }
+
+  41.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px -7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  50% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  58.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  66.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 -7px -7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  75% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px -7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  83.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px 7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee 7px 7px 0 3px;
+  }
+
+  91.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+
+  100% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+}
+
+@-webkit-keyframes cssload-dots {
+  0% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) -7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  8.33% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) 7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  16.67% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) 7px 7px 0 3px, rgb(255, 204, 102) 7px 7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  25% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+
+  33.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee -7px -7px 0 3px;
+  }
+
+  41.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px -7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  50% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  58.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  66.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 -7px -7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  75% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px -7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  83.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px 7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee 7px 7px 0 3px;
+  }
+
+  91.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+
+  100% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+}
+
+@-moz-keyframes cssload-dots {
+  0% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) -7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  8.33% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) 7px -7px 0 3px, rgb(255, 204, 102) 7px -7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  16.67% {
+    box-shadow: white 0 0 7px 0, rgb(255, 136, 102) 7px 7px 0 3px, rgb(255, 204, 102) 7px 7px 0 3px, rgb(102, 221, 119) 7px 7px 0 3px, rgb(68, 170, 238) -7px 7px 0 3px;
+  }
+
+  25% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+
+  33.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee -7px -7px 0 3px;
+  }
+
+  41.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px -7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  50% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  58.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 -7px 7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  66.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 -7px -7px 0 3px, #66dd77 -7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  75% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px -7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px -7px 0 3px, #44aaee 7px -7px 0 3px;
+  }
+
+  83.33% {
+    box-shadow: white 0 0 7px 0, #ff8866 7px 7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee 7px 7px 0 3px;
+  }
+
+  91.67% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px 7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+
+  100% {
+    box-shadow: white 0 0 7px 0, #ff8866 -7px -7px 0 3px, #ffcc66 7px -7px 0 3px, #66dd77 7px 7px 0 3px, #44aaee -7px 7px 0 3px;
+  }
+}

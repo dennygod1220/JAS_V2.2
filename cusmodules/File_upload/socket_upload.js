@@ -4,6 +4,7 @@ var ffmpeg = use('ffmpeg');
 
 function uploadVideo(io,socket){
 
+
     var uploader = new SocketIOFile(socket, {
         // uploadDir: {			// multiple directories
         // 	music: 'data/music',
@@ -27,17 +28,17 @@ function uploadVideo(io,socket){
         console.log('Upload Complete.');
         console.log(fileInfo);
         try {
-          var process = new ffmpeg('public/uploadtest/'+fileInfo.name);
+          var process = new ffmpeg('public/uploadtest/' +fileInfo.name);
           process.then(function (video) {
             video
             .setVideoFrameRate(25)
             .setVideoSize('75%',true,true)
-            .save('public/videoconvert/'+fileInfo.name ,function(error,file){
+            .save('public/videoconvert/'+fileInfo.data.user+'/'+fileInfo.name ,function(error,file){
               if(!error){
                 console.log('video file:' + file); 
                 io.sockets.connected[socket.id].emit('StoC video convert ok');
               }else{
-                console.log(error);
+                io.sockets.connected[socket.id].emit('StoC video convert has error');
                 
               }
             });
@@ -53,6 +54,7 @@ function uploadVideo(io,socket){
         } catch (e) {
           console.log(e.code);
           console.log(e.msg);
+
         }
       });
       uploader.on('error', (err) => {
