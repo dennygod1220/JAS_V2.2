@@ -1,7 +1,7 @@
 var AWS = use('aws-sdk');
 var SocketIOFile = use('socket.io-file');
 var ffmpeg = use('ffmpeg');
-var fs = user('fs');
+var fs = use('fs');
 
 function uploadVideo(io,socket){
 
