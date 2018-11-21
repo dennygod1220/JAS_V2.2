@@ -2,7 +2,7 @@ var AWS = use('aws-sdk');
 var SocketIOFile = use('socket.io-file');
 var ffmpeg = use('ffmpeg');
 
-function uploadVideo(socket){
+function uploadVideo(io,socket){
 
     var uploader = new SocketIOFile(socket, {
         // uploadDir: {			// multiple directories

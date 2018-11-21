@@ -269,7 +269,7 @@ io.on('connection', function (socket) {
   //           File upload test
   //======================================================
   var su = require('../cusmodules/File_upload/socket_upload');
-  su.uploadVideo(socket);
+  su.uploadVideo(io,socket);
   // var AWS = use('aws-sdk');
   // var SocketIOFile = use('socket.io-file');
   // var ffmpeg = use('ffmpeg');
