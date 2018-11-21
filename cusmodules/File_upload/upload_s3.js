@@ -1,6 +1,7 @@
 var AWS = use('aws-sdk');
 var FC = require('../FileControl');
 var key = FC.readjsonSync('S3config.json');
+var fs = use('fs');
 
 
 function up(path,filename,io,socket){
