@@ -35,6 +35,7 @@ form.onsubmit = function (ev) {
   //   });
 };
 
+//影片壓縮完成
 socket.on('StoC video convert ok', function () {
   $("#percent").text("100% 完成");
   $("#percent").css("background-color", "rgba(30,210,60,0.8)");
