@@ -38,6 +38,8 @@ function uploadVideo(io,socket){
                 console.log('video file:' + file); 
                 io.sockets.connected[socket.id].emit('StoC video convert ok');
               }else{
+                  console.log(error);
+                  
                 io.sockets.connected[socket.id].emit('StoC video convert has error');
                 
               }
