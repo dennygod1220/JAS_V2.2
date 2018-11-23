@@ -4,6 +4,7 @@ var AWS = use('aws-sdk');
 var FC = require('../../../cusmodules/FileControl');
 var key = FC.readjsonSync('S3config.json');
 var fs = use('fs');
+const Helpers = use('Helpers');
 
 class ProjectController {
   async test() {
@@ -36,6 +37,14 @@ class ProjectController {
 
   async test2(){
 
+  }
+
+
+  async downloadContentCover_nobanner({request,response}){
+    var user = request.params.user;
+    var file = decodeURIComponent(request.params.filename);
+    response.attachment('./public/UserProfile/'+user+'/Project/'+file);
+    return
   }
 }
 

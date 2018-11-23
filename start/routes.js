@@ -18,6 +18,9 @@ Route.group(() => {
   Route.get('/Project',({view})=>view.render('project/index'));
   Route.get('/Project/test2',({view})=>view.render('project/test2'));
   Route.get('/Project/test','ProjectController.test');
+  Route.get('/Project/contentcover_nobanner',({view})=>view.render('project/contentcover_nobanner'));
+  //下載檔案
+  Route.get('/Project/download/public/UserProfile/:user/Project/:filename','ProjectController.downloadContentCover_nobanner');
 
   //=======啟動 Crontab==========
   Route.get('Cron', 'CronJobController.index')

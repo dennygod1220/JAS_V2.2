@@ -59,7 +59,6 @@ function uploadVideo(io,socket){
         } catch (e) {
           console.log(e.code);
           console.log(e.msg);
-
         }
       });
       uploader.on('error', (err) => {

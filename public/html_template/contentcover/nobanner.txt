@@ -1,0 +1,64 @@
+<script>
+    var target = parent.frameElement.parentElement;
+    target.setAttribute('style', 'width:0px;height:0px;overflow:hidden;');
+    var ins = target.parentElement;
+
+    var block = document.createElement("div");
+    block.setAttribute('class', 'block-scroll-banner');
+
+    var main = document.createElement('div');
+    main.setAttribute('class', 'main-scroll-banner');
+
+    var fixedContainer = document.createElement('div');
+    fixedContainer.setAttribute('class', 'fixed-scroll-banner');
+    var css =
+          " .block-scroll-banner{display: block;height: 100vh;visibility: visible;} .main-scroll-banner{display: block;     position: absolute;left: 0px;right: auto; bottom: auto;width: 100%;overflow: hidden !important;height: 100vh;margin: 0px auto;      padding: 0px;     z-index: 5;       clip: rect(0px, auto, auto, 0px);         text-align: center; }     .fixed-scroll-banner{       display: block;         left: 0px;        top: 100px;       padding: 0px;     position: fixed !important;         height: 100vh !important;     width: 100vw !important;      transform: translateZ(0px);         backface-visibility: hidden;        text-align:center;  }.img-scroll-banner{width:auto !important;height:65vh !important;}";
+    var style = document.createElement('style');
+    style.appendChild(document.createTextNode(css));
+    ins.appendChild(style);
+
+
+    block.appendChild(main);
+    main.appendChild(fixedContainer);
+
+
+    var clickLink = document.createElement('a');
+    clickLink.setAttribute('target', '_blank');
+    clickLink.setAttribute('href', '%%CLICK_URL%%');
+    clickLink.setAttribute('id', 'clickLink');
+    clickLink.setAttribute('style', 'position:absolute;left:0;width:100%;height:100%;');
+    fixedContainer.appendChild(clickLink);
+
+    var s =
+          '<style type="text/css">*{margin:0;padding:0}#wrap{position:relative;width:100%!important;height:100%!important}.img-scroll-banner{position:absolute;width:100%!important;height:100%!important}#cflogo{position:absolute;right:0!important;bottom:0px!important;z-index:9999999;width:23px!important;height:20px!important}</style><a href="%%CLICK_URL%%" target="_blank"><div id="wrap"><img class="img-scroll-banner" src="FUCK"><a target="_blank" href="http://www.clickforce.com.tw"><img src="//cdn.doublemax.net/cf.png" id="cflogo"></a></div></a>';
+    
+    var cfif = document.createElement("iframe");
+    cfif.src = "about:blank";
+    cfif.id = "contentIf";
+    cfif.setAttribute("scrolling", "no");
+    cfif.setAttribute("marginheight", "0");
+    cfif.setAttribute("marginwidth", "0");
+    cfif.setAttribute("allowtransparency", "true");
+    cfif.setAttribute("vspace", 0);
+    cfif.setAttribute("hspace", 0);
+    cfif.setAttribute("frameborder", 0);
+    clickLink.appendChild(cfif);
+
+
+
+    ins.appendChild(block);
+    cfif.contentDocument.write(s);
+    cfif.contentDocument.close();
+
+
+
+
+    var script = document.createElement('script');
+    script.src = '//cdn.doublemax.net/js/scroll320480v4n.js';
+    ins.appendChild(script);
+</script>
+
+
+
+
+

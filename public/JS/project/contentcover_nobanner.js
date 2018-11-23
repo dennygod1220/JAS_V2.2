@@ -1,5 +1,9 @@
 var socket = io();
 
+socket.emit('CtoS img upload',{
+    username:$("#username").text().trim()
+});
+
 var uploader = new SocketIOFileClient(socket);
 var form = document.getElementById('form');
 
@@ -33,6 +37,8 @@ form.onsubmit = function (ev) {
   ev.preventDefault();
 
   var fileEl = document.getElementById('file');
+  console.log(fileEl);
+  
 //   uploader.upload(fileEl);
     uploader.upload(fileEl, {
       data: {
@@ -41,14 +47,25 @@ form.onsubmit = function (ev) {
     });
 };
 
-//影片壓縮完成
-socket.on('StoC video convert ok', function (data) {
+//圖片上傳完成
+socket.on('StoC img upload ok', function (data) {
   $("#percent").text("100% 完成");
+  $("#percent").css('width','100%');
   $("#percent").css("background-color", "rgba(30,210,60,0.8)");
   $("#loading").css('display', 'none');
   $("#btn_send").css('display', 'block');
+  socket.emit('CtoS content cover no banner img',{
+      url:data.img,
+      user:$("#username").text().trim()
+  })
 })
-
+//Server 丟出 內文全屏 的程式碼
+socket.on('StoC content cover no banner code',function(data){
+    $("#code").text(data.temp);
+    $("#code_block").css("display","block");
+    $("#download_block").css('display','block');
+    $("#download_btn").attr('href','download/'+data.FileName);
+})
 //影片壓縮失敗
 socket.on('StoC video convert has error', function () {
     $("#percent").text("影片壓縮失敗!");
@@ -59,3 +76,5 @@ socket.on('StoC video convert has error', function () {
   $("#loading").css('display', 'none');
   $("#btn_send").css('display', 'block');
 })
+
+

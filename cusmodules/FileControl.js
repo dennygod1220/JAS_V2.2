@@ -64,11 +64,49 @@ async function ReadFile(FilePath){
   }
 }
 
+function ReadFileSync(FilePath){
+  try{
+    var file = fs.readFileSync(FilePath,'utf8');
+    return file;
+  }catch(e){
+    console.log("FileControl.js ReadFileSync() has an error !!!");
+    console.log(e);
+  }
+}
+
+function MkdirSync(Path){
+  try{
+    fs.mkdirSync(Path);
+  }catch(e){
+    console.log("FileControl.js MkdirSync() has an error !!!");
+    console.log(e);
+  }
+}
+
+function copyFile(src, dist) {
+  console.log("COPY " + dist);
+
+  fs.writeFileSync(dist, fs.readFileSync(src));
+}
+
+function writeFileSync(dist,data){
+  try{
+    fs.writeFileSync(dist,data);
+  }catch(e){
+    console.log("FileControl.js writeFileSync() has an error !!!");
+    console.log(e);
+  }
+  
+}
 module.exports = {
   readjson: readjson,
   Exists:Exists,
   Remove:Remove,
   AppendFile:AppendFile,
   ReadFile:ReadFile,
-  readjsonSync:readjsonSync
+  readjsonSync:readjsonSync,
+  ReadFileSync:ReadFileSync,
+  MkdirSync:MkdirSync,
+  copyFile:copyFile,
+  writeFileSync:writeFileSync
 }

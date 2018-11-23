@@ -268,9 +268,40 @@ io.on('connection', function (socket) {
   //======================================================
   //           File upload test
   //======================================================
-  var su = require('../cusmodules/File_upload/socket_upload');
+  // var su = require('../cusmodules/File_upload/socket_upload');
+  // su.uploadVideo(io, socket);
 
-    su.uploadVideo(io,socket);
+  socket.on('CtoS img upload', function (data) {
+    var su = require('../cusmodules/File_upload/socket_upload_img');
+    su.uploadImg(io, socket, data.username)
+  });
+
+  //======================================================
+  //==================內文全屏 素材製作====================
+  //======================================================
+  socket.on('CtoS content cover no banner img', function (data) {
+    var temp = FC.ReadFileSync('public/html_template/contentcover/nobanner.txt');
+    var code = temp.replace('FUCK', data.url);
+    if (FC.Exists('public/UserProfile/' + data.user + '/Project') == false) {
+      FC.MkdirSync('public/UserProfile/' + data.user + '/Project');
+    }
+    var date = new Date();
+    var YY = date.getFullYear();
+    var MM = date.getMonth()+1;
+    var DD = date.getDate();
+    var mm = date.getMinutes();
+    var SS = date.getSeconds();
+    FileName = 'public/UserProfile/' + data.user + '/Project/' + YY + MM + DD + '_' +mm+SS+'_內文全屏無Banner.txt';
+
+    FC.writeFileSync(FileName,code);
+
+    io.sockets.connected[socket.id].emit('StoC content cover no banner code', {
+      temp: code,
+      FileName:FileName
+    })
+
+  })
+
   //======================================================
   //======================================================
   //======================================================
