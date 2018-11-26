@@ -13,21 +13,23 @@ var FC = require('../../../cusmodules/FileControl');
 
 class CronJobController {
 
-  async index({view}) {
+  async index({
+    view
+  }) {
     return view.render('CronDownloadSite.index');
   }
 
 
   async start2() {
-    //   cron.schedule('* 59 * * * *', async () => {
-    FC.readjson('public/JS/Scrape/config.json').then(async function (obj) {
-      var len = obj.set.length;
-      for (var x = 0; x < len; x++) {
-        await sc.set_option(obj.set[x][0], obj.set[x][1], obj.set[x][2], obj.set[x][3], obj.set[x][4]);
-      }
-    })
-  // }
+    cron.schedule('* 59 * * * *', async () => {
+        FC.readjson('public/JS/Scrape/config.json').then(async function (obj) {
+          var len = obj.set.length;
+          for (var x = 0; x < len; x++) {
+            await sc.set_option(obj.set[x][0], obj.set[x][1], obj.set[x][2], obj.set[x][3], obj.set[x][4]);
+          }
+        })
+      })
+    }
   }
-}
 
-module.exports = CronJobController
+  module.exports = CronJobController
