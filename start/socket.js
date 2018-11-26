@@ -266,6 +266,23 @@ io.on('connection', function (socket) {
   })
 
   //======================================================
+  //              首頁 顯示使用者檔案                    //
+  //======================================================
+
+  socket.on('CtoS User Profile', function (data) {
+    if (FC.Exists('public/UserProfile/' + data.username + '/Project') == false) {
+      FC.MkdirSync('public/UserProfile/' + data.username + '/Project');
+    }
+    // display_subdir('public/UserProfile/' + data.username + '/Project','CtoS User Project File')
+
+    fs.readdirSync('public/UserProfile/' + data.username + '/Project').forEach(file => {
+      io.sockets.connected[socket.id].emit('CtoS User Project File',{
+        file:file
+      })
+    })
+  })
+
+  //======================================================
   //           File upload test
   //======================================================
   // var su = require('../cusmodules/File_upload/socket_upload');
@@ -287,17 +304,17 @@ io.on('connection', function (socket) {
     }
     var date = new Date();
     var YY = date.getFullYear();
-    var MM = date.getMonth()+1;
+    var MM = date.getMonth() + 1;
     var DD = date.getDate();
     var mm = date.getMinutes();
     var SS = date.getSeconds();
-    FileName = 'public/UserProfile/' + data.user + '/Project/' + YY + MM + DD + '_' +mm+SS+'_內文全屏無Banner.txt';
+    FileName = 'public/UserProfile/' + data.user + '/Project/' + YY + MM + DD + '_' + mm + SS + '_內文全屏無Banner.txt';
 
-    FC.writeFileSync(FileName,code);
+    FC.writeFileSync(FileName, code);
 
     io.sockets.connected[socket.id].emit('StoC content cover no banner code', {
       temp: code,
-      FileName:FileName
+      FileName: FileName
     })
 
   })

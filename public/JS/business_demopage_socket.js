@@ -6,7 +6,7 @@
 
   var app = new Vue({
     // el: "#demopage_choise",
-    el:"#home",
+    el: "#home",
     delimiters: ['$$', '$$'],
     data: {
       device: '',
@@ -69,6 +69,11 @@
               var win = window.open(url, '_blank');
               win.focus();
               break;
+            case '32050':
+              var url = '/DemoPage/site/' + this.device + '/' + this.zonesize + '/' + this.site + '/DefaultZone.html?cfadc=8783:' + this.matiral_id;
+              var win = window.open(url, '_blank');
+              win.focus();
+              break;
             case '72890':
               var url = '/DemoPage/site/' + this.device + '/' + this.zonesize + '/' + this.site + '/DefaultZone.html?cfadc=8726:' + this.matiral_id;
               var win = window.open(url, '_blank');
@@ -103,9 +108,9 @@
           $("#zone_size_block").css('display', 'block');
           zone_size_arr.length = 0;
           dir.dir.forEach(ele => {
-            if(ele == "內文全屏"){
+            if (ele == "內文全屏") {
 
-            }else{
+            } else {
               zone_size_arr.push(ele);
             }
           });
@@ -140,29 +145,29 @@
     }
   })
 
-  
+
   //==============PREROLL===============
   socket.emit('CtoS tell me PreRoll site');
 
   var pre_site_arr = [];
 
   var PREROLL = new Vue({
-    el:"#profile",
+    el: "#profile",
     delimiters: ['$$', '$$'],
-    data:{
-      pre_site:pre_site_arr,
+    data: {
+      pre_site: pre_site_arr,
     },
-    methods:{
+    methods: {
       //取得使用者 選擇哪個preroll網站
-      ch_pre_site:function(item){
-        window.open('/DemoPage/preroll/'+item+'/index.html', '_blank');
+      ch_pre_site: function (item) {
+        window.open('/DemoPage/preroll/' + item + '/index.html', '_blank');
       }
     },
-    computed:{
+    computed: {
       //詢問Server Preroll有啥網站
-      getPreRollSite:function(){
-        socket.on('StoC can use PreRoll Site',function(prerollsite){
-          prerollsite.dir.forEach(ele=>{
+      getPreRollSite: function () {
+        socket.on('StoC can use PreRoll Site', function (prerollsite) {
+          prerollsite.dir.forEach(ele => {
             pre_site_arr.push(ele);
           });
         })
@@ -175,23 +180,23 @@
   var content_site_arr = [];
 
   var ContentCover = new Vue({
-    el:"#content_zone",
+    el: "#content_zone",
     delimiters: ['$$', '$$'],
-    data:{
-      content_site_arr:content_site_arr,
-      site:'',
-      material_id:'',
-      zone_code:''
+    data: {
+      content_site_arr: content_site_arr,
+      site: '',
+      material_id: '',
+      zone_code: ''
     },
-    methods:{
+    methods: {
       //取得使用者 選擇哪個preroll網站
-      ch_Content_site:function(item){
+      ch_Content_site: function (item) {
         this.site = item;
       },
-      default_zone:function(){
-        window.open('/DemoPage/site/phone/內文全屏/'+this.site+'/DefaultZone.html?cfadc=8730:'+this.material_id, '_blank');
+      default_zone: function () {
+        window.open('/DemoPage/site/phone/內文全屏/' + this.site + '/DefaultZone.html?cfadc=8730:' + this.material_id, '_blank');
       },
-      Cus_zone:function(){
+      Cus_zone: function () {
         socket.emit('CtoS Content_zone Site', {
           zone_code: this.zone_code,
           site: this.site,
@@ -199,12 +204,12 @@
       }
 
     },
-    computed:{
+    computed: {
       //詢問Server 內文全屏有啥網站
-      getContentZoneSite:function(){
-        socket.on('StoC can use Content_zone Site',function(ContentZone){
-          ContentZone.dir.forEach(ele=>{
-              content_site_arr.push(ele);
+      getContentZoneSite: function () {
+        socket.on('StoC can use Content_zone Site', function (ContentZone) {
+          ContentZone.dir.forEach(ele => {
+            content_site_arr.push(ele);
           });
         })
       }

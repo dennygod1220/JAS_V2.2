@@ -129,7 +129,7 @@ async function set_option(url, dir, zonesize, phone, modify_name = false) {
       console.log("scrape.js No.52 setTimeout has an error!!!")
     }
 
-  }, 1000);
+  }, 1500);
 }
 
 module.exports = {

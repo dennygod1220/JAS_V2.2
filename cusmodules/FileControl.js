@@ -42,7 +42,12 @@ function Remove(path){
         if(err){
             console.log("FileControl.js Remove() has an error !!!")
         }
+        else{
+          console.log(path + "刪除");
+          
+        }
     })
+    
 }
 
 async function AppendFile(FileName,content){
