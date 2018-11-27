@@ -16,7 +16,8 @@
       site: '',
       df_zone: '',
       matiral_id: '',
-      zone_info: ''
+      zone_info: '',
+      zone_cus:''
     },
     methods: {
       ch_device: function (device) {
@@ -26,6 +27,7 @@
         zone_size_arr.length = 0;
         this.zonesize = '';
         this.df_zone = '';
+        $("#store_btn").css('display','none');
         //=================
         this.device = device;
         socket.emit('CtoS which device', {
@@ -38,7 +40,7 @@
         this.site = '';
         this.zonesize = size;
         this.df_zone = '';
-
+        $("#store_btn").css('display','none');
         socket.emit('CtoS which ZoneSize', {
           Device: this.device,
           ZoneSize: size
@@ -46,11 +48,13 @@
       },
       //點了 網站 後 觸發事件
       ch_site: function (site) {
+        $("#store_btn").css('display','none');
         this.site = site;
         this.df_zone = '';
       },
       //選擇 預設版位 或是 自訂版未
       ch_zone_df: function (zone_cus) {
+        this.zone_cus=zone_cus;
         if (zone_cus == 'default') {
           //用版位大小 給定 預設cfadc 版位ID
           switch (this.zonesize) {
@@ -90,6 +94,7 @@
               win.focus();
               break;
           }
+          $("#store_btn").css('display','block');
         } else {
           this.df_zone = zone_cus;
           socket.emit('CtoS which Site', {
@@ -103,6 +108,17 @@
       },
       trimarea: function (e) {
         this.zone_info = e.target.value.trim();
+      },
+      Store_Site:function(){
+        
+        socket.emit('CtoS DemoPage Store', {
+          Device: this.device,
+          ZoneSize: this.zonesize,
+          site: this.site,
+          df_zone: this.zone_cus,
+          user:$("#username").text().trim(),
+          matiral_id:this.matiral_id
+        });
       }
     },
     computed: {

@@ -5,11 +5,14 @@ var rd = use('rd');
 var find = use('find');
 var dir = use('node-dir');
 var FC = require('../cusmodules/FileControl');
-
+var adm_zip = require('adm-zip');
 
 io.on('connection', function (socket) {
   console.log("ID: " + socket.id + " 連線");
 
+  //============================================
+  //             DEMO PAGE                    ||
+  //============================================
 
   //Client 選擇裝置後 ， 告訴Server -> Server 告訴裝置 可用版位大小目錄
   socket.on('CtoS which device', function (device) {
@@ -72,7 +75,41 @@ io.on('connection', function (socket) {
     // display_subdir(path,'StoC site dir');
   })
 
+  //儲存DemoPage
+  socket.on('CtoS DemoPage Store', function (data) {
+    var date = new Date();
+    var YY = date.getFullYear();
+    var MM = date.getMonth() + 1;
+    var DD = date.getDate();
+    var hh = date.getHours();
+    var mm = date.getMinutes();
+    var SS = date.getSeconds();
+    console.log(data);
+    // 預設版位
+    if (data.df_zone == 'default') {
+      // var zip = new adm_zip();
+      // zip.addLocalFolder('public/DemoPage/site/'+data.Device+'/'+data.ZoneSize+'/'+data.site);
+      // zip.writeZip('../public/UserProfile/'+data.user+'/DemoPage/'+YY+MM+DD+'_'+mm+SS+'_');
+      if(FC.Exists('public/UserProfile/'+data.user) == false){
+        FC.MkdirSync('public/UserProfile/'+data.user)
+        FC.MkdirSync('public/UserProfile/'+data.user+'/DemoPage')
+      }
+      if(FC.Exists('public/UserProfile/'+data.user+'/DemoPage') == false){
+        FC.MkdirSync('public/UserProfile/'+data.user+'/DemoPage')
+      }
+      var targetDir = 'public/UserProfile/'+data.user+'/DemoPage/'+YY+MM+DD+hh+mm+SS+'_'+data.site+'_'+data.Device+'_'+data.ZoneSize+'_素材'+data.matiral_id;
+      FC.MkdirSync(targetDir);
+      setTimeout(function(){
+        FC.copyFolder('public/DemoPage/site/'+data.Device+'/'+data.ZoneSize+'/'+data.site,targetDir,function(err){
+          if(err){
+            console.log(err);
+          }
+        })
+      },1000)
 
+    }
+
+  })
 
   //=========================================================================
   //=======================ADMIN ADD=========================================
@@ -275,11 +312,15 @@ io.on('connection', function (socket) {
     }
     // display_subdir('public/UserProfile/' + data.username + '/Project','CtoS User Project File')
 
-    fs.readdirSync('public/UserProfile/' + data.username + '/Project').forEach(file => {
-      io.sockets.connected[socket.id].emit('CtoS User Project File',{
-        file:file
-      })
-    })
+    // fs.readdirSync('public/UserProfile/' + data.username + '/Project').forEach(file => {
+    //   io.sockets.connected[socket.id].emit('CtoS User Project File',{
+    //     file:file
+    //   })
+    // })
+    // var file = fs.readdirSync('public/UserProfile/' + data.username + '/Project');
+    // io.sockets.connected[socket.id].emit('CtoS User Project File', {
+    //   file: file
+    // })
   })
 
   //======================================================

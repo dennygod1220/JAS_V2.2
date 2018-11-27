@@ -1,19 +1,73 @@
 @layout('layout/main')
 @section('content')
 
-<div class="container-fluid">
+<div class="container-fluid" id="userProfile">
 
-    <div class="row" style="margin-top: 30vmin;">
-        <div class="col" style="text-align:center">
-            <h1>歡迎光臨</h1>
-        </div>
+  <div class="row" style="margin-top: 10vmin;">
+    <div class="col" style="text-align:center">
+      <h1>歡迎光臨</h1>
     </div>
+  </div>
 
-    <div class="row">
-        <div class="col">
+  <div class="row">
+    <div class="col">
+      <h3>用戶資料夾</h3>
 
-        </div>
     </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          HTML素材
+        </div>
+        <table class="table">
+          <tbody>
+            @each(item in project_file)
+            <tr>
+              <td>
+                {{item}}
+              </td>
+              <td>
+                <button class="btn btn-outline-info">下載</button>
+              </td>
+              <td>
+                <button class="btn btn-outline-danger">刪除</button>
+              </td>
+            </tr>
+            @endeach
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          DemoPage 網站
+        </div>
+        <table class="table">
+          <tbody>
+            @each(item in DemoPage_site)
+            <tr>
+              <td>
+                {{item}}
+              </td>
+              <td>
+                <button class="btn btn-outline-info">再次開啟</button>
+              </td>
+              <td>
+                <button class="btn btn-outline-danger">刪除</button>
+              </td>
+            </tr>
+            @endeach
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="{{ assetsUrl('JS/welcome.js') }}"></script>

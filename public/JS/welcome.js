@@ -1,11 +1,12 @@
 var socket = io();
 
-socket.emit('CtoS User Profile',{
-    username:$("#username").text().trim()
+socket.emit('CtoS User Profile', {
+  username: $("#username").text().trim()
 });
 
-socket.on('CtoS User Project File',function(data){
-    console.log(data.file);
+
+
+var app = new Vue({
+    el:"#userProfile",
     
 })
-
