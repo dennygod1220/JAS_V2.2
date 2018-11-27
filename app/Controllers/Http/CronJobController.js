@@ -21,14 +21,14 @@ class CronJobController {
 
 
   async start2() {
-    // cron.schedule('1 56 * * * *', async()=>{
+    cron.schedule('1 36 * * * *', async()=>{
         FC.readjson('public/JS/Scrape/config.json').then(async function (obj) {
           var len = obj.set.length;
           for (var x = 0; x < len; x++) {
             await sc.set_option(obj.set[x][0], obj.set[x][1], obj.set[x][2], obj.set[x][3], obj.set[x][4]);
           }
         })
-      // })
+      })
     }
   }
 
