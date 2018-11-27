@@ -74,6 +74,11 @@
               var win = window.open(url, '_blank');
               win.focus();
               break;
+            case '320100':
+              var url = '/DemoPage/site/' + this.device + '/' + this.zonesize + '/' + this.site + '/DefaultZone.html?cfadc=8784:' + this.matiral_id;
+              var win = window.open(url, '_blank');
+              win.focus();
+              break;
             case '72890':
               var url = '/DemoPage/site/' + this.device + '/' + this.zonesize + '/' + this.site + '/DefaultZone.html?cfadc=8726:' + this.matiral_id;
               var win = window.open(url, '_blank');
