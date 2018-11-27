@@ -11,7 +11,7 @@ Route.post('/login', 'UserController.login').validator('LoginUser');
 
 //=====================================
 Route.group(() => {
-  Route.get('/', 'WelcomeController.index');
+  Route.get('/', 'WelcomeController.index2');
 
   Route.get('/Business', ({view}) => view.render('business/index'));
 
