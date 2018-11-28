@@ -21,7 +21,7 @@ class CronJobController {
 
 
   async start2() {
-    cron.schedule('1 59 * * * *', async()=>{
+    cron.schedule('1 20 * * * *', async()=>{
         FC.readjson('public/JS/Scrape/config.json').then(async function (obj) {
           var len = obj.set.length;
           for (var x = 0; x < len; x++) {

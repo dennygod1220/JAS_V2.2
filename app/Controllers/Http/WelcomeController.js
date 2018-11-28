@@ -8,9 +8,13 @@ class WelcomeController {
     var username = auth.user.username.trim();
     if(FC.Exists('public/UserProfile/' + username + '/Project') == true){
         project_file = fs.readdirSync('public/UserProfile/' + username + '/Project');
+    }else{
+        project_file = '';
     }
     if(FC.Exists('public/UserProfile/' + username + '/DemoPage') == true){
-        project_file = fs.readdirSync('public/UserProfile/' + username + '/DemoPage');
+        DemoPage_site = fs.readdirSync('public/UserProfile/' + username + '/DemoPage');
+    }else{
+        DemoPage_site = '';
     }
         
 
