@@ -1,0 +1,17 @@
+@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none){#header .searchbar .searchbtn{background-position:-5px -154px;padding:8px 18px;top:-2px;}
+.fastlink li a, .fastlink li span{line-height:28px;}
+.articlelist.hybrid .article_item h3{margin:6px 0;}
+.articlelist.headlineview .article_item .date{margin-top:6px;}
+.advanced_search button[type="submit"]{top:-2px;}
+.articlelist.forum ul li{margin:3px 0;}
+a.morebtn{line-height:34px;}
+.mark{bottom:5px;}
+.bottomtoolbar > .clearfix{line-height:21px;}
+.re_comment span{background-position:0 1px;}
+.re_comment span:first-child{background-position:0 3px;}
+.main_recommend li a.recommend_btn{position:relative;top:8px;}
+.minor_recommend{margin-bottom:5px;}
+.minor_recommend li .catlist{padding:4px 6px 2px}
+.searchform .row.single label, .searchform .row.single input[type="radio"]{margin:0 -1px 0 0}
+.searchform .row.single label:last-child{margin:0}
+}

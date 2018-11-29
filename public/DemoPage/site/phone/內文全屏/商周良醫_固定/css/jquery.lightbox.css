@@ -1,0 +1,151 @@
+/*-----------------------------------------------------------------------------
+ [MARKUP]
+    <div id="jquery-overlay"></div>
+    <div id="jquery-lightbox">
+        <div id="lightbox-container-image-box">
+            <div id="lightbox-container-image">
+                <img src="../fotos/XX.jpg?20151231" id="lightbox-image">
+                <div id="lightbox-nav">
+                    <a href="#" id="lightbox-nav-btnPrev"></a>
+                    <a href="#" id="lightbox-nav-btnNext"></a>
+                </div>
+                <div id="lightbox-loading">
+                    <a href="#" id="lightbox-loading-link">
+                        <img src="../images/lightbox-ico-loading.gif?20151231">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="lightbox-container-image-data-box">
+            <div id="lightbox-container-image-data">
+                <div id="lightbox-image-details">
+                    <span id="lightbox-image-details-caption"></span>
+                    <span id="lightbox-image-details-currentNumber"></span>
+                </div>
+                <div id="lightbox-secNav">
+                    <a href="#" id="lightbox-secNav-btnClose">
+                        <img src="../images/lightbox-btn-close.gif?20151231">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ [DOCS]
+    http://leandrovieira.com/projects/jquery/lightbox/
+-----------------------------------------------------------------------------*/
+
+#jquery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    width: 100%;
+    height: 500px;
+}
+
+#jquery-lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    line-height: 0;
+    text-align: center;
+}
+
+#jquery-lightbox a img {
+    border: none;
+}
+
+#lightbox-container-image-box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+#lightbox-container-image {
+    padding: 10px;
+}
+
+#lightbox-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+#lightbox-container-image-box > #lightbox-nav {
+    left: 0;
+}
+
+#lightbox-nav a {
+    outline: none;
+}
+
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext {
+    display: block;
+    zoom: 1;
+    width: 49%;
+    height: 100%;
+}
+
+#lightbox-nav-btnPrev {
+    left: 0;
+    float: left;
+}
+
+#lightbox-nav-btnNext {
+    right: 0;
+    float: right;
+}
+
+#lightbox-loading {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    width: 100%;
+    height: 25%;
+    line-height: 0;
+    text-align: center;
+}
+
+#lightbox-container-image-data-box {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px 0;
+    background-color: #fff;
+    font: 10px/1.4em Verdana, Helvetica, sans-serif;
+}
+
+#lightbox-container-image-data {
+    padding: 0 10px;
+    color: #666;
+}
+
+#lightbox-container-image-data #lightbox-image-details {
+    float: left;
+    width: 70%;
+    text-align: left;
+}
+
+#lightbox-image-details-caption {
+    font-weight: bold;
+}
+
+#lightbox-image-details-currentNumber {
+    display: block;
+    clear: left;
+    padding-bottom: 1.0em;
+}
+
+#lightbox-secNav-btnClose {
+    float: right;
+    width: 66px;
+    padding-bottom: 0.7em;
+}

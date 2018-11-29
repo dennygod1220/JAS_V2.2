@@ -1,0 +1,21 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video{margin:0;padding:0;outline:none;}
+body{background:#FFF;font-family:Tahoma, LiHei Pro, "儷黑體", Microsoft JhengHei, "微軟正黑體", PMingliu, "新細明體", sans-serif;font-size:13px;}
+a:link, a:visited{background:transparent;color:#0000FF;text-decoration:none;}
+a:link[href^="http://"]:after, a[href^="http://"]:visited:after{content:" (" attr(href) ") ";font-size:12px;}
+a[href^="http://"]{color:#C90000;}
+.maincontent a[href^="/"]:after{content:" (http://www.u-car.com.tw" attr(href) ") ";}
+table{border-collapse:collapse;border-spacing:0;text-align:center;}
+#header .topnav, #header .main .searchbar, #header .main .bw_ad, #header .mainnav, .sidebar,
+.postinsidead, .relatedpost, #comments, #footer, .bottomad, #featurelist, #fixed_header{display:none;}
+.maincontent .contbody{float:none;width:100%;}
+/**/

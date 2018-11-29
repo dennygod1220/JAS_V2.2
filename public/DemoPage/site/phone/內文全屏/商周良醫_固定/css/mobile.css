@@ -1,0 +1,568 @@
+/* Mobile Portrait */
+
+body, html {
+	width: 100%;
+	min-width: 100%;
+}
+body {
+	font-size: 13px;
+	-webkit-text-size-adjust: none;
+}
+.fullsize {
+	overflow: hidden;
+	height: 100%;
+	position: relative
+}
+h1 {
+	font-size: 17px;
+}
+h2, h3 {
+	font-size: 16px;
+}
+h4 {
+	font-size: 15px;
+}
+h5 {
+	font-size: 13px;
+}
+.headnews .title a {
+	line-height: 120%;
+	font-size: 17px;
+}
+.articlecontent section.content {
+	font-size: 1.2em;
+	line-height: 1.7em
+}
+.maincontent, #header .container, #statustop, #footer .container, #categorysearch>.container {
+	width: 100%;
+	height: auto;
+	max-width: 620px;
+}
+#main, .relatedpost .latest, .relatedpost .recommend, #aside, .bloggrtcont .columnists, .comments_list .commentbody, .comments_formbody, .mainnav>ul.clearfix li.ch_home, .articleinfo .author, .articleinfo .detail_info, .searchresults .title>ol, .searchresults .title>ol:last-child, .main .searchform .searchsort, .latestnews .main_news, .latestnews .newslist, .latestrecommend, .section.recommend .latestwrite, .maincontent.home #categorysearch .headline, #headnews .headnews, .latestnews, .topdoctors {
+	float: none;
+	width: 100%
+}
+.latestnews, .topdoctors {
+	margin: 20px auto
+}
+.mainnav .submenu li {
+	float: left;
+	width: 50%;
+	font-size: 15px;
+	border-bottom: #A7D900 1px solid
+}
+.mainnav .submenu a {
+	background: #333;
+	padding: 0;
+}
+.mainnav>ul.clearfix>li>a:hover, .mainnav ul.clearfix li .submenu a:hover {
+	background: #7CB942
+}
+.mainnav li .link_pc {
+	background: transparent;
+	color: #FFF;
+	font-size: 10px;
+	padding: 0;
+	position: absolute;
+	bottom: 16px;
+	right: 16%;
+}
+.maincontent>.content>.main {
+	padding: 0
+}
+.itemlist a.thumb, .articlelist a.thumb {
+	margin-bottom: 5px;
+	width: 80px
+}
+#mainnav, #fixed_header, #aside .side_module, #statustop, #footer .container, #comments .comments_post, .pagination li.first, .pagination li.last, .gallerymore, .gototop, .topad, .sidead, .leftcolumn, .bottomad, .contad, .member_function>ul.clearfix, .socialshare .comments, #header .topmenu, #categorysearch .feature a:hover span:after, #main .focuscont p, .specialad, #header .mainnav>ul>li.ch_home>a, .itemlist .side_share, .article_item .side_share, .bottomtoolbar .member_function, .rankchart table td.center, .rankchart table th.center, .articleinfo .author .openauthorbtn, .mainnav .submenu, .mainnav li:hover .submenu, .sidebar .side_module.side_info, .articlelist.middlecolumn .article_item .more, .article_function, #headnews nav, .maincontent.home #categorysearch .container, .feature_pop p, .home #aside .container_fixed .side_module, .home .section.recommend, .home .recentarticle.clear {
+	display: none
+}
+#aside .container_fixed .sidead:first-child, #aside .container_fixed .side_module:first-child+.sidead, .socialforMobile, .forMobile, .socialshare .line, .mobileADfixed, .mobileADcover, .mobileADtop, #aside .container_fixed .side_module.subscribe, .brandBanner {
+	display: block;
+}
+.socialforMobile {
+	margin: 5px auto 20px;
+	position: relative
+}
+.socialforMobile span.wording {
+	position: absolute;
+	left: 90px;
+	top: 1px;
+}
+#header {
+	height: 40px;
+	background-color: #FFF;
+	position: relative
+}
+#header .container {
+	border-bottom: #FF6600 3px solid;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	background-color: #FFF;
+}
+#header .main {
+	margin: 8px auto 5px;
+	width: 95%;
+}
+.mainnav>ul.clearfix>li {
+	border-bottom: #A7D900 1px solid;
+	width: 50%;
+}
+.maincontent>.content {
+	margin: 10px 10px 15px;
+	padding: 0
+}
+#header h1.logo.orange, #header .logo.orange {
+	width: 110px;
+	height: 26px;
+	background-size: 100%
+}
+#header .logo.orange {
+    line-height: 120%;
+}
+#header .searchbar {
+	float: right;
+	top: 0
+}
+#header .searchbar .keyword {
+	padding: 6px 8px 2px 30px;
+	width: 90px;
+	background-position: 2px 3px
+}
+#header .searchbar button, .searchkeyword .kw_btn, #header .searchbar .searchbtn {
+	padding: 5px 8px
+}
+#mainnav {
+	background-color: #333;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 1000;
+}
+.mainnav ul li.ch_home>a, .overlayer .mainnav ul li.ch_home>a {
+	background-position: 5px -315px;
+	text-indent: 0;
+}
+#header .mainnav>ul>li.ch_searchdoctor>a {
+	background: none;
+	padding-right: 0
+}
+.mainnav>ul>li a {
+	line-height: 50px;
+	height: 50px
+}
+.menu_dropdown {
+	background-color: #FF6600;
+	border: #FF6600 1px solid;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display: block;
+	float: left;
+	position: relative;
+	top: 1px;
+	left: 8px;
+}
+.menu_dropdownbtn {
+	background: url("../images/menu.png") 0px 0px no-repeat;
+	display: block;
+	text-indent: -9999em;
+	width: 24px;
+	height: 21px;
+}
+/*.mainnav > ul.clearfix {border-bottom: #A7D900 1px solid;}
+.mainnav > ul.clearfix > li.ch_searchdoctor {border: none}*/
+
+.pagination li.goback a {
+	margin: 15px 0;
+}
+#footer {
+	color: #FFF;
+	font-size: 1em;
+	line-height: 18px;
+	padding: 0;
+	width: 100%;
+}
+.article p img[style*="left"], .articlephoto[style*="left"] {
+	margin: 0 0 24px;
+	width: auto;
+}
+.articlelist.hybrid .detail a {
+	display: inline
+}
+.tag ul {
+	width: 84%
+}
+.articlecontent blockquote {
+	padding: 5px 15px
+}
+.relatedpost {
+	margin: 0 auto
+}
+.relatedpost>div {
+	margin: 20px auto;
+}
+.rankchart table td.right, .rankchart table th.right {
+	white-space: nowrap;
+}
+/* feature */
+
+#categorysearch {
+	padding: 10px 8px;
+}
+.maincontent.home #categorysearch {
+	margin-bottom: 15px;
+	padding: 0
+}
+#categorysearch h3 {
+	font-size: 15px
+}
+#categorysearch>.container {
+	padding: 0;
+	box-shadow: 0 0 5px #333;
+}
+#categorysearch .container .headline {
+	background: #333;
+	color: #FFF;
+	font-size: 1em;
+	margin: 0;
+	padding: 12px 0 13px;
+	text-align: center;
+	width: 50%;
+}
+#categorysearch .type_group, .home #categorysearch .type_group {
+	width: 50%;
+	float: left
+}
+.type_group a, .home #categorysearch .type_group a {
+	padding: 12px 0;
+	color: #FFF
+}
+.type_group a.type_1, .home #categorysearch .type_group a.type_1.selected {
+	background-color: #4F525A;
+}
+.type_group a.type_2, .home #categorysearch .type_group a.type_2.selected {
+	background-color: #8FC31F;
+}
+.type_group a.type_3, .home #categorysearch .type_group a.type_3.selected {
+	background-color: #F39800;
+}
+.type_group a.type_4, .home #categorysearch .type_group a.type_4.selected {
+	background-color: #00B7EE;
+}
+.type_group a.type_5, .home #categorysearch .type_group a.type_5.selected {
+	background-color: #F699C2;
+}
+.type_group a span.typeicon {
+	background-position: -10px 2px;
+	background-size: cover;
+	border-radius: 0;
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.home #categorysearch .type_group a.selected {
+	border-radius: 0;
+}
+.home #categorysearch .type_group a:hover span.typeicon, .home #categorysearch .type_group a.selected span.typeicon {
+	background-color: transparent;
+}
+.type_group a.type_2 span.typeicon {
+	background-position: -80px 2px;
+}
+.type_group a.type_3 span.typeicon {
+	background-position: -155px 2px;
+}
+.type_group a.type_4 span.typeicon {
+	background-position: -225px 2px;
+}
+.type_group a.type_5 span.typeicon {
+	background-position: -298px 2px;
+}
+#categorysearch a strong {
+	display: inline;
+	text-align: center;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.home #categorysearch a strong {
+	top: 0
+}
+.bloggrtcont .thumb {
+	line-height: 75px;
+	width: 25%;
+}
+/* video */
+
+.rwd_video {
+	margin: 24px auto;
+	padding-top: 25px;
+	padding-bottom: 67.5%;
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	z-index: 1;
+}
+.rwd_video.widescreen {
+	padding-bottom: 62%;
+}
+.rwd_video embed, .rwd_video iframe, .rwd_video object, .rwd_video video {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+}
+.rwd_video iframe {
+	max-height: 92.5%;
+	min-height: 78%;
+}
+.articlcontent .rwd_video .photocaption {
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0px;
+	z-index: 2;
+}
+.articleinfo .author .authorname {
+	float: right;
+	padding: 0;
+}
+.articleinfo .detail_info {
+	text-align: left;
+	padding: 0 0 5px
+}
+.articleinfo .counts {
+	background: none;
+	float: right
+}
+.toptoolbar .socialshare {
+	float: none;
+	top: 2px
+}
+#comments {
+	padding: 15px 0
+}
+.users_thumb {
+	margin-right: 15px;
+}
+.users_thumb strong {
+	font-size: 11px;
+	font-family: Arial
+}
+.commentbody .commentcont {
+	margin: 0
+}
+.commentbody .commentcont p {
+	line-height: 24px;
+}
+.img-block img {
+	max-width: 100%
+}
+#ContentPlaceHolder1_overMore .container {
+	font-size: 0.9em;
+	width: 85%;
+	padding: 15px 0 25px;
+	margin: 20% auto
+}
+#ContentPlaceHolder1_overMore .container img {
+	width: 60%
+}
+a.alertButton {
+	font-size: 1em
+}
+.articlelist.middlecolumn .article_item {
+	margin: 10px 0 24px 5px;
+	width: 47%
+}
+.articlelist.middlecolumn .article_item.first {
+	margin: 10px 5px 24px 0;
+	width: 47%
+}
+.side_info {
+	margin-bottom: 10px
+}
+.searchresults .review {
+	margin: 0
+}
+.searchresults .content {
+	width: 70%
+}
+.main .searchform .row .right {
+	text-align: left
+}
+.main .searchform .row .doctor_kw {
+	width: 190px
+}
+.main .searchform #search_area {
+	margin-bottom: 10px
+}
+.main .searchform .row .right {
+	position: relative
+}
+.mainbanner, .subjectbanner, .subjectbanner .container {
+	height: 156px;
+}
+.mainbanner .subjectnav {
+	bottom: 0px;
+}
+.tabnav li a {
+	font-size: 13px
+}
+/* AD */
+
+.mobileADfixed {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 999;
+}
+.mobileADfixed div {
+	margin: 0 auto !important;
+}
+.mobileADcover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	overflow: hidden;
+	display: table
+}
+.mobileADcover .wrapper {
+	background: url("../images/black_80_1.png") 0 0 repeat;
+	max-width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+/*.mobileADcover .offbox {position:absolute;top:10px;right:0px;z-index:99999;width:44px;height:44px}
+.mobileADcover .offbox span {
+    background: #333;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    right: 0px;
+    top: 0px;
+    display:block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    border: #FFF 2px solid;
+    color: #FFF;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: 900
+}*/
+
+.mobileADcover .content, .mobileADcover .content img {
+	max-width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+.mobileADfixed img {
+	max-width: 100%;
+	height: 50px
+}
+#oneAd_Mobile {
+	text-align: center;
+}
+#ContentPlaceHolder1_AD_Panel01 {
+	text-align: center;
+}
+#div-gpt-ad-1489030995340-1, #div-gpt-ad-1489030995340-2 {
+	margin: 0 auto;
+}
+/* HOME */
+
+#headnews .container, #headnews .headnews {
+	height: auto
+}
+#headnews .headnews, #headnews .showbox {
+	position: static;
+	width: 100%;
+	margin-bottom: 25px
+}
+#headnews .showbox .headnews:last-child {
+	margin-bottom: 10px
+}
+#headnews .headnews .title {
+	width: 100%;
+	padding: 5px 0 0px;
+	line-height: 130%;
+	position: static;
+}
+#headnews .headnews .forblock {
+	background: #FFF;
+}
+#headnews .headnews .forblock a, #headnews .headnews .forwhite a {
+	color: #000;
+}
+.maincontent.home #main .forblock p {
+	color: #555;
+	line-height: 125%
+}
+#headnews .showbox img {
+	width: 100%;
+	max-width: 100%
+}
+.extention li {
+	padding: 0px 0 6px 15px;
+	height: 150px
+}
+.extention .thumb strong {
+	font-size: 1em;
+	line-height: 125%;
+	height: 64px;
+}
+.home hr {
+	margin: 15px 0;
+}
+.maincontent.home .section, .maincontent.home .contad {
+	margin-bottom: 20px;
+}
+.main_news, .latestnews .newslist li {
+	margin-bottom: 8px;
+}
+.latestrecommend {
+	margin-bottom: 25px;
+}
+.feature_pop .content {
+	height: 68px;
+}
+.feature_pop .headline {
+	left: 5px;
+	bottom: 0px;
+}
+.feature_pop .more {
+	font-size: 12px;
+	top: 0;
+	height: 16px
+}
+.articlecontent p iframe, .article p iframe {
+	height: 100%
+}
+.extention .thumb .sourceimg {
+	max-height: 52px;
+}
+.home #aside {
+	display: block;
+}
+.home #aside .container_fixed .side_module:first-child, .home #aside .sidead, .home #aside .sidead+.side_module {
+	display: block;
+}
+.focuscont h3 {
+	font-size: 17px;
+}
+.article_item .detail .h3 {
+	font-size: 16px;
+}
+#categorysearch .headline div {
+	font-size: 15px;
+}
